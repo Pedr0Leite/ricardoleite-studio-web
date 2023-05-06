@@ -1,0 +1,118 @@
+.navbar {
+  /* display: flex;
+    justify-content: space-between; */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 79px;
+  position: sticky;
+  top: 0px;
+  height: 3rem;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+  z-index: 1;
+  /* margin: 15px; */
+  padding: 15px;
+  /* background: #FC2121; */
+}
+
+.navbar.down {
+  top: -4rem;
+}
+
+.navbar span {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 100%;
+  color: #000000;
+  /* color: white; */
+  padding-top: 15px;
+  cursor: pointer;
+  text-align: right;
+}
+
+.navbar span:hover {
+  color: var(--globalRed);
+}
+
+.navbar span:nth-child(2) {
+  padding-right: 10px;
+  color: var(--globalRed);
+}
+
+.navbar a {
+  text-decoration: none;
+}
+
+.navLeftBlock {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navRightBlock {
+  display: flex;
+  justify-content: space-between;
+}
+
+.rl_logo {
+  background-image: url("../public/RL_Logotype.png");
+  /* background-image: url("../public/RL_Logotype_w.png"); */
+  height: 40px;
+  width: 40px;
+  display: block;
+  background-repeat: no-repeat;
+}
+
+.navMobileLeftBlock {
+  display: none;
+  /* display: flex;
+  justify-content: flex-start;
+  align-items: center; */
+}
+
+.navMobileRightBlock {
+  display: none;
+  /* display: flex;
+  justify-content: flex-end;
+  align-items: center; */
+}
+
+.navMobileMenu {
+  width: 100%;
+  background-color: white;
+  height: 210px;
+  position: fixed;
+  top: 75px;
+  padding: 15px;
+  right: -30px;
+}
+
+.navMobileMenu ul{
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  row-gap: 50px;
+}
+
+
+@media (width < 600px) {
+  .navLeftBlock, .navRightBlock{
+    display: none;
+  }
+
+  .navMobileLeftBlock {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .navMobileRightBlock {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}

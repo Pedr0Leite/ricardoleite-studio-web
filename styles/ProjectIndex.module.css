@@ -1,0 +1,78 @@
+.projectIndexMain {
+  width: 100%;
+}
+
+.projectIndexMain a{
+  text-decoration: none;
+}
+
+.projectIndexBlock {
+  display: grid;
+  /* grid-template-columns: 1.7fr 1fr; */
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 79px;
+  margin: 0 15px 0 15px;
+  border-top: 1px solid black;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.projectIndexBlockOne {
+  display: flex;
+  justify-content: space-between;
+}
+
+.projectIndexBlockOne div:first-child {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 100%;
+  color: #000000;
+}
+
+.projectIndexBlockOne div:nth-child(2) {
+  /* font-family: "ABC Walter Alte"; */
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  text-align: right;
+
+  color: #000000;
+}
+
+.projectIndexBlockTwo {
+  display: flex;
+  justify-content: space-between;
+}
+
+.projectIndexBlockTwo div:first-child {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 100%;
+  color: #000000;
+}
+
+.projectIndexBlockTwo div:nth-child(2) {
+  /* font-family: 'ABC Walter Alte'; */
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 100%;
+  text-align: right;
+  color: #000000;
+}
+
+.cardImg {
+    height: 517px;
+    width: 453px;
+    position: fixed;
+    z-index: 2;
+    left: 25%;
+    top: 25%;
+}
