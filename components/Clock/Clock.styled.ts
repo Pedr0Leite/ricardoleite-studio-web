@@ -6,7 +6,7 @@ export const ClockMainDiv = styled.div`
   align-items: center;
 
   & span {
-    font-family: "ABC Walter Alte";
+    font-family: "SuisseIntl-Regular";
     font-style: normal;
     font-weight: bolder;
     font-size: 14px;

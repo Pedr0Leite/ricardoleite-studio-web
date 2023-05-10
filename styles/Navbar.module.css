@@ -1,6 +1,4 @@
 .navbar {
-  /* display: flex;
-    justify-content: space-between; */
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 79px;
@@ -11,9 +9,7 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 500ms;
   z-index: 1;
-  /* margin: 15px; */
   padding: 15px;
-  /* background: #FC2121; */
 }
 
 .navbar.down {
@@ -21,13 +17,12 @@
 }
 
 .navbar span {
-  font-family: "Inter";
+  font-family: "SuisseIntl-Regular";
   font-style: normal;
   font-weight: 400;
   font-size: 26px;
   line-height: 100%;
   color: #000000;
-  /* color: white; */
   padding-top: 15px;
   cursor: pointer;
   text-align: right;
@@ -58,25 +53,15 @@
 
 .rl_logo {
   background-image: url("../public/RL_Logotype.png");
-  /* background-image: url("../public/RL_Logotype_w.png"); */
   height: 40px;
   width: 40px;
   display: block;
   background-repeat: no-repeat;
 }
 
-.navMobileLeftBlock {
-  display: none;
-  /* display: flex;
-  justify-content: flex-start;
-  align-items: center; */
-}
-
+.navMobileLeftBlock,
 .navMobileRightBlock {
   display: none;
-  /* display: flex;
-  justify-content: flex-end;
-  align-items: center; */
 }
 
 .navMobileMenu {
@@ -97,7 +82,6 @@
   justify-content: space-evenly;
   row-gap: 50px;
 }
-
 
 @media (width < 600px) {
   .navLeftBlock, .navRightBlock{

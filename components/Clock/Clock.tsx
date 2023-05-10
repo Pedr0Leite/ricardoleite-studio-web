@@ -23,8 +23,9 @@ export default function Clock() {
 
   useEffect(() => {
     const now = new Date().getHours();
+    const dayOfWeek = new Date().getDay();
 
-    if (now >= 9 && now <= 18) {
+    if (now >= 9 && now <= 18 && dayOfWeek != 0 && dayOfWeek != 6) {
       setOpenForProjects("Open for projects!");
     } else {
       setOpenForProjects("Closed! See you tomorrow!");

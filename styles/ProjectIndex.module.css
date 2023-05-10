@@ -2,13 +2,12 @@
   width: 100%;
 }
 
-.projectIndexMain a{
+.projectIndexMain a {
   text-decoration: none;
 }
 
 .projectIndexBlock {
   display: grid;
-  /* grid-template-columns: 1.7fr 1fr; */
   grid-template-columns: repeat(2, 1fr);
   column-gap: 79px;
   margin: 0 15px 0 15px;
@@ -23,7 +22,7 @@
 }
 
 .projectIndexBlockOne div:first-child {
-  font-family: "Inter";
+  font-family: "SuisseIntl-Regular";
   font-style: normal;
   font-weight: 500;
   font-size: 26px;
@@ -32,14 +31,12 @@
 }
 
 .projectIndexBlockOne div:nth-child(2) {
-  /* font-family: "ABC Walter Alte"; */
-  font-family: "Inter";
+  font-family: "SuisseIntl-Regular";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 100%;
   text-align: right;
-
   color: #000000;
 }
 
@@ -49,7 +46,7 @@
 }
 
 .projectIndexBlockTwo div:first-child {
-  font-family: "Inter";
+  font-family: "SuisseIntl-Regular";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -58,8 +55,7 @@
 }
 
 .projectIndexBlockTwo div:nth-child(2) {
-  /* font-family: 'ABC Walter Alte'; */
-  font-family: "Inter";
+  font-family: "SuisseIntl-Regular";
   font-style: normal;
   font-weight: bold;
   font-size: 18px;
@@ -69,10 +65,10 @@
 }
 
 .cardImg {
-    height: 517px;
-    width: 453px;
-    position: fixed;
-    z-index: 2;
-    left: 25%;
-    top: 25%;
+  height: 517px;
+  width: 453px;
+  position: fixed;
+  z-index: 2;
+  left: 25%;
+  top: 25%;
 }

@@ -8,14 +8,13 @@
   --globalRed: #FC2121;
 }
 
-
 * {
   padding: 0;
   margin: 0;
 }
 
 body {
-  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-family: "SuisseIntl-Regular";
 }
 
 ::-webkit-scrollbar {
@@ -24,7 +23,6 @@ body {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  /* box-shadow: inset 0 0 5px grey;  */
   background: black;
 }
 
@@ -59,7 +57,7 @@ body {
 }
 
 .titleTwo {
-  font-family: SuisseIntl-Regular;
+  font-family: "SuisseIntl-Regular";
   color: #1a1a1a;
   letter-spacing: 0.01em;
   line-height: 1.3;
@@ -91,7 +89,6 @@ body {
 .rightMainDiv {
   height: 100vh;
   width: 50%;
-  /* margin-top: 50vh; */
   margin-top: 824px;
 }
 
@@ -130,34 +127,11 @@ body {
   justify-content: flex-end;
 }
 
-.worksBlock1 {
-  /* width: fill-available;
-  width: -webkit-fill-available; */
-}
+.worksBlock1 {}
 
 .worksBlock2 a:nth-child(2) {
   align-self: flex-end;
 }
-/* .worksBlock2 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  width: 100%;
-}
-
-.worksBlock2 .figure:first-child {
-  grid-area: 1;
-}
-
-.worksBlock2 .figure:nth-child(2) {
-  grid-area: 2 / 3;
-  align-self: flex-end;
-}
-
-.worksBlock4,
-.worksBlock5,
-.worksBlock6 {
-  grid-area: 2;
-} */
 
 .worksBlock2 {
   display: flex;
@@ -165,16 +139,6 @@ body {
   width: 100%;
   justify-content: space-between;
 }
-
-/* .worksBlock2 .figure:first-child {
-  display: flex;
-  flex-direction: column;
-}
-
-.worksBlock2 .figure:nth-child(2) {
-  display: flex;
-  flex-direction: column;
-} */
 
 .worksBlock2Row1 {
   align-self: flex-start;
@@ -237,12 +201,11 @@ body {
 }
 
 .specificFigure {
-  /* height: auto !important; */
   width: 100% !important;
 }
 
 .figure p span:first-child {
-  font-family: SuisseIntl-Regular;
+  font-family: "SuisseIntl-Regular";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -252,7 +215,7 @@ body {
 
 .figure p span:nth-child(2) {
   padding-left: 50px;
-  font-family: SuisseIntl-Regular;
+  font-family: "SuisseIntl-Regular";
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -275,15 +238,13 @@ body {
 .worksDetailsLeft {
   display: grid;
   grid-template-rows: 182px repeat(4, 45px) auto;
-  /* grid-template-rows: repeat( auto-fill, minmax(45px, 1fr)); */
   padding-right: 20px;
   position: fixed;
   width: 50%;
 }
 
 .worksDetailsTitle {
-  /* height: 182px; */
-  font-family: SuisseIntl-Regular;
+  font-family: "SuisseIntl-Regular";
   font-style: normal;
   font-weight: 400;
   font-size: 80px;
@@ -301,7 +262,7 @@ body {
 }
 
 .worksDetailsInfo span:first-child {
-  font-family: SuisseIntl-Regular;
+  font-family: "SuisseIntl-Regular";
   font-style: normal;
   font-weight: bold;
   font-size: calc(8px + 1vw);
@@ -310,7 +271,7 @@ body {
 }
 
 .worksDetailsInfo span:nth-child(2) {
-  font-family: SuisseIntl-Regular;
+  font-family: "SuisseIntl-Regular";
   font-style: normal;
   font-weight: 400;
   font-size: calc(7px + 1vw);
@@ -320,7 +281,7 @@ body {
 
 .worksDetailsText {
   height: 405px;
-  font-family: SuisseIntl-Regular;
+  font-family: "SuisseIntl-Regular";
   font-style: normal;
   font-weight: 400;
   font-size: calc(9px + 1vw);
@@ -350,7 +311,7 @@ body {
   height: 35px;
   width: 100px;
   margin-bottom: 10px;
-  font-family: SuisseIntl-Regular;
+  font-family: "SuisseIntl-Regular";
   font-style: normal;
   font-weight: 500;
   font-size: 26px;
@@ -372,7 +333,7 @@ body {
 }
 
 .workDetailsNextPrevProject span {
-  font-family: SuisseIntl-Regular;
+  font-family: "SuisseIntl-Regular";
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
@@ -384,8 +345,8 @@ body {
 
 /* clock */
 
-.clock {
-  font-family: "ABC Walter Alte";
+/* .clock {
+  font-family: "SuisseIntl-Regular";
   font-style: normal;
   font-weight: bolder;
   font-size: 14px;
@@ -393,9 +354,8 @@ body {
   text-decoration-line: underline;
   color: #000000;
   position: relative;
-  /* left: 120px; */
   left: 8vw;
-}
+} */
 
 /* Sliding text */
 
@@ -417,7 +377,7 @@ body {
 
 .track > span {
   font-size: 18px;
-  font-family: SuisseIntl-Regular;
+  font-family: "SuisseIntl-Regular";
   padding-left: 30px;
   padding-top: 5px;
 }
@@ -442,7 +402,6 @@ body {
 }
 
 /* Media Queries */
-
 @media only screen and (max-width: 900px) {
   .worksRowBlock1,
   .worksRowBlock2,
@@ -454,8 +413,14 @@ body {
     align-self: flex-start;
   }
 
-  .figure-1, .figure-2, .figure-3, .figure-4, .figure-5, .figure-6, .figure-7 {
-    width: 100vw;
+  .figure-1, 
+  .figure-2, 
+  .figure-3, 
+  .figure-4, 
+  .figure-5, 
+  .figure-6, 
+  .figure-7 {
+    width: 100vw; 
   }
 
   .clock{
@@ -479,6 +444,23 @@ body {
 }
 
 @media only screen and (max-width: 600px) {
+  .worksDetailsLeft{
+    width: 100%;
+  }
+
+  .worksDetailsLeft{
+    position: initial;
+  }
+
+  .worksDetailsMainDiv {
+    display: flex;
+    flex-direction: column;
+    row-gap: 50px;
+    margin: 0 15px 0 15px;
+    border-top: 1px solid black;
+    padding: 10px;
+  }
+  
   .worksDetailsText{
     height: 310px;
   }

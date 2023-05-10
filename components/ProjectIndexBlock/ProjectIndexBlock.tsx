@@ -1,11 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import * as Styled from "./ProjectIndexBlock.styled";
 import Link from "next/link";
 import styles from "@/styles/ProjectIndex.module.css";
 
 interface imgObj {
-    url: string
+  url: string;
 }
 
 interface ProjectIndexBlockInterface {
@@ -25,6 +25,7 @@ export default function ProjectIndexBlock({
   location,
   images,
 }: ProjectIndexBlockInterface) {
+  const [vpInnerWidth, setVpInnerWidth] = useState<number>();
   const cardImgVariants = {
     hidden: {
       opacity: 0,
@@ -57,6 +58,16 @@ export default function ProjectIndexBlock({
     },
   };
 
+  function handleResize() {
+    if (typeof window !== "undefined") {
+      setVpInnerWidth(window.innerWidth);
+    }
+  }
+
+  useEffect(()=> {
+    window.addEventListener('resize', handleResize)
+ })
+
   return (
     <>
       <motion.div
@@ -85,12 +96,11 @@ export default function ProjectIndexBlock({
             </Styled.ProjectIndexBlockTwoDiv>
           </Styled.ProjectIndexBlockDiv>
         </Link>
-        <motion.div
-          variants={cardImgVariants}
-          className={styles.cardImg}
-        >
-            {images != undefined && <Styled.CardImgDiv url={images[0].url}></Styled.CardImgDiv>}
-        </motion.div>
+        {(vpInnerWidth != undefined && vpInnerWidth >= 800) && <motion.div variants={cardImgVariants} className={styles.cardImg}>
+          {images != undefined && (
+            <Styled.CardImgDiv url={images[0].url}></Styled.CardImgDiv>
+          )}
+        </motion.div>}
       </motion.div>
     </>
   );

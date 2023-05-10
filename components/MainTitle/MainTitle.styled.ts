@@ -15,7 +15,7 @@ export const MainDiv = styled.div`
 `
 
 export const Title = styled.div<colorInterface>`
-    font-family: SuisseIntl-Regular;
+    font-family: "SuisseIntl-Regular";
     color:  ${props => props.color};
     letter-spacing: 0.01em;
     line-height: 1.3;
@@ -52,7 +52,7 @@ export const TopDiv = styled.div<colorInterface>`
 
     & span {
         // color:  ${props => props.color};
-        font-family: "Inter";
+        font-family: "SuisseIntl-Regular";
         font-style: normal;
         font-weight: 500;
         font-size: 25px;
