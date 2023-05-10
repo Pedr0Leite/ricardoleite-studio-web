@@ -1,6 +1,5 @@
 .mainDiv {
   width: 100%;
-  /* background: linear-gradient(0deg, rgba(255,255,255,1) 90%, rgba(252,33,33,1) 100%); */
   background: linear-gradient(
     0deg,
     rgba(255, 255, 255, 1) 74%,
@@ -11,13 +10,8 @@
 }
 
 /* New */
-
 .firstBlock {
-  /* display: flex;
-  flex-direction: row;
-  justify-content: space-between; */
   display: grid;
-  /* grid-template-columns: 1.7fr 1fr; */
   grid-template-columns: repeat(2, 1fr);
   column-gap: 79px;
   border-top: 1px solid black;
@@ -32,8 +26,7 @@
 }
 
 .firstBlockLeft div:first-child {
-  /* font-family: 'Suisse BPtestFont Int'l'; */
-  font-family: "Inter";
+  font-family: "SuisseIntl-Regular";
   font-style: normal;
   font-weight: 400;
   line-height: 100%;
@@ -52,8 +45,7 @@
 }
 
 .firstBlockLeft div:nth-child(2) p {
-  /* font-family: 'Suisse BPtestFont Int'l'; */
-  font-family: "Inter";
+  font-family: "SuisseIntl-Regular";
   font-style: normal;
   font-weight: 400;
   line-height: 100%;
@@ -69,8 +61,7 @@
 }
 
 .firstBlockLeft div:nth-child(3) p {
-  /* font-family: 'Suisse BPtestFont Int'l'; */
-  font-family: "Inter";
+  font-family: "SuisseIntl-Regular";
   font-style: normal;
   font-weight: 400;
   line-height: 100%;
@@ -85,7 +76,7 @@
 }
 
 .firstBlockRight div:first-child {
-  font-family: "Inter";
+  font-family: "SuisseIntl-Regular";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -114,7 +105,7 @@
   aspect-ratio: 4 / 5;
 }
 
-.mainAbstrcImgNOTForMobile{
+.mainAbstrcImgNOTForMobile {
   display: inline !important;
 }
 
@@ -140,8 +131,7 @@
 .secondBlockLeft,
 .secondBlockRight {
   grid-area: 2;
-  /* font-family: 'Suisse BPtestFont Int'l'; */
-  font-family: "Inter";
+  font-family: "SuisseIntl-Regular";
   font-style: normal;
   font-weight: 400;
   font-size: calc(17px + 1vw);
@@ -150,7 +140,7 @@
 }
 
 .secondBlockRightTitle {
-  font-family: "Inter";
+  font-family: "SuisseIntl-Regular";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -180,7 +170,7 @@
 .thirdBlockTitle {
   display: flex;
   align-items: flex-end;
-  font-family: "Inter";
+  font-family: "SuisseIntl-Regular";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -191,7 +181,7 @@
 
 .thirdBlockText {
   grid-area: 2;
-  font-family: "Inter";
+  font-family: "SuisseIntl-Regular";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -204,10 +194,9 @@
 }
 
 .linksText {
-  font-family: "Inter";
+  font-family: "SuisseIntl-Regular";
   font-style: normal;
   font-weight: 400;
-  /* font-size: 34px; */
   font-size: calc(50px - 1vw);
   line-height: 100%;
   text-decoration-line: underline;
@@ -239,7 +228,7 @@
 }
 
 .subBlock:first-child {
-  font-family: "Inter";
+  font-family: "SuisseIntl-Regular";
   font-style: normal;
   font-weight: 500;
   font-size: 69px;
@@ -247,23 +236,18 @@
   display: flex;
   align-items: flex-start;
   color: #1a1a1a;
-  /* background-color: beige; */
-
   border-right: 1px solid black;
 }
 
 .subBlock:nth-child(2) {
-  font-family: "Inter";
+  font-family: "SuisseIntl-Regular";
   font-style: normal;
   font-weight: 500;
   font-size: 25px;
   line-height: 36px;
-  /* or 120% */
-
   display: flex;
   align-items: flex-start;
   letter-spacing: 0.3px;
-
   color: #1a1a1a;
   padding-left: 40px;
   padding-bottom: 40px;
@@ -288,14 +272,13 @@
 }
 
 .footer span {
+  font-family: "SuisseIntl-Regular";
   text-transform: uppercase;
-  font-family: "Inter";
   font-style: normal;
   font-weight: xx-large;
   font-size: 26px;
   line-height: 26px;
   color: #000000;
-  /* color: white; */
   cursor: pointer;
 }
 
@@ -316,7 +299,7 @@
 }
 
 @media only screen and (max-width: 600px) {
-  .firstBlock{
+  .firstBlock {
     grid-template-columns: none;
     grid-template-columns: none;
     grid-column-gap: none;
@@ -332,14 +315,14 @@
 
   .secondBlockLeft,
   .secondBlockRight {
-    font-size: calc(14px + 1vw);
+    font-size: calc(11px + 1vw);
   }
 
   .linksText {
     font-size: calc(25px - 1vw);
   }
 
-  .mainAbstrcImg{
+  .mainAbstrcImg {
     display: none !important;
   }
 
@@ -348,16 +331,15 @@
     height: 85%;
   }
 
-  .firstBlockRight{
+  .firstBlockRight {
     display: none !important;
   }
 
-  .firstBlockLeft{
+  .firstBlockLeft {
     grid-template-rows: 10% 55% 20%;
   }
 
-  .thirdBlock{
+  .thirdBlock {
     column-gap: 15px;
   }
-
 }

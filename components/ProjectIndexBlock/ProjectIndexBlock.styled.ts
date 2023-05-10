@@ -17,6 +17,14 @@ export const ProjectIndexBlockDiv = styled.div`
   &:hover{
     background-color: ${colors.globalRed};
   }
+
+  @media only screen and (max-width: 800px) {
+    column-gap: 25px;
+
+    &:hover{
+      background-color: none;
+    }
+  }
 `;
 
 export const ProjectIndexBlockOneDiv = styled.div`
@@ -24,7 +32,7 @@ export const ProjectIndexBlockOneDiv = styled.div`
   justify-content: space-between;
 
   & div:first-child {
-    font-family: "Inter";
+    font-family: "SuisseIntl-Regular";
     font-style: normal;
     font-weight: 500;
     font-size: 26px;
@@ -33,14 +41,23 @@ export const ProjectIndexBlockOneDiv = styled.div`
   }
 
   & div:nth-child(2) {
-    font-family: "Inter";
+    font-family: "SuisseIntl-Regular";
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 100%;
     text-align: right;
-
     color: #000000;
+  }
+
+  @media only screen and (max-width: 850px) {
+    & div:first-child {
+      font-size: calc(11px + 1vw);
+    }
+    
+    & div:nth-child(2) {
+      font-size: calc(8px + 1vw);
+    }
   }
 `;
 
@@ -49,7 +66,7 @@ export const ProjectIndexBlockTwoDiv = styled.div`
   justify-content: space-between;
 
   & div:first-child {
-    font-family: "Inter";
+    font-family: "SuisseIntl-Regular";
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -58,13 +75,20 @@ export const ProjectIndexBlockTwoDiv = styled.div`
   }
 
   & div:nth-child(2) {
-    font-family: "Inter";
+    font-family: "SuisseIntl-Regular";
     font-style: normal;
     font-weight: bold;
     font-size: 18px;
     line-height: 100%;
     text-align: right;
     color: #000000;
+  }
+
+  @media only screen and (max-width: 850px) {
+    & div:first-child,
+    & div:nth-child(2) {
+      font-size: calc(9px + 1vw);
+    }
   }
 `;
 

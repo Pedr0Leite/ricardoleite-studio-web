@@ -1,5 +1,4 @@
 import React from "react";
-import indexProjectData from "../indexProjectData.json";
 import styles from "@/styles/ProjectIndex.module.css";
 import { motion } from "framer-motion";
 import Link from "next/link";
