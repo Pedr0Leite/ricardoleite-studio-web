@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import MainTitle from "@/components/MainTitle/MainTitle";
 import WorksBlock from "@/components/WorksBlock/WorksBlock";
-import indexProjectData from "../../indexProjectData.json";
 import workBlockData from "../../workBlockData.json";
 import { GraphQLClient } from "graphql-request";
 import SlidingText from "@/components/SlidingText";
