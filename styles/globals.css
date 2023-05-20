@@ -470,3 +470,13 @@ body {
     max-width: none;
   }
 }
+
+.divfiguretest{
+  width: 100vw;
+
+}
+
+.figureTEST {
+  width: 100vw;
+  height: 100px;
+}

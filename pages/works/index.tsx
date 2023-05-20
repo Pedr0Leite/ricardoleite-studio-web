@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import MainTitle from "@/components/MainTitle/MainTitle";
 import WorksBlock from "@/components/WorksBlock/WorksBlock";
-import workBlockData from "../../workBlockData.json";
 import { GraphQLClient } from "graphql-request";
 import SlidingText from "@/components/SlidingText";
 
@@ -65,6 +64,7 @@ interface ProjectsInterface {
 export default function Works({ projects }: ProjectsInterface) {
    const projectsBlocks = projects.workBlockEntries;
 
+  //SECTIONS
   const sectionOne = projectsBlocks.filter(
     (section: any) => section.sectionNumber == 1
     );
@@ -75,6 +75,7 @@ export default function Works({ projects }: ProjectsInterface) {
     (section: any) => section.sectionNumber == 3
     );
 
+    //SECTION ONE
   const sectionOneRowOne = sectionOne.filter(
     (block: any) => block.blockNumber == "block1"
   );
@@ -85,8 +86,7 @@ export default function Works({ projects }: ProjectsInterface) {
     (block: any) => block.blockNumber == "block3"
   );
 
-  // if(sectionTwo != undefined || Array(sectionTwo).length != 0){
-  // console.log(sectionTwoRowOne[0].img.data.url)
+  //SECTION TWO
   const sectionTwoRowOne = sectionTwo.filter(
     (block: any) => block.blockNumber == "block1"
   );
@@ -96,19 +96,12 @@ export default function Works({ projects }: ProjectsInterface) {
   const sectionTwoRowThree = sectionTwo.filter(
     (block: any) => block.blockNumber == "block3"
   );
-  // }
 
-  // if(sectionThree != undefined || Array(sectionThree).length != 0){
+  //SECTION THREE
   const sectionThreeRowOne = sectionThree.filter(
     (block: any) => block.blockNumber == "block1"
   );
-  const sectionThreeRowTwo = sectionThree.filter(
-    (block: any) => block.blockNumber == "block2"
-    );
-  const sectionThreeRowThree = sectionThree.filter(
-    (block: any) => block.blockNumber == "block3"
-  );
-  // }
+
 
   return (
     <>
@@ -243,30 +236,6 @@ export default function Works({ projects }: ProjectsInterface) {
                 tags: sectionThreeRowOne[2].project.tags
               },
             }}
-            // imgBlock2={{
-            //   0: {
-            //     imgSrc4: sectionThreeRowTwo[0].img.url,
-            //     clientId: sectionThreeRowTwo[0].project.project_id,
-            //     clientName: sectionThreeRowTwo[0].project?.title,
-            //   },
-            //   1: {
-            //     imgSrc5: sectionThreeRowTwo[1].img.url,
-            //     clientId: sectionThreeRowTwo[1].project.project_id,
-            //     clientName: sectionThreeRowTwo[1].project?.title,
-            //   },
-            //   2: {
-            //     imgSrc6: sectionThreeRowTwo[2].img.url,
-            //     clientId: sectionThreeRowTwo[2].project.project_id,
-            //     clientName: sectionThreeRowTwo[2].project?.title,
-            //   },
-            // }}
-            // imgBlock3={{
-            //   0: {
-            //     imgSrc7: sectionThreeRowThree[0].img.url,
-            //     clientId: sectionThreeRowThree[0].project.project_id,
-            //     clientName: sectionThreeRowThree[0].project?.title,
-            //   },
-            // }}
           />
         )}
         <SlidingText />
@@ -274,38 +243,3 @@ export default function Works({ projects }: ProjectsInterface) {
     </>
   );
 }
-
-{
-  /* {projects !== undefined &&
-  //         projects.map((_value: any) => {
-  //           return (
-  //             <>
-  //               <div>
-  //                 <WorksBlock 
-  //                   key={_value.id}
-  //                   id={_value.id}
-  //                   clientName={_value.title}
-  //                   tags={_value.tags}
-  //                   block1={true}
-  //                   block2={true}
-  //                   block3={true}
-  //                   imgBlock1={{imgSrc1: "", imgSrc2: "", imgSrc3: ""}}
-  //                   imgBlock2={{imgSrc4: "", imgSrc5: "", imgSrc6: ""}}
-  //                   imgBlock3={{imgSrc7: ""}}
-  //                 />
-  //               </div>
-  //             </>
-  //           );
-  //         })} */
-}
-//       {/*   return (
-//              <motion.div
-//                variants={workBlockVariant}
-//                initial="hidden"
-//                whileHover="visible"
-//                animate="hidden"
-//                key={_value.id}
-//              >
-//                <WorksBlock key={_value.id} clientName={_value.title} tags={_value.tags}/>
-//              </motion.div>
-//            ); */}

@@ -135,14 +135,6 @@ export default function WorksBlock({
 
   
   return (
-    // <motion.div
-    //   variants={workBlockVariant}
-    //   initial="hidden"
-    //   whileHover="visible"
-    //   animate="hidden"
-    //   key={key}
-    //   className="worksGrid"
-    // >
     <div className="worksGrid">
       {imgBlock1 && <div className="worksRowBlock1">
         <div className="worksBlock1">
@@ -152,7 +144,6 @@ export default function WorksBlock({
             </p>
             <p>
               <span>{imgBlock1?.[0].clientName}</span>
-              {/* <span>{imgBlock1?.[0].tags}</span> */}
               <span>{tags1}</span>
             </p>
           </Link>
@@ -164,7 +155,6 @@ export default function WorksBlock({
             </p>
             <p>
               <span>{imgBlock1?.[1].clientName}</span>
-              {/* <span>{imgBlock1?.[1].tags}</span> */}
               <span>{tags2}</span>
             </p>
           </Link>
@@ -174,7 +164,6 @@ export default function WorksBlock({
             </p>
             <p>
               <span>{imgBlock1?.[2].clientName}</span>
-              {/* <span>{imgBlock1?.[2].tags}</span> */}
               <span>{tags3}</span>
             </p>
           </Link>
@@ -187,7 +176,6 @@ export default function WorksBlock({
           </p>
           <p>
             <span>{imgBlock2?.[0].clientName}</span>
-            {/* <span>{imgBlock2?.[0].tags}</span> */}
             <span>{tags4}</span>
           </p>
         </Link>
@@ -197,7 +185,6 @@ export default function WorksBlock({
           </p>
           <p>
             <span>{imgBlock2?.[1].clientName}</span>
-            {/* <span>{imgBlock2?.[1].tags}</span> */}
             <span>{tags5}</span>
           </p>
         </Link>
@@ -207,7 +194,6 @@ export default function WorksBlock({
           </p>
           <p>
             <span>{imgBlock2?.[2].clientName}</span>
-            {/* <span>{imgBlock2?.[2].tags}</span> */}
             <span>{tags6}</span>
           </p>
         </Link>
@@ -219,12 +205,10 @@ export default function WorksBlock({
           </p>
           <p>
             <span>{imgBlock3?.[0].clientName}</span>
-            {/* <span>{imgBlock3?.[0].tags}</span> */}
             <span>{tags7}</span>
           </p>
         </Link>
       </div>}
-      {/* </motion.div> */}
       {/* <SlidingText/> */}
     </div>
   );
