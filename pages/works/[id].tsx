@@ -3,7 +3,7 @@ import React, { ReactNode, useEffect, useState } from "react";
 import specificProjectData from "../../specificProjectData.json";
 import { GraphQLClient, request, gql } from "graphql-request";
 import Link from "next/link";
-import Image from 'next/image'
+import Image from "next/image";
 
 interface SpecificProjectInterface {
   title: ReactNode;
@@ -137,16 +137,15 @@ export default function WorksDetails({ project }: ProjectsInterface) {
 
   let tags;
 
-  if(currentProject && currentProject.tags){
+  if (currentProject && currentProject.tags) {
     tags = currentProject.tags.map((tag: string, index: number) => {
-        if (currentProject.tags.length - 1 == index) {
-          return tag.replace("_", " ");
-        } else {
-          return tag.replace("_", " ") + ", ";
-        }
-      })
-    }
-
+      if (currentProject.tags.length - 1 == index) {
+        return tag.replace("_", " ");
+      } else {
+        return tag.replace("_", " ") + ", ";
+      }
+    });
+  }
 
   useEffect(() => {
     project.forEach((project: projectInterface) => {
@@ -158,9 +157,8 @@ export default function WorksDetails({ project }: ProjectsInterface) {
         setNextProject(project);
       }
     });
-    
-    setIsLoading(false);
 
+    setIsLoading(false);
   }, [project, projectId]);
 
   if (router.isFallback) {
@@ -175,6 +173,32 @@ export default function WorksDetails({ project }: ProjectsInterface) {
         <>
           <div className="worksDetailsLeft">
             <div className="worksDetailsTitle">
+              <div>{currentProject.title}</div>
+            </div>
+            <div className="worksDetailsInfoMain">
+              <div className="worksDetailsInfo">
+                <span>Client</span>
+                <span>{currentProject.title}</span>
+              </div>
+              <div className="worksDetailsInfo">
+                <span>Year</span>
+                <span>{currentProject.year}</span>
+              </div>
+              <div className="worksDetailsInfo">
+                <span>Location</span>
+                <span>{currentProject.location}</span>
+              </div>
+              <div className="worksDetailsInfo">
+                <span>Services</span>
+                <span>{tags}</span>
+              </div>
+              <div className="worksDetailsInfo">
+                <span>Credits</span>
+                <span>{currentProject.info}</span>
+              </div>
+            </div>
+          </div>
+          {/* <div className="worksDetailsTitle">
               <div>{currentProject.title}</div>
             </div>
             <div className="worksDetailsInfo">
@@ -193,10 +217,17 @@ export default function WorksDetails({ project }: ProjectsInterface) {
               <span>Services</span>
               <span>{tags}</span>
             </div>
-            <div className="worksDetailsText">{currentProject.info}</div>
-          </div>
+            <div className="worksDetailsInfo">
+              <span>Credits</span>
+              <span>{currentProject.info}</span>
+            </div> */}
+          {/* <div className="worksDetailsText">{currentProject.info}</div> */}
         </>
       )}
+      {/* <div className="workDetailsNextPrevProject-600">
+        {prevProjectId != undefined && <span>{prevProjectId.title}</span>}
+        {nextProjectId != undefined && <span>{nextProjectId.title}</span>}
+      </div> */}
       <div className="worksDetailsRight">
         {currentProject?.images.map(
           (projImg: { url: string }, index: number) => {
@@ -223,6 +254,24 @@ export default function WorksDetails({ project }: ProjectsInterface) {
           )}
         </div>
         <div className="workDetailsNextPrevProject">
+          {prevProjectId != undefined && <span>{prevProjectId.title}</span>}
+          {nextProjectId != undefined && <span>{nextProjectId.title}</span>}
+        </div>
+      </div>
+      <div className="workDetails-600">
+        <div className="workDetailsRightButtons-600">
+          {prevProjectId != undefined && prevProjectId?.project_id >= 0 && (
+            <Link href={`/works/${prevProjectId?.project_id}`}>
+              &#10094; Prev
+            </Link>
+          )}
+          {nextProjectId != undefined && nextProjectId?.project_id >= 0 && (
+            <Link href={`/works/${nextProjectId?.project_id}`}>
+              Next &#10095;
+            </Link>
+          )}
+        </div>
+        <div className="workDetailsNextPrevProject-600">
           {prevProjectId != undefined && <span>{prevProjectId.title}</span>}
           {nextProjectId != undefined && <span>{nextProjectId.title}</span>}
         </div>
