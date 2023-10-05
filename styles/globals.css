@@ -5,7 +5,7 @@
 
 :root {
   --globalBlue: #0029ff;
-  --globalRed: #FC2121;
+  --globalRed: #fc2121;
 }
 
 * {
@@ -28,12 +28,12 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--globalRed);;
+  background: var(--globalRed);
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--globalRed);;
+  background: var(--globalRed);
 }
 
 .fade-in-section:not(:first-child) {
@@ -127,7 +127,8 @@ body {
   justify-content: flex-end;
 }
 
-.worksBlock1 {}
+.worksBlock1 {
+}
 
 .worksBlock2 a:nth-child(2) {
   align-self: flex-end;
@@ -238,9 +239,18 @@ body {
 .worksDetailsLeft {
   display: grid;
   grid-template-rows: 182px repeat(4, 45px) auto;
+  display: flex;
+  flex-direction: column;
   padding-right: 20px;
   position: fixed;
   width: 50%;
+  height: -webkit-fill-available;
+  justify-content: space-between;
+
+}
+
+.worksDetailsInfoMain {
+  padding-bottom: 10vh;
 }
 
 .worksDetailsTitle {
@@ -323,6 +333,36 @@ body {
   cursor: pointer;
 }
 
+.workDetailsRightButtons-600 {
+  display: none;
+  justify-content: space-between;
+  padding-bottom: 27px;
+  height: 275px;
+  align-items: flex-end;
+  margin-bottom: -27px;
+}
+
+.workDetailsRightButtons-600 a {
+  height: 35px;
+  width: 100px;
+  /* margin-bottom: 10px; */
+  font-family: "SuisseIntl-Regular";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 100%;
+  color: var(--globalRed);
+  background-color: transparent;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.workDetailsRightButtons-600 a:last-child{
+  justify-content: flex-end;
+  display: flex;
+}
+
 .workDetailsNextPrevProject {
   display: flex;
   justify-content: space-between;
@@ -342,6 +382,27 @@ body {
 
   color: #000000;
 }
+
+.workDetailsNextPrevProject-600 {
+  /* display: flex; */
+  display: none;
+  justify-content: space-between;
+  margin-top: 5px;
+  margin-right: 25px;
+  width: -webkit-fill-available;
+}
+
+.workDetailsNextPrevProject-600 span {
+  font-family: "SuisseIntl-Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 100%;
+  text-align: right;
+
+  color: #000000;
+}
+
 
 /* clock */
 
@@ -413,70 +474,114 @@ body {
     align-self: flex-start;
   }
 
-  .figure-1, 
-  .figure-2, 
-  .figure-3, 
-  .figure-4, 
-  .figure-5, 
-  .figure-6, 
+  .figure-1,
+  .figure-2,
+  .figure-3,
+  .figure-4,
+  .figure-5,
+  .figure-6,
   .figure-7 {
-    width: 100vw; 
+    width: 100vw;
   }
 
-  .clock{
+  .clock {
     left: 0;
   }
 }
 
 @media only screen and (max-width: 840px) {
-  .marquee{
+  .marquee {
     width: 105vw;
     max-width: 105vw;
   }
 
-  .worksDetailsTitle{
+  .worksDetailsTitle {
     font-size: 55px;
   }
 
-  .worksDetailsText{
+  .worksDetailsText {
     height: 328px;
   }
 }
 
 @media only screen and (max-width: 600px) {
-  .worksDetailsLeft{
-    width: 100%;
+  .worksGrid {
+    grid-row-gap: 0;
+    padding-bottom: 0;
   }
 
-  .worksDetailsLeft{
+  .worksMainDiv {
+    padding-top: 20px;
+  }
+
+  .worksBlock1,
+  .worksBlock2 .figure,
+  .worksRowBlock2 .figure,
+  .worksRowBlock3 .figure {
+    padding-bottom: 25px;
+  }
+
+  .worksDetailsLeft {
+    width: 100%;
+    position: inherit;
+  }
+
+  .worksDetailsInfoMain{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .worksDetailsRight {
     position: initial;
   }
 
   .worksDetailsMainDiv {
     display: flex;
-    flex-direction: column;
-    row-gap: 50px;
+    flex-direction: column-reverse;
     margin: 0 15px 0 15px;
     border-top: 1px solid black;
     padding: 10px;
   }
-  
-  .worksDetailsText{
+
+  .worksDetailsText {
     height: 310px;
   }
 
-  .marquee{
+  .workDetailsRightButtons {
+    display: none;
+  }
+
+  .workDetailsNextPrevProject {
+    display: none;
+  }
+
+  .workDetailsNextPrevProject-600 {
+    display: flex;
+  }
+  
+  .workDetailsRightButtons-600 {
+    display: flex;
+    height: 100%;
+    width: -webkit-fill-available;
+    border-bottom: 1px solid black;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    width: -webkit-fill-available;
+    margin-right: 25px;
+  }
+
+  .workDetails-600{
+    position: absolute;
+    width: -webkit-fill-available;
+  }
+
+  .worksDetailsInfo:last-child {
+    padding-bottom: 15vh;
+  }
+
+  .marquee {
+    bottom: 0;
     width: 100vw;
     max-width: none;
   }
-}
-
-.divfiguretest{
-  width: 100vw;
-
-}
-
-.figureTEST {
-  width: 100vw;
-  height: 100px;
 }
