@@ -80,13 +80,13 @@ export default function Studio() {
       {/* </div> */}
       <MainTitle />
       {Loading && <div className="classic-2">Loading</div>}
-        <Spline
+        {/* <Spline
           className={styles.threedbg}
           // onLoad={onLoad}
           // onLoad={() => setTimeout(()=>{},500)}
           onLoad={() => setLoading(false)}
           scene="https://prod.spline.design/BkrGLpQQ4CiqLZ-m/scene.splinecode"
-        />
+        /> */}
     </>
   );
 }

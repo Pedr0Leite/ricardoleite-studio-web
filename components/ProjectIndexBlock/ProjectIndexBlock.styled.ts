@@ -56,7 +56,8 @@ export const ProjectIndexBlockOneDiv = styled.div`
     }
     
     & div:nth-child(2) {
-      font-size: calc(8px + 1vw);
+      // font-size: calc(8px + 1vw);
+      display: none;
     }
   }
 `;

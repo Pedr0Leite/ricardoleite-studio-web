@@ -59,17 +59,17 @@ export default function About() {
             </div>
           </div>
           <div className={styles.firstBlockRight}>
-            <div>
+            {/* <div>
               <p>Amsterdam,</p>
               <p>2023.</p>
-            </div>
+            </div> */}
             <div className={styles.mainAbstrcImg}>
-              <Image
+              {/* <Image
                 src={mainAbstrc.src}
                 height="100"
                 width="100"
                 alt="abstract"
-              ></Image>
+              ></Image> */}
             </div>
           </div>
         </div>

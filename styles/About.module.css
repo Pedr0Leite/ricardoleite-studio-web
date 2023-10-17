@@ -22,7 +22,7 @@
 .firstBlockLeft {
   height: 90vh;
   display: grid;
-  grid-template-rows: 10% 70% 20%;
+  grid-template-rows: 10% 65% 25%;
 }
 
 .firstBlockLeft div:first-child {
@@ -68,6 +68,13 @@
   color: #000000;
 }
 
+.firstBlockLeft div:nth-child(4) {
+
+  position: relative;
+  top: 5vh;
+  
+}
+
 .firstBlockRight {
   height: 90vh;
   display: flex;
@@ -82,14 +89,15 @@
   font-size: 18px;
   line-height: 100%;
   color: #000000;
-  padding-bottom: 20px;
+  /* padding-bottom: 20px; */
 }
 
 /* .firstBlockRight div:nth-child(2) { */
 .mainAbstrcImg {
-  background-image: url("../public/About/main1.png");
+  background-image: url("../public/About/main2.png");
   background-repeat: no-repeat;
-  background-size: contain;
+  /* background-size: contain; */
+  background-size: cover;
   height: 100%;
   width: 100%;
   aspect-ratio: 4 / 5;
@@ -97,9 +105,10 @@
 
 .mainAbstrcImgForMobile {
   display: none !important;
-  background-image: url("../public/About/main1.png");
+  background-image: url("../public/About/main2.png");
   background-repeat: no-repeat;
-  background-size: contain;
+  /* background-size: contain; */
+  background-size: cover;
   height: 100%;
   width: 100%;
   aspect-ratio: 4 / 5;
@@ -299,6 +308,10 @@
 }
 
 @media only screen and (max-width: 600px) {
+  .mainDiv{
+    width: 101vw;
+  }
+
   .firstBlock {
     grid-template-columns: none;
     grid-template-columns: none;
@@ -340,7 +353,8 @@
 
   .mainAbstrcImgForMobile {
     display: inline !important;
-    height: 85%;
+    background-position: center;
+    background-size: contain;
   }
 
   .firstBlockRight {
@@ -348,7 +362,8 @@
   }
 
   .firstBlockLeft {
-    grid-template-rows: 10% 55% 20%;
+    /* grid-template-rows: 10% 55% 20%; */
+    grid-template-rows: 8% 60% 17%;
   }
 
   .thirdBlock {

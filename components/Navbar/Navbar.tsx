@@ -21,7 +21,7 @@ export default function Navbar() {
     >
       <NavbarMobile />
       <div className={styles.navLeftBlock}>
-        <Link href="/about">
+        <Link href="/">
         {/* <Link href="/studio"> */}
           {/* <span className={styles.rl_logo}></span> */}
           <span>Info</span>

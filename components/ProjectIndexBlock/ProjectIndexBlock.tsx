@@ -57,17 +57,24 @@ export default function ProjectIndexBlock({
       },
     },
   };
-
+  
   function handleResize() {
     if (typeof window !== "undefined") {
       setVpInnerWidth(window.innerWidth);
     }
   }
+  
 
-  useEffect(()=> {
-    window.addEventListener('resize', handleResize)
- })
+  useEffect(() => {
+    handleResize(); // Initialize the value on component mount
+    window.addEventListener("resize", handleResize);
 
+    // Cleanup the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []); 
+  
   return (
     <>
       <motion.div
