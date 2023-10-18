@@ -12,6 +12,7 @@ const containerVariants = {
 
 export default function NavbarMobile() {
   const [isOpen, setOpen] = useState(false);
+
   return (
     <>
       <div className={styles.navMobileLeftBlock}>
@@ -20,7 +21,7 @@ export default function NavbarMobile() {
         </Link>
       </div>
       <div className={styles.navMobileRightBlock}>
-        <Hamburger color="#FC2121" onToggle={() => setOpen(!isOpen)} />
+        <Hamburger color="#000000" onToggle={() => setOpen(!isOpen)} />
         {isOpen && (
           <AnimatePresence>
             <motion.div
@@ -32,13 +33,16 @@ export default function NavbarMobile() {
               exit="exit"
             >
               <ul>
-                <Link href="/projectIndex">
+                <Link 
+                className={styles.navMobileLinks} 
+                href="/projectIndex"
+                >
                   <span>Index</span>
                 </Link>
-                <Link href="/works">
+                <Link className={styles.navMobileLinks} href="/works">
                   <span>Works</span>
                 </Link>
-                <Link href="/about">
+                <Link className={styles.navMobileLinks} href="/about">
                   <span>About</span>
                 </Link>
               </ul>
