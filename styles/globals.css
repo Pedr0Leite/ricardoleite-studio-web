@@ -6,6 +6,7 @@
 :root {
   --globalBlue: #0029ff;
   --globalRed: #fc2121;
+  --globalBlack: #000000;
 }
 
 * {
@@ -47,6 +48,10 @@ body {
   opacity: 1;
   transform: none;
   visibility: visible;
+}
+
+.hamburger-react{
+  z-index: 3;
 }
 
 .mainProjectsDiv {
@@ -125,9 +130,6 @@ body {
 .worksRowBlock3 {
   display: flex;
   justify-content: flex-end;
-}
-
-.worksBlock1 {
 }
 
 .worksBlock2 a:nth-child(2) {

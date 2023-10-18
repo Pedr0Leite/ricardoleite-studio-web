@@ -96,6 +96,7 @@ export const TopDivMobile = styled.div<colorInterface>`
     justify-content: space-between;
     margin: 0 15px;
     padding-top: 10px;
+    z-index: 0;
 
     & span {
         // color:  ${props => props.color};

@@ -20,6 +20,7 @@ export const ProjectIndexBlockDiv = styled.div`
 
   @media only screen and (max-width: 800px) {
     column-gap: 25px;
+    margin: 0;
 
     &:hover{
       background-color: none;
