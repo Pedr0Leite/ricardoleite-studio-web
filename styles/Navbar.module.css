@@ -103,6 +103,13 @@
 }
 
 @media (width < 600px) {
+  .navbar {
+    grid-template-columns: 0.5fr 2fr 0.5fr;
+    column-gap: 10px;
+    align-items: center;
+    justify-items: center;
+  }
+
   .navbar span:hover {
     color: black;
   }

@@ -263,11 +263,38 @@ body {
   line-height: 100%;
   color: #000000;
   padding-bottom: 74px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.worksDetailsTitle div:nth-child(2){
+  font-size: 18px;
+  position: relative;
+  top: -25px;
+}
+
+.worksDetailsTitleMobile {
+  display: none;
+  font-family: "SuisseIntl-Regular";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 80px;
+  line-height: 100%;
+  color: #000000;
+  padding-bottom: 74px;
+  justify-content: space-between;
+}
+
+.worksDetailsTitleMobile div:nth-child(2){
+  font-size: 18px;
+  position: relative;
+  top: -25px;
 }
 
 .worksDetailsInfo {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  /* grid-template-columns: repeat(2, 1fr); */
+  grid-template-columns: 0.8fr 2.2fr;
   height: 45px;
   border-top: 1px solid black;
   padding-top: 10px;
@@ -276,8 +303,8 @@ body {
 .worksDetailsInfo span:first-child {
   font-family: "SuisseIntl-Regular";
   font-style: normal;
-  font-weight: bold;
-  font-size: calc(8px + 1vw);
+  font-weight: 500;
+  font-size: calc(8px + 0.8vw);
   line-height: 100%;
   color: #000000;
 }
@@ -285,10 +312,14 @@ body {
 .worksDetailsInfo span:nth-child(2) {
   font-family: "SuisseIntl-Regular";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   font-size: calc(7px + 1vw);
   line-height: 100%;
   color: #000000;
+}
+
+.worksDetailsInfo:nth-child(5) span:nth-child(2) {
+  font-weight: 400;
 }
 
 .worksDetailsText {
@@ -311,24 +342,34 @@ body {
 }
 
 .workDetailsRightButtons {
-  display: flex;
+  /* display: flex;
   justify-content: space-between;
   padding-bottom: 27px;
   height: 275px;
   align-items: flex-end;
+  margin-bottom: -27px; */
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  /* height: 275px; */
+  align-items: flex-end;
   margin-bottom: -27px;
+  border-top: 1px solid black;
+  padding-top: 10px;
+  margin-top: 250px;
 }
 
 .workDetailsRightButtons a {
   height: 35px;
-  width: 100px;
+  /* width: 100px; */
   margin-bottom: 10px;
   font-family: "SuisseIntl-Regular";
   font-style: normal;
   font-weight: 500;
   font-size: 26px;
   line-height: 100%;
-  color: var(--globalRed);
+  /* color: var(--globalRed); */
+  color: var(--globalBlack);
   background-color: transparent;
   border: none;
   text-decoration: none;
@@ -353,7 +394,8 @@ body {
   font-weight: 500;
   font-size: 26px;
   line-height: 100%;
-  color: var(--globalRed);
+  /* color: var(--globalRed); */
+  color: var(--globalBlack);
   background-color: transparent;
   border: none;
   text-decoration: none;
@@ -372,6 +414,7 @@ body {
   margin-top: 5px;
   margin-right: 25px;
   width: -webkit-fill-available;
+  border-bottom: 1px solid black;
 }
 
 .workDetailsNextPrevProject span {
@@ -423,7 +466,7 @@ body {
 /* Sliding text */
 
 .marquee {
-  bottom: -100px;
+  /* bottom: -100px; */
   position: relative;
   max-width: 100%;
   overflow-x: hidden;
@@ -485,10 +528,6 @@ body {
   .figure-7 {
     width: 100vw;
   }
-
-  .clock {
-    left: 0;
-  }
 }
 
 @media only screen and (max-width: 840px) {
@@ -498,12 +537,13 @@ body {
   }
 
   .worksDetailsTitle {
-    font-size: 55px;
+    font-size: 75px;
   }
 
   .worksDetailsText {
     height: 328px;
   }
+  
 }
 
 @media only screen and (max-width: 600px) {
@@ -514,6 +554,26 @@ body {
 
   .worksMainDiv {
     padding-top: 20px;
+  }
+
+  .worksDetailsTitle {
+    display: none;
+  }
+
+  .worksDetailsTitleMobile {
+    display: inherit;
+  }
+
+  .worksDetailsTitleMobile {
+    font-size: 70px;
+  }
+
+  .worksDetailsTitleMobile div:nth-child(2){
+    font-size: 14px;
+  }
+
+  .worksDetailsInfo:nth-child(1) {
+    border-top: none;
   }
 
   .worksBlock1,
@@ -531,6 +591,7 @@ body {
   .worksDetailsInfoMain{
     display: flex;
     flex-direction: column;
+    padding-bottom: 7vh;
   }
 
   .worksDetailsRight {
@@ -555,6 +616,7 @@ body {
 
   .workDetailsNextPrevProject {
     display: none;
+    
   }
 
   .workDetailsNextPrevProject-600 {
@@ -578,7 +640,9 @@ body {
   }
 
   .worksDetailsInfo:last-child {
-    padding-bottom: 15vh;
+    padding-bottom: 13vh;
+    /* padding-bottom: 20vh; */
+    border-bottom: 1px solid black;
   }
 
   /* Loading */
@@ -591,5 +655,11 @@ body {
     bottom: 0;
     width: 100vw;
     max-width: none;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .worksDetailsTitleMobile {
+    font-size: 60px;
   }
 }

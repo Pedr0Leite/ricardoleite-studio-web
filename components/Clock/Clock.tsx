@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import * as Styled from "./Clock.styled";
+import useWindowSize from "@/hooks/useWindowSize";
 
 export default function Clock() {
   const [dateTime, setDateTime] = useState(
@@ -9,6 +10,8 @@ export default function Clock() {
   );
   const [openForProjects, setOpenForProjects] =
     useState<string>("Open for projects!");
+
+  const size = useWindowSize();
 
   const refreshClock = () => {
     setDateTime(
@@ -39,10 +42,21 @@ export default function Clock() {
 
   return (
     <>
+    <Styled.ClockMainDiv>
+        <span>Amsterdam, {dateTime}</span>
+        <span>{openForProjects}</span>
+      </Styled.ClockMainDiv>
+      {/* {size != undefined && size.width != undefined && size.width >= 600 ? 
       <Styled.ClockMainDiv>
         <span>Amsterdam, {dateTime}</span>
         <span>{openForProjects}</span>
       </Styled.ClockMainDiv>
+      :
+      <Styled.ClockMainDivMobile>
+        <span>Amsterdam, {dateTime}</span>
+        <span>{openForProjects}</span>
+      </Styled.ClockMainDivMobile>
+      } */}
     </>
   );
 }

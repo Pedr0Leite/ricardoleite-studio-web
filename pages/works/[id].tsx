@@ -146,7 +146,8 @@ export default function WorksDetails({ project }: ProjectsInterface) {
       }
     });
   }
-
+  console.log('currentProject :', currentProject);
+  
   useEffect(() => {
     project.forEach((project: projectInterface) => {
       if (project.project_id === projectId) {
@@ -174,6 +175,7 @@ export default function WorksDetails({ project }: ProjectsInterface) {
           <div className="worksDetailsLeft">
             <div className="worksDetailsTitle">
               <div>{currentProject.title}</div>
+              <div>{currentProject.year}</div>
             </div>
             <div className="worksDetailsInfoMain">
               <div className="worksDetailsInfo">
@@ -258,6 +260,12 @@ export default function WorksDetails({ project }: ProjectsInterface) {
           {nextProjectId != undefined && <span>{nextProjectId.title}</span>}
         </div>
       </div>
+      {currentProject != undefined && (
+      <div className="worksDetailsTitleMobile">
+              <div>{currentProject.title}</div>
+              <div>{currentProject.year}</div>
+            </div>
+            )}
       <div className="workDetails-600">
         <div className="workDetailsRightButtons-600">
           {prevProjectId != undefined && prevProjectId?.project_id >= 0 && (

@@ -92,6 +92,13 @@ export const ProjectIndexBlockTwoDiv = styled.div`
       font-size: calc(9px + 1vw);
     }
   }
+
+  @media only screen and (max-width: 600px) {
+    & div:first-child,
+    & div:nth-child(2) {
+      font-size: calc(7px + 1vw);
+    }
+  }
 `;
 
 export const CardImgDiv = styled.div<imgInterface>`
