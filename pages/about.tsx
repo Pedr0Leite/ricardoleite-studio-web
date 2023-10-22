@@ -4,7 +4,8 @@ import useScrollDirection from "../hooks/useScrollDirection";
 import aboutData from "../aboutData.json";
 import Block from "@/components/About/Block/Block";
 import mainImg from "../public/About/main1.png";
-import mainAbstrc from "../public/About/abstract_img_1.png";
+// import mainAbstrc from "../public/About/abstract_img_1.png";
+import mainAbstrc from "../public/About/RL_Logotype_3D.png";
 import Image from "next/image";
 import SlidingText from "@/components/SlidingText";
 
@@ -43,7 +44,7 @@ export default function About() {
         <div className={styles.firstBlock}>
           <div className={styles.firstBlockLeft}>
             <div>I am Ricardo Leite</div>
-            <div className={styles.mainAbstrcImgForMobile}></div>
+            <div className={styles.mainAbstrcImgMobile}></div>
             <div>
               <p>
                 Amsterdam-based creative designer and art director, with a
@@ -64,15 +65,19 @@ export default function About() {
               <p>2023.</p>
             </div> */}
             <div className={styles.mainAbstrcImg}>
-              {/* <Image
-                src={mainAbstrc.src}
-                height="100"
-                width="100"
-                alt="abstract"
-              ></Image> */}
+              <div className={styles.mainAbstrcOverlapDiv}>
+                <Image
+                  src={mainAbstrc.src}
+                  height="100"
+                  width="100"
+                  alt="abstract"
+                  className={styles.mainAbstrcOverlapImg}
+                />
+              </div>
             </div>
           </div>
         </div>
+          <SlidingText/>
         <div className={styles.secondBlock}>
           <div className={styles.secondBlockLeftTitle}></div>
           <div className={styles.secondBlockLeft}>

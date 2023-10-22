@@ -15,12 +15,12 @@
   grid-template-columns: repeat(2, 1fr);
   column-gap: 79px;
   border-top: 1px solid black;
-  border-bottom: 1px solid black;
+  /* border-bottom: 1px solid black; */
   margin: 0 15px 0 15px;
 }
 
 .firstBlockLeft {
-  height: 90vh;
+  height: 87vh;
   display: grid;
   grid-template-rows: 10% 65% 25%;
 }
@@ -76,7 +76,7 @@
 }
 
 .firstBlockRight {
-  height: 90vh;
+  height: 87vh;
   display: flex;
   align-items: flex-end;
   column-gap: 40px;
@@ -92,22 +92,28 @@
   /* padding-bottom: 20px; */
 }
 
-/* .firstBlockRight div:nth-child(2) { */
 .mainAbstrcImg {
   background-image: url("../public/About/main2.png");
   background-repeat: no-repeat;
-  /* background-size: contain; */
   background-size: cover;
   height: 100%;
   width: 100%;
   aspect-ratio: 4 / 5;
 }
 
-.mainAbstrcImgForMobile {
+.mainAbstrcOverlapImg{
+  background-repeat: no-repeat;
+    background-size: cover;
+    height: 90%;
+    width: 50vw;
+    aspect-ratio: 4 / 5;
+    position: fixed;
+  }
+
+.mainAbstrcImgMobile {
   display: none !important;
   background-image: url("../public/About/main2.png");
   background-repeat: no-repeat;
-  /* background-size: contain; */
   background-size: cover;
   height: 100%;
   width: 100%;
@@ -118,13 +124,13 @@
   display: inline !important;
 }
 
-.firstBlockRight div:nth-child(2) img {
+/* .firstBlockRight div:nth-child(2) img {
   height: 100% !important;
   width: 33% !important;
   position: fixed;
   top: 30px;
   right: 30px;
-}
+} */
 
 .secondBlock {
   height: 423px;
@@ -135,6 +141,8 @@
   column-gap: 79px;
   row-gap: 40px;
   margin: 0 15px 0 15px;
+  z-index: 5;
+  position: sticky;
 }
 
 .secondBlockLeft,
@@ -169,6 +177,8 @@
   column-gap: 79px;
   row-gap: 40px;
   margin: 0 15px 0 15px;
+  z-index: 5;
+  position: sticky;
 }
 
 .thirdBlock ~ .thirdBlock ~ .thirdBlock {
@@ -307,15 +317,143 @@
   padding-right: 10px;
 }
 
-@media only screen and (max-width: 600px) {
+.marquee{
+  bottom: 0 !important;
+}
+
+@media only screen and (max-width: 1500px) {
+  .mainAbstrcOverlapImg {
+    width: 58vw;
+  }
+}
+
+@media only screen and (max-width: 1350px) {
+  .mainAbstrcOverlapImg {
+    width: 66vw;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .mainAbstrcImg {
+    height: 75vh;
+    width: 62vw;
+    background-size: contain;
+  }
+
+  .mainAbstrcOverlapImg {
+    width: 65vw;
+    height: 70%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .mainAbstrcImg {
+    height: 75vh;
+    width: 62vw;
+    background-size: contain;
+  }
+  
+  .mainAbstrcOverlapImg {
+    width: 66vw;
+    height: 63%;
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 850px) {
+  .mainAbstrcOverlapImg {
+    width: 100vw;
+    height: 60%;
+  }
+}
+
+
+
+@media only screen and (max-width: 768px) {
   .mainDiv{
-    width: 101vw;
+    background: linear-gradient( 0deg, rgba(255, 255, 255, 1) 52%, rgba(252, 33, 33, 1) 69%, rgba(253, 107, 107, 1) 90%, rgb(241, 135, 135) 90%, rgba(255, 255, 255, 1) 97%, rgba(255, 255, 255, 1) 100% );
+  }
+
+  .mainAbstrcImg {
+    height: 60vh;
+    width: 96vw;
+    background-size: contain;
+  }
+
+  .mainAbstrcOverlapImg {
+    width: 80vw;
+    height: 60%;
   }
 
   .firstBlock {
     grid-template-columns: none;
+  }
+
+  .firstBlockLeft {
+    grid-row: 2;
+    position: relative;
+    height: 103vh;
+  }
+
+  .firstBlockRight {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 72vh;
+  }
+
+  .firstBlockRight div:first-child {
+    font-family: "SuisseIntl-Regular";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    color: #000000;
+  }
+
+}
+
+@media only screen and (max-width: 600px) {
+
+  /* .firstBlock {
     grid-template-columns: none;
-    grid-column-gap: none;
+  }
+
+  .firstBlockLeft {
+    grid-row: 2;
+    position: relative;
+    height: 103vh;
+  }
+
+  .firstBlockRight {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 70vh;
+  }
+
+  .firstBlockRight div:first-child {
+    font-family: "SuisseIntl-Regular";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 100%;
+    color: #000000;
+  } */
+
+  .mainDiv{
+    width: 101vw;
+  }
+
+  .mainAbstrcImg {
+    height: 58vh;
+    width: 98vw;
+    background-size: contain;
+  }
+
+  .mainAbstrcOverlapImg {
+    width: 96vw;
+    height: 57%;
   }
 
   .firstBlockLeft div:nth-child(3) {
@@ -347,23 +485,11 @@
     font-size: calc(25px - 1vw);
   }
 
-  .mainAbstrcImg {
-    display: none !important;
-  }
 
   .mainAbstrcImgForMobile {
     display: inline !important;
     background-position: center;
     background-size: contain;
-  }
-
-  .firstBlockRight {
-    display: none !important;
-  }
-
-  .firstBlockLeft {
-    /* grid-template-rows: 10% 55% 20%; */
-    grid-template-rows: 8% 60% 17%;
   }
 
   .thirdBlock {
@@ -378,5 +504,23 @@
 
   .thirdBlock ~ .thirdBlock ~ .thirdBlock {
     height: auto;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .firstBlockLeft {
+    grid-row: 2;
+    position: relative;
+    height: 100vh;
+  }
+
+  .mainAbstrcImg {
+    height: 58vh;
+    width: 99vw;
+  }
+
+  .mainAbstrcOverlapImg {
+    width: 100vw;
+    height: 45%;
   }
 }

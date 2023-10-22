@@ -7,11 +7,14 @@ import rlLogo from "../public/RL_Logotype.png";
 import { motion, AnimatePresence } from "framer-motion";
 import { Squeeze as Hamburger } from "hamburger-react";
 import NavbarMobile from "./NavbarMobile";
+import useWindowSize from "@/hooks/useWindowSize";
 
 const Clock = dynamic(() => import("../Clock/Clock"), { ssr: false });
 
 export default function Navbar() {
   const scrollDirection = useScrollDirection();
+
+  const size = useWindowSize();
 
   return (
     <nav
@@ -19,11 +22,11 @@ export default function Navbar() {
         scrollDirection === "down" ? styles.down : ""
       }`}
     >
-      <NavbarMobile />
+       {size != undefined && size.width != undefined && size.width < 600 ? 
+      <NavbarMobile /> :
+      (<>
       <div className={styles.navLeftBlock}>
         <Link href="/">
-        {/* <Link href="/studio"> */}
-          {/* <span className={styles.rl_logo}></span> */}
           <span>Info</span>
         </Link>
         <Link href="/works">
@@ -31,7 +34,7 @@ export default function Navbar() {
         </Link>
       </div>
       <div className={styles.navRightBlock}>
-        <Link href="/projectIndex">
+        <Link href="/project-index">
           <span>Index</span>
         </Link>
         <Clock />
@@ -39,6 +42,9 @@ export default function Navbar() {
           <span>About</span>
         </Link>
       </div>
+      </>
+      )
+    }
     </nav>
   );
 }
