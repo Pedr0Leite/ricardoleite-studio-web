@@ -133,11 +133,13 @@
 } */
 
 .secondBlock {
-  height: 423px;
+  /* height: 423px; */
+  height: 600px;
   border-bottom: 1px solid black;
   display: grid;
   grid-template-columns: 1.7fr 1fr;
-  grid-template-rows: 0.7fr 1.3fr;
+  /* grid-template-rows: 0.7fr 1.3fr; */
+  grid-template-rows: 0.3fr 1.7fr;
   column-gap: 79px;
   row-gap: 40px;
   margin: 0 15px 0 15px;
@@ -156,7 +158,7 @@
   color: #000000;
 }
 
-.secondBlockRightTitle {
+.secondBlockLeftTitle, .secondBlockRightTitle {
   font-family: "SuisseIntl-Regular";
   font-style: normal;
   font-weight: 400;
@@ -168,11 +170,16 @@
   align-items: flex-end;
 }
 
+.secondBlockRightList {
+  list-style-type: none;
+}
+
 .thirdBlock {
   height: 415px;
   border-bottom: 1px solid black;
   display: grid;
-  grid-template-rows: 0.7fr 1.3fr;
+  /* grid-template-rows: 0.7fr 1.3fr; */
+  grid-template-rows: 0.3fr 1.7fr;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 79px;
   row-gap: 40px;
@@ -357,6 +364,10 @@
     width: 66vw;
     height: 63%;
   }
+
+  .thirdBlockText {
+    font-size: calc(8px + 1vw);
+  }
 }
 
 
@@ -376,7 +387,7 @@
 
   .mainAbstrcImg {
     height: 60vh;
-    width: 96vw;
+    width: 90vw;
     background-size: contain;
   }
 
@@ -411,6 +422,10 @@
     color: #000000;
   }
 
+  .secondBlock, .thirdBlock {
+    /* grid-template-rows: 0.7fr 1.3fr; */
+    height: 500px;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -457,7 +472,8 @@
   }
 
   .firstBlockLeft div:nth-child(3) {
-    margin: 0px 25px 0px 0px;
+    /* margin: 0px 25px 0px 0px; */
+    margin: 0px 25px -35px 0px;
   }
 
   .worksDetailsText {
@@ -475,8 +491,10 @@
 
   .secondBlock {
     height: 380px;
-    margin: 0px 50px 25px 10px;
-    padding: 10px;
+    /* margin: 0px 50px 25px 10px; */
+    margin: 0px 0 25px 10px;
+    /* padding: 10px; */
+    padding: 10px 10px 200px 10px;
     display: flex;
     flex-direction: column;
   }
@@ -497,7 +515,8 @@
     display: flex;
     flex-direction: column;
     height: auto;
-    margin: 25px 50px 25px 10px;
+    /* margin: 25px 50px 25px 10px; */
+    margin: 25px 0px 25px 10px;
     padding: 10px;
     row-gap: 15px;
   }
@@ -515,8 +534,8 @@
   }
 
   .mainAbstrcImg {
-    height: 58vh;
-    width: 99vw;
+    height: 56vh;
+    width: 100vw;
   }
 
   .mainAbstrcOverlapImg {

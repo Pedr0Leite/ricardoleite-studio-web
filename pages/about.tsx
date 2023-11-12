@@ -8,6 +8,7 @@ import mainImg from "../public/About/main1.png";
 import mainAbstrc from "../public/About/RL_Logotype_3D.png";
 import Image from "next/image";
 import SlidingText from "@/components/SlidingText";
+import Link from "next/link";
 
 export default function About() {
   return (
@@ -77,26 +78,55 @@ export default function About() {
             </div>
           </div>
         </div>
-          <SlidingText/>
+        <SlidingText />
         <div className={styles.secondBlock}>
-          <div className={styles.secondBlockLeftTitle}></div>
+          <div className={styles.secondBlockLeftTitle}>Bio</div>
           <div className={styles.secondBlockLeft}>
             <p>
-              Since 2010, he has worked on global projects as art director,
-              designer, and illustrator for arts, culture, and advertising
-              clients. Specializing in the development of creative strategies
-              and visual concepts for sports, fashion, food, tech, and music
-              fields. Creativity as a tool to create visual narratives. From
-              local brands to global briefings.
+              Ricardo has been working on global projects as designer, art
+              director and visual artist for arts, culture, and advertising
+              clients since 2010. As a multidisciplinary freelance his skill set
+              takes him helping teams on briefings from scratch to end, just a
+              boost help on specific project phases. Whatever is necessary to
+              creativity as a continuum quest, driven by curiosity all the time.
+              <br />
+              <br />
+              Specializing in the development of creative strategies and visual
+              concepts for sports, fashion, food, tech, and music fields.
+              Creativity as a tool to create visual narratives. From local
+              brands to global briefings.
             </p>
           </div>
           <div className={styles.secondBlockRightTitle}>Services</div>
           <div className={styles.secondBlockRight}>
-            <p>
-              Branding Design & Art Direction, Brand DNA & Development, Visual
-              Strategies, 360 Campaign, Visual Identity ,Graphic Design,
-              Illustration, Motion Design, Web Design, UX , 3D, Set Design.
-            </p>
+            <div>
+              <div className={styles.secondBlockRightTitle}>
+                As a freelancer
+              </div>
+              <ul className={styles.secondBlockRightList}>
+                <li>Design & Art Direction Creative Direction</li>
+              </ul>
+            </div>
+              <br />
+            <div>
+              <div className={styles.secondBlockRightTitle}>As a studio</div>
+              <ul className={styles.secondBlockRightList}>
+                <li>
+                  Branding Design & Art Direction, Brand DNA & Development,
+                  Visual Strategies, 360 Campaign, Visual Identity,
+                  Illustration, Motion Design, Web Design, CGI , 3D, Retail.
+                </li>
+              </ul>
+            </div>
+            <br />
+            <div>
+              <div className={styles.secondBlockRightTitle}>
+                As a Director / Rep. by
+              </div>
+              <ul className={styles.secondBlockRightList}>
+                <li>Brut.works [ES]</li>
+              </ul>
+            </div>
           </div>
         </div>
         <div className={styles.thirdBlock}>
@@ -109,29 +139,38 @@ export default function About() {
               <li>Facebook</li>
               <li>Pepsi</li>
               <li>Spotify</li>
-            </ul>
-          </div>
-          <div className={styles.thirdBlockTitle}></div>
-          <div className={styles.thirdBlockText}>
-            <ul>
               <li>WeArePi</li>
               <li>Brut</li>
               <li>CloudFactory</li>
               <li>Ridley Scott Creative Group</li>
               <li>Nike</li>
-              <li>KNAS Agency</li>
-              <li>YourMajesty</li>
             </ul>
           </div>
           <div className={styles.thirdBlockTitle}></div>
           <div className={styles.thirdBlockText}>
             <ul>
+              <li>KNAS Agency</li>
+              <li>YourMajesty</li>
               <li>WeTransfer</li>
               <li>LeGuessWho?</li>
               <li>Mr.Frank</li>
               <li>Pepsi</li>
               <li>Experimenta</li>
               <li>Adobe</li>
+            </ul>
+          </div>
+          <div className={styles.thirdBlockTitle}>Magazines</div>
+          <div className={styles.thirdBlockText}>
+            <ul>
+              <li>Kinfolk v38 / Rituals, Winter, 2020</li>
+              <li>IdN v22n3: Designer Typefaces, 2015</li>
+              <li>IdN v20n4: Paper Special, 2014</li>
+              <li>Soirée graphique n°6, 2013</li>
+              <li>IdN v19n4: Shapes-in-Pattern, 2013</li>
+              <li>Étapes, France, 2013</li>
+              <li>Creative Review, June, 2012</li>
+              <li>IDN v19/ Shaping their own patterns, 2012</li>
+              <li>C.R. , Monograph Barcelona, 2012</li>
             </ul>
           </div>
         </div>
@@ -152,25 +191,25 @@ export default function About() {
               <li>FRESH - Cutting Edge Illustrations, Slanted 2012</li>
             </ul>
           </div>
-          <div className={styles.thirdBlockTitle}>Magazines</div>
-          <div className={styles.thirdBlockText}>
-            <ul>
-              <li>Kinfolk v38 / Rituals, Winter, 2020</li>
-              <li>IdN v22n3: Designer Typefaces, 2015</li>
-              <li>IdN v20n4: Paper Special, 2014</li>
-              <li>Soirée graphique n°6, 2013</li>
-              <li>IdN v19n4: Shapes-in-Pattern, 2013</li>
-              <li>Étapes, France, 2013</li>
-              <li>Creative Review, June, 2012</li>
-              <li>IDN v19/ Shaping their own patterns, 2012</li>
-              <li>C.R. , Monograph Barcelona, 2012</li>
-            </ul>
-          </div>
           <div className={styles.thirdBlockTitle}>Prizes</div>
           <div className={styles.thirdBlockText}>
             <ul>
               <li>Clio Awards / C.F, 2023</li>
               <li>ADCN / 2x Silver Lamp / C.F., 2022</li>
+            </ul>
+          </div>
+          <div className={styles.thirdBlockTitle}>Contacts</div>
+          <div className={styles.thirdBlockText}>
+            <ul>
+              <li>Exhibition & Lectures</li>
+              <li>ricardo@ricardoleite.net</li>
+              <br />
+              <li>Creative Direction</li>
+              <li>Brut Representation/US/UK/ES</li>
+              <li>sara@brut.works</li>
+              <br />
+              <li>Freelancer inquiries availability/</li>
+              <li>info@ricardoleite.net</li>
             </ul>
           </div>
         </div>
@@ -183,15 +222,17 @@ export default function About() {
           </div>
           <div className={styles.thirdBlockTitle}></div>
           <div className={styles.thirdBlockText}>
-            <p>All rights reserved 2023</p>
+            {/* <p>All rights reserved 2023</p> */}
           </div>
           <div className={styles.thirdBlockTitle}></div>
           <div className={styles.thirdBlockText}>
+          <p>All rights reserved 2023</p>
+          <br/>
             <p>
               Type by <u>ABC Dinamo</u>
             </p>
             <p>
-              Site by <u>Pedro Leite</u>
+              Site by <Link href="https://www.linkedin.com/in/pedromgleite/">Pedro Leite</Link>
             </p>
           </div>
         </div>
