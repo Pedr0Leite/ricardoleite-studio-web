@@ -39,7 +39,7 @@ export default function NavbarMobile() {
               <ul>
                 <Link 
                 className={styles.navMobileLinks} 
-                href="/projectIndex"
+                href="/project-index"
                 >
                   <span>Index</span>
                 </Link>
