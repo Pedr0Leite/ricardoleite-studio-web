@@ -653,7 +653,7 @@ body {
 
   .marquee {
     bottom: 0;
-    width: 101vw;
+    /* width: 101vw; */
     max-width: none;
   }
 }
