@@ -247,7 +247,7 @@ body {
   position: fixed;
   width: 50%;
   height: -webkit-fill-available;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 
 }
 
@@ -295,7 +295,7 @@ body {
   display: grid;
   /* grid-template-columns: repeat(2, 1fr); */
   grid-template-columns: 0.8fr 2.2fr;
-  height: 45px;
+  height: 40px;
   border-top: 1px solid black;
   padding-top: 10px;
 }
