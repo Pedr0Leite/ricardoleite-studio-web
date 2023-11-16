@@ -134,9 +134,9 @@ export default function WorksDetails({ project }: ProjectsInterface) {
   const [currentProject, setCurrentProject] = useState<projectInterface>();
   const [prevProjectId, setPrevProject] = useState<projectInterface>();
   const [nextProjectId, setNextProject] = useState<projectInterface>();
-
+  
   let tags;
-
+  
   if (currentProject && currentProject.tags) {
     tags = currentProject.tags.map((tag: string, index: number) => {
       if (currentProject.tags.length - 1 == index) {
@@ -146,7 +146,6 @@ export default function WorksDetails({ project }: ProjectsInterface) {
       }
     });
   }
-  console.log('currentProject :', currentProject);
   
   useEffect(() => {
     project.forEach((project: projectInterface) => {
@@ -244,7 +243,7 @@ export default function WorksDetails({ project }: ProjectsInterface) {
           }
         )}
         <div className="workDetailsRightButtons">
-          {prevProjectId != undefined && prevProjectId?.project_id >= 0 && (
+          {prevProjectId != undefined && currentProject?.project_id != 0 && prevProjectId?.project_id >= 0 && (
             <Link href={`/works/${prevProjectId?.project_id}`}>
               &#10094; Prev
             </Link>
@@ -268,7 +267,7 @@ export default function WorksDetails({ project }: ProjectsInterface) {
             )}
       <div className="workDetails-600">
         <div className="workDetailsRightButtons-600">
-          {prevProjectId != undefined && prevProjectId?.project_id >= 0 && (
+          {prevProjectId != undefined && currentProject?.project_id != 0 && prevProjectId?.project_id >= 0 && (
             <Link href={`/works/${prevProjectId?.project_id}`}>
               &#10094; Prev
             </Link>
