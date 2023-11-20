@@ -471,7 +471,9 @@ body {
   max-width: 100%;
   overflow-x: hidden;
   height: 45px;
-  border: 1px solid #000000;
+  /* border: 1px solid #000000; */
+  border-bottom: 1px solid #000000;
+  border-top: 1px solid #000000;
   display: flex;
   align-items: center;
 }

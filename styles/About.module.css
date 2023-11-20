@@ -476,6 +476,10 @@
     margin: 0px 25px -35px 0px;
   }
 
+  .firstBlockLeft div p {
+    font-size: calc(16px + 1vw);
+  }
+
   .worksDetailsText {
     height: 310px;
   }
