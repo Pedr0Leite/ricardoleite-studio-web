@@ -108,6 +108,7 @@
     column-gap: 10px;
     align-items: center;
     justify-items: center;
+    padding: 10px 5px 15px 5px;
   }
 
   .navbar span:hover {
@@ -129,5 +130,9 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+  }
+
+  .rl_logo {
+    width: 20px;
   }
 }
