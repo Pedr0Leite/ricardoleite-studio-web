@@ -4,6 +4,7 @@ import specificProjectData from "../../specificProjectData.json";
 import { GraphQLClient, request, gql } from "graphql-request";
 import Link from "next/link";
 import Image from "next/image";
+import useWindowSize from "@/hooks/useWindowSize";
 
 interface SpecificProjectInterface {
   title: ReactNode;
@@ -134,7 +135,14 @@ export default function WorksDetails({ project }: ProjectsInterface) {
   const [currentProject, setCurrentProject] = useState<projectInterface>();
   const [prevProjectId, setPrevProject] = useState<projectInterface>();
   const [nextProjectId, setNextProject] = useState<projectInterface>();
+
+  const size = useWindowSize();
   
+  const [workDetailsRightButtonsClass, setworkDetailsRightButtonsClass] = useState("workDetailsRightButtons");
+  const [workDetailsRightButtons600Class, setworkDetailsRightButtons600Class] = useState("workDetailsRightButtons-600");
+  const [workDetailsNextPrevProjectClass, setworkDetailsNextPrevProjectClass] = useState("workDetailsNextPrevProject");
+  const [workDetailsNextPrevProject600Class, setworkDetailsNextPrevProject600Class] = useState("workDetailsNextPrevProject-600");
+
   let tags;
   
   if (currentProject && currentProject.tags) {
@@ -160,6 +168,33 @@ export default function WorksDetails({ project }: ProjectsInterface) {
 
     setIsLoading(false);
   }, [project, projectId]);
+
+  useEffect(() =>{
+    if((prevProjectId == undefined && currentProject?.project_id == 0) || currentProject?.project_id == prevProjectId?.project_id){
+      if(size.width != undefined && size.width >= 600){
+        setworkDetailsRightButtonsClass("workDetailsRightButtonsJustifyEnd workDetailsRightButtons");
+        setworkDetailsNextPrevProjectClass("workDetailsNextPrevProjectJustifyEnd workDetailsNextPrevProject");
+      }else{
+        setworkDetailsRightButtons600Class("workDetailsRightButtonsJustifyEnd workDetailsRightButtons-600");
+        setworkDetailsNextPrevProject600Class("workDetailsNextPrevProjectJustifyEnd workDetailsNextPrevProject-600");
+      }
+      
+    }else if(currentProject?.project_id == nextProjectId?.project_id){
+      if(size.width != undefined && size.width >= 600){
+        setworkDetailsRightButtonsClass("workDetailsRightButtonsJustifyStart workDetailsRightButtons");
+        setworkDetailsNextPrevProjectClass("workDetailsNextPrevProjectJustifyStart workDetailsNextPrevProject");
+      }else{
+        setworkDetailsRightButtons600Class("workDetailsRightButtonsJustifyStart workDetailsRightButtons-600");
+        setworkDetailsNextPrevProject600Class("workDetailsNextPrevProjectJustifyStart workDetailsNextPrevProject-600");
+      }
+      
+    }else{
+      setworkDetailsRightButtonsClass("workDetailsRightButtons");
+      setworkDetailsNextPrevProjectClass("workDetailsNextPrevProject");
+      setworkDetailsRightButtons600Class("workDetailsRightButtons-600");
+      setworkDetailsNextPrevProject600Class("workDetailsNextPrevProject-600");
+    }
+  }, [prevProjectId, currentProject, nextProjectId])
 
   if (router.isFallback) {
     return <div>Loading...</div>;
@@ -199,36 +234,8 @@ export default function WorksDetails({ project }: ProjectsInterface) {
               </div>
             </div>
           </div>
-          {/* <div className="worksDetailsTitle">
-              <div>{currentProject.title}</div>
-            </div>
-            <div className="worksDetailsInfo">
-              <span>Client</span>
-              <span>{currentProject.title}</span>
-            </div>
-            <div className="worksDetailsInfo">
-              <span>Year</span>
-              <span>{currentProject.year}</span>
-            </div>
-            <div className="worksDetailsInfo">
-              <span>Location</span>
-              <span>{currentProject.location}</span>
-            </div>
-            <div className="worksDetailsInfo">
-              <span>Services</span>
-              <span>{tags}</span>
-            </div>
-            <div className="worksDetailsInfo">
-              <span>Credits</span>
-              <span>{currentProject.info}</span>
-            </div> */}
-          {/* <div className="worksDetailsText">{currentProject.info}</div> */}
         </>
       )}
-      {/* <div className="workDetailsNextPrevProject-600">
-        {prevProjectId != undefined && <span>{prevProjectId.title}</span>}
-        {nextProjectId != undefined && <span>{nextProjectId.title}</span>}
-      </div> */}
       <div className="worksDetailsRight">
         {currentProject?.images.map(
           (projImg: { url: string }, index: number) => {
@@ -242,21 +249,21 @@ export default function WorksDetails({ project }: ProjectsInterface) {
             );
           }
         )}
-        <div className="workDetailsRightButtons">
+        <div className={workDetailsRightButtonsClass}>
           {prevProjectId != undefined && currentProject?.project_id != 0 && prevProjectId?.project_id >= 0 && (
             <Link href={`/works/${prevProjectId?.project_id}`}>
               &#10094; Prev
             </Link>
           )}
-          {nextProjectId != undefined && nextProjectId?.project_id >= 0 && (
+          {nextProjectId != undefined && currentProject?.project_id != nextProjectId?.project_id && nextProjectId?.project_id >= 0 && (
             <Link href={`/works/${nextProjectId?.project_id}`}>
               Next &#10095;
             </Link>
           )}
         </div>
-        <div className="workDetailsNextPrevProject">
-          {prevProjectId != undefined && <span>{prevProjectId.title}</span>}
-          {nextProjectId != undefined && <span>{nextProjectId.title}</span>}
+        <div className={workDetailsNextPrevProjectClass}>
+          {prevProjectId != undefined && currentProject?.project_id != 0 && <span>{prevProjectId.title}</span>}
+          {nextProjectId != undefined && currentProject?.project_id != nextProjectId?.project_id && <span>{nextProjectId.title}</span>}
         </div>
       </div>
       {currentProject != undefined && (
@@ -266,21 +273,21 @@ export default function WorksDetails({ project }: ProjectsInterface) {
             </div>
             )}
       <div className="workDetails-600">
-        <div className="workDetailsRightButtons-600">
+        <div className={workDetailsRightButtons600Class}>
           {prevProjectId != undefined && currentProject?.project_id != 0 && prevProjectId?.project_id >= 0 && (
             <Link href={`/works/${prevProjectId?.project_id}`}>
               &#10094; Prev
             </Link>
           )}
-          {nextProjectId != undefined && nextProjectId?.project_id >= 0 && (
+          {nextProjectId != undefined && currentProject?.project_id != nextProjectId?.project_id && nextProjectId?.project_id >= 0 && (
             <Link href={`/works/${nextProjectId?.project_id}`}>
               Next &#10095;
             </Link>
           )}
         </div>
-        <div className="workDetailsNextPrevProject-600">
-          {prevProjectId != undefined && <span>{prevProjectId.title}</span>}
-          {nextProjectId != undefined && <span>{nextProjectId.title}</span>}
+        <div className={workDetailsNextPrevProject600Class}>
+          {prevProjectId != undefined && currentProject?.project_id != 0 && <span>{prevProjectId.title}</span>}
+          {nextProjectId != undefined && currentProject?.project_id != nextProjectId?.project_id && <span>{nextProjectId.title}</span>}
         </div>
       </div>
     </div>

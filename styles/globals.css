@@ -312,7 +312,7 @@ body {
 .worksDetailsInfo span:nth-child(2) {
   font-family: "SuisseIntl-Regular";
   font-style: normal;
-  font-weight: 600;
+  /* font-weight: 600; */
   font-size: calc(7px + 1vw);
   line-height: 100%;
   color: #000000;
@@ -385,6 +385,14 @@ body {
   margin-bottom: -27px;
 }
 
+.workDetailsRightButtonsJustifyEnd {
+  justify-content: flex-end !important;
+}
+
+.workDetailsRightButtonsJustifyStart {
+  justify-content: flex-start !important;
+}
+
 .workDetailsRightButtons-600 a {
   height: 35px;
   width: 100px;
@@ -417,6 +425,16 @@ body {
   border-bottom: 1px solid black;
 }
 
+.workDetailsNextPrevProjectJustifyEnd{
+  justify-content: flex-end;
+
+}
+
+.workDetailsNextPrevProjectJustifyStart{
+  justify-content: flex-start;
+
+}
+
 .workDetailsNextPrevProject span {
   font-family: "SuisseIntl-Regular";
   font-style: normal;
@@ -429,9 +447,7 @@ body {
 }
 
 .workDetailsNextPrevProject-600 {
-  /* display: flex; */
   display: none;
-  justify-content: space-between;
   margin-top: 5px;
   margin-right: 25px;
   width: -webkit-fill-available;
@@ -564,10 +580,10 @@ body {
 
   .worksDetailsTitleMobile {
     display: inherit;
-  }
-
-  .worksDetailsTitleMobile {
-    font-size: 70px;
+    /* font-size: 70px; */
+    font-size: 50px;
+    padding: 15px;
+    border-bottom: 1px solid #000000;
   }
 
   .worksDetailsTitleMobile div:nth-child(2){
@@ -588,6 +604,7 @@ body {
   .worksDetailsLeft {
     width: 100%;
     position: inherit;
+    padding-right: 0;
   }
 
   .worksDetailsInfoMain{
@@ -598,14 +615,16 @@ body {
 
   .worksDetailsRight {
     position: initial;
+    border-bottom: 0;
+    
   }
 
   .worksDetailsMainDiv {
     display: flex;
     flex-direction: column-reverse;
-    margin: 0 15px 0 15px;
+    margin: 0;
     border-top: 1px solid black;
-    padding: 10px;
+    padding: 0;
   }
 
   .worksDetailsText {
@@ -623,6 +642,9 @@ body {
 
   .workDetailsNextPrevProject-600 {
     display: flex;
+    justify-content: space-between;
+    margin: 10px 10px 15px 10px;
+    padding: 0 20px;
   }
   
   .workDetailsRightButtons-600 {
@@ -630,10 +652,16 @@ body {
     height: 100%;
     width: -webkit-fill-available;
     border-bottom: 1px solid black;
+    border-top: 1px solid black;
     margin-bottom: 0;
-    padding-bottom: 0;
+    padding-bottom: 10px;
+    padding-top: 15px;
     width: -webkit-fill-available;
-    margin-right: 25px;
+
+  }
+
+  .workDetailsRightButtons-600 a{
+    /* margin: 0 10px; */
   }
 
   .workDetails-600{
@@ -641,10 +669,18 @@ body {
     width: -webkit-fill-available;
   }
 
+  .worksDetailsInfo span:first-child {
+    margin: 0 10px;
+  }
+
+  .worksDetailsInfo span:nth-child(2){
+    margin: 0px 25px 0px 10px;
+  }
+
   .worksDetailsInfo:last-child {
     padding-bottom: 13vh;
     /* padding-bottom: 20vh; */
-    border-bottom: 1px solid black;
+    /* border-bottom: 1px solid black; */
   }
 
   /* Loading */
