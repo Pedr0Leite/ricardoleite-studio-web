@@ -228,13 +228,14 @@
 }
 
 .linksText {
+  display: flex;
+  flex-direction: column;
   font-family: "SuisseIntl-Regular";
   font-style: normal;
   font-weight: 400;
   font-size: calc(50px - 1vw);
   line-height: 100%;
   text-decoration-line: underline;
-
   color: #000000;
 }
 
@@ -465,17 +466,18 @@
   } */
 
   .mainDiv{
-    width: 101vw;
+    width: 100vw;
+    overflow-x: hidden;
   }
 
   .mainAbstrcImg {
     height: 58vh;
-    width: 98vw;
-    background-size: contain;
+    width: 100vw;
+    background-size: cover;
   }
 
   .mainAbstrcOverlapImg {
-    width: 96vw;
+    width: 100vw;
     height: 57%;
   }
 
@@ -502,13 +504,15 @@
   }
 
   .secondBlock {
-    height: 380px;
     /* margin: 0px 50px 25px 10px; */
-    margin: 0px 0 25px 10px;
     /* padding: 10px; */
+    /* height: 380px; */
+    height: 310px;
+    margin: 0px 0 25px 10px;
     padding: 10px 10px 200px 10px;
     display: flex;
     flex-direction: column;
+    row-gap: 15px;
   }
 
   .linksText {

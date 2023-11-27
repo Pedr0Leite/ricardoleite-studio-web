@@ -217,7 +217,10 @@ export default function About() {
           <div className={styles.thirdBlockTitle}>Links</div>
           <div className={styles.thirdBlockText}>
             <p className={styles.linksText}>
-              LinkedIn, Instagram, Behance, Vimeo
+              <Link href="https://www.linkedin.com/in/ricardo-leite-98820523/">LinkedIn</Link>
+              <Link href="https://www.instagram.com/_ricardo_leite_/">Instagram</Link>
+              <Link href="https://www.behance.net/ricardoleite">Behance</Link>
+              <Link href="https://vimeo.com/rl85">Vimeo</Link>
             </p>
           </div>
           <div className={styles.thirdBlockTitle}></div>

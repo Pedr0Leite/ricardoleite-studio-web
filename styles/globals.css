@@ -341,81 +341,70 @@ body {
   border-bottom: 1px solid black;
 }
 
-.workDetailsRightButtons {
-  /* display: flex;
-  justify-content: space-between;
-  padding-bottom: 27px;
-  height: 275px;
-  align-items: flex-end;
-  margin-bottom: -27px; */
+/* .workDetailsRightButtons {
   display: flex;
   justify-content: space-between;
   padding-bottom: 20px;
-  /* height: 275px; */
   align-items: flex-end;
   margin-bottom: -27px;
   border-top: 1px solid black;
   padding-top: 10px;
   margin-top: 250px;
-}
+} */
 
-.workDetailsRightButtons a {
+/* .workDetailsRightButtons a {
   height: 35px;
-  /* width: 100px; */
   margin-bottom: 10px;
   font-family: "SuisseIntl-Regular";
   font-style: normal;
   font-weight: 500;
   font-size: 26px;
   line-height: 100%;
-  /* color: var(--globalRed); */
   color: var(--globalBlack);
   background-color: transparent;
   border: none;
   text-decoration: none;
   cursor: pointer;
-}
+} */
 
-.workDetailsRightButtons-600 {
+/* .workDetailsRightButtons-600 {
   display: none;
   justify-content: space-between;
   padding-bottom: 27px;
   height: 275px;
   align-items: flex-end;
   margin-bottom: -27px;
-}
+} */
 
-.workDetailsRightButtonsJustifyEnd {
+/* .workDetailsRightButtonsJustifyEnd {
   justify-content: flex-end !important;
-}
+} */
 
-.workDetailsRightButtonsJustifyStart {
+/* .workDetailsRightButtonsJustifyStart {
   justify-content: flex-start !important;
-}
+} */
 
-.workDetailsRightButtons-600 a {
+/* .workDetailsRightButtons-600 a {
   height: 35px;
   width: 100px;
-  /* margin-bottom: 10px; */
   font-family: "SuisseIntl-Regular";
   font-style: normal;
   font-weight: 500;
   font-size: 26px;
   line-height: 100%;
-  /* color: var(--globalRed); */
   color: var(--globalBlack);
   background-color: transparent;
   border: none;
   text-decoration: none;
   cursor: pointer;
-}
+} */
 
-.workDetailsRightButtons-600 a:last-child{
+/* .workDetailsRightButtons-600 a:last-child{
   justify-content: flex-end;
   display: flex;
-}
+} */
 
-.workDetailsNextPrevProject {
+/* .workDetailsNextPrevProject {
   display: flex;
   justify-content: space-between;
   position: absolute;
@@ -423,19 +412,19 @@ body {
   margin-right: 25px;
   width: -webkit-fill-available;
   border-bottom: 1px solid black;
-}
+} */
 
-.workDetailsNextPrevProjectJustifyEnd{
+/* .workDetailsNextPrevProjectJustifyEnd{
   justify-content: flex-end;
 
-}
+} */
 
-.workDetailsNextPrevProjectJustifyStart{
+/* .workDetailsNextPrevProjectJustifyStart{
   justify-content: flex-start;
 
-}
+} */
 
-.workDetailsNextPrevProject span {
+/* .workDetailsNextPrevProject span {
   font-family: "SuisseIntl-Regular";
   font-style: normal;
   font-weight: 400;
@@ -444,16 +433,16 @@ body {
   text-align: right;
 
   color: #000000;
-}
+} */
 
-.workDetailsNextPrevProject-600 {
+/* .workDetailsNextPrevProject-600 {
   display: none;
   margin-top: 5px;
   margin-right: 25px;
   width: -webkit-fill-available;
-}
+} */
 
-.workDetailsNextPrevProject-600 span {
+/* .workDetailsNextPrevProject-600 span {
   font-family: "SuisseIntl-Regular";
   font-style: normal;
   font-weight: 400;
@@ -462,7 +451,7 @@ body {
   text-align: right;
 
   color: #000000;
-}
+} */
 
 
 /* clock */
@@ -631,23 +620,23 @@ body {
     height: 310px;
   }
 
-  .workDetailsRightButtons {
+  /* .workDetailsRightButtons {
     display: none;
-  }
+  } */
 
-  .workDetailsNextPrevProject {
+  /* .workDetailsNextPrevProject {
     display: none;
     
-  }
+  } */
 
-  .workDetailsNextPrevProject-600 {
+  /* .workDetailsNextPrevProject-600 {
     display: flex;
     justify-content: space-between;
     margin: 10px 10px 15px 10px;
     padding: 0 20px;
-  }
+  } */
   
-  .workDetailsRightButtons-600 {
+  /* .workDetailsRightButtons-600 {
     display: flex;
     height: 100%;
     width: -webkit-fill-available;
@@ -658,11 +647,7 @@ body {
     padding-top: 15px;
     width: -webkit-fill-available;
 
-  }
-
-  .workDetailsRightButtons-600 a{
-    /* margin: 0 10px; */
-  }
+  } */
 
   .workDetails-600{
     position: absolute;
@@ -678,8 +663,8 @@ body {
   }
 
   .worksDetailsInfo:last-child {
-    padding-bottom: 13vh;
-    /* padding-bottom: 20vh; */
+    padding-bottom: 17vh;
+    /* padding-bottom: 13vh; */
     /* border-bottom: 1px solid black; */
   }
 
@@ -698,6 +683,6 @@ body {
 
 @media only screen and (max-width: 400px) {
   .worksDetailsTitleMobile {
-    font-size: 60px;
+    font-size: 40px;
   }
 }
