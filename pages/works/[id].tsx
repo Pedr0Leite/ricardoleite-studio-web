@@ -5,6 +5,8 @@ import { GraphQLClient, request, gql } from "graphql-request";
 import Link from "next/link";
 import Image from "next/image";
 import useWindowSize from "@/hooks/useWindowSize";
+import WorksButtons from "@/components/WorksButtons/WorksButtons";
+import WorksButtons600 from "@/components/WorksButtons/WorkButtons600";
 
 interface SpecificProjectInterface {
   title: ReactNode;
@@ -138,10 +140,10 @@ export default function WorksDetails({ project }: ProjectsInterface) {
 
   const size = useWindowSize();
   
-  const [workDetailsRightButtonsClass, setworkDetailsRightButtonsClass] = useState("workDetailsRightButtons");
-  const [workDetailsRightButtons600Class, setworkDetailsRightButtons600Class] = useState("workDetailsRightButtons-600");
-  const [workDetailsNextPrevProjectClass, setworkDetailsNextPrevProjectClass] = useState("workDetailsNextPrevProject");
-  const [workDetailsNextPrevProject600Class, setworkDetailsNextPrevProject600Class] = useState("workDetailsNextPrevProject-600");
+  // const [workDetailsRightButtonsClass, setworkDetailsRightButtonsClass] = useState("workDetailsRightButtons");
+  // const [workDetailsRightButtons600Class, setworkDetailsRightButtons600Class] = useState("workDetailsRightButtons-600");
+  // const [workDetailsNextPrevProjectClass, setworkDetailsNextPrevProjectClass] = useState("workDetailsNextPrevProject");
+  // const [workDetailsNextPrevProject600Class, setworkDetailsNextPrevProject600Class] = useState("workDetailsNextPrevProject-600");
 
   let tags;
   
@@ -169,32 +171,32 @@ export default function WorksDetails({ project }: ProjectsInterface) {
     setIsLoading(false);
   }, [project, projectId]);
 
-  useEffect(() =>{
-    if((prevProjectId == undefined && currentProject?.project_id == 0) || currentProject?.project_id == prevProjectId?.project_id){
-      if(size.width != undefined && size.width >= 600){
-        setworkDetailsRightButtonsClass("workDetailsRightButtonsJustifyEnd workDetailsRightButtons");
-        setworkDetailsNextPrevProjectClass("workDetailsNextPrevProjectJustifyEnd workDetailsNextPrevProject");
-      }else{
-        setworkDetailsRightButtons600Class("workDetailsRightButtonsJustifyEnd workDetailsRightButtons-600");
-        setworkDetailsNextPrevProject600Class("workDetailsNextPrevProjectJustifyEnd workDetailsNextPrevProject-600");
-      }
+  // useEffect(() =>{
+  //   if((prevProjectId == undefined && currentProject?.project_id == 0) || currentProject?.project_id == prevProjectId?.project_id){
+  //     if(size.width != undefined && size.width >= 600){
+  //       setworkDetailsRightButtonsClass("workDetailsRightButtonsJustifyEnd workDetailsRightButtons");
+  //       setworkDetailsNextPrevProjectClass("workDetailsNextPrevProjectJustifyEnd workDetailsNextPrevProject");
+  //     }else{
+  //       setworkDetailsRightButtons600Class("workDetailsRightButtonsJustifyEnd workDetailsRightButtons-600");
+  //       setworkDetailsNextPrevProject600Class("workDetailsNextPrevProjectJustifyEnd workDetailsNextPrevProject-600");
+  //     }
       
-    }else if(currentProject?.project_id == nextProjectId?.project_id){
-      if(size.width != undefined && size.width >= 600){
-        setworkDetailsRightButtonsClass("workDetailsRightButtonsJustifyStart workDetailsRightButtons");
-        setworkDetailsNextPrevProjectClass("workDetailsNextPrevProjectJustifyStart workDetailsNextPrevProject");
-      }else{
-        setworkDetailsRightButtons600Class("workDetailsRightButtonsJustifyStart workDetailsRightButtons-600");
-        setworkDetailsNextPrevProject600Class("workDetailsNextPrevProjectJustifyStart workDetailsNextPrevProject-600");
-      }
+  //   }else if(currentProject?.project_id == nextProjectId?.project_id){
+  //     if(size.width != undefined && size.width >= 600){
+  //       setworkDetailsRightButtonsClass("workDetailsRightButtonsJustifyStart workDetailsRightButtons");
+  //       setworkDetailsNextPrevProjectClass("workDetailsNextPrevProjectJustifyStart workDetailsNextPrevProject");
+  //     }else{
+  //       setworkDetailsRightButtons600Class("workDetailsRightButtonsJustifyStart workDetailsRightButtons-600");
+  //       setworkDetailsNextPrevProject600Class("workDetailsNextPrevProjectJustifyStart workDetailsNextPrevProject-600");
+  //     }
       
-    }else{
-      setworkDetailsRightButtonsClass("workDetailsRightButtons");
-      setworkDetailsNextPrevProjectClass("workDetailsNextPrevProject");
-      setworkDetailsRightButtons600Class("workDetailsRightButtons-600");
-      setworkDetailsNextPrevProject600Class("workDetailsNextPrevProject-600");
-    }
-  }, [prevProjectId, currentProject, nextProjectId])
+  //   }else{
+  //     setworkDetailsRightButtonsClass("workDetailsRightButtons");
+  //     setworkDetailsNextPrevProjectClass("workDetailsNextPrevProject");
+  //     setworkDetailsRightButtons600Class("workDetailsRightButtons-600");
+  //     setworkDetailsNextPrevProject600Class("workDetailsNextPrevProject-600");
+  //   }
+  // }, [prevProjectId, currentProject, nextProjectId])
 
   if (router.isFallback) {
     return <div>Loading...</div>;
@@ -249,7 +251,8 @@ export default function WorksDetails({ project }: ProjectsInterface) {
             );
           }
         )}
-        <div className={workDetailsRightButtonsClass}>
+        <WorksButtons project={project} />
+        {/* <div className={workDetailsRightButtonsClass}>
           {prevProjectId != undefined && currentProject?.project_id != 0 && prevProjectId?.project_id >= 0 && (
             <Link href={`/works/${prevProjectId?.project_id}`}>
               &#10094; Prev
@@ -264,7 +267,7 @@ export default function WorksDetails({ project }: ProjectsInterface) {
         <div className={workDetailsNextPrevProjectClass}>
           {prevProjectId != undefined && currentProject?.project_id != 0 && <span>{prevProjectId.title}</span>}
           {nextProjectId != undefined && currentProject?.project_id != nextProjectId?.project_id && <span>{nextProjectId.title}</span>}
-        </div>
+        </div> */}
       </div>
       {currentProject != undefined && (
       <div className="worksDetailsTitleMobile">
@@ -272,7 +275,8 @@ export default function WorksDetails({ project }: ProjectsInterface) {
               <div>{currentProject.year}</div>
             </div>
             )}
-      <div className="workDetails-600">
+            <WorksButtons600 project={project} />
+      {/* <div className="workDetails-600">
         <div className={workDetailsRightButtons600Class}>
           {prevProjectId != undefined && currentProject?.project_id != 0 && prevProjectId?.project_id >= 0 && (
             <Link href={`/works/${prevProjectId?.project_id}`}>
@@ -289,7 +293,7 @@ export default function WorksDetails({ project }: ProjectsInterface) {
           {prevProjectId != undefined && currentProject?.project_id != 0 && <span>{prevProjectId.title}</span>}
           {nextProjectId != undefined && currentProject?.project_id != nextProjectId?.project_id && <span>{nextProjectId.title}</span>}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
