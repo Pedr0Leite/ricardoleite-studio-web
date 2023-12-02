@@ -139,12 +139,6 @@ export default function WorksDetails({ project }: ProjectsInterface) {
   const [nextProjectId, setNextProject] = useState<projectInterface>();
 
   const size = useWindowSize();
-  
-  // const [workDetailsRightButtonsClass, setworkDetailsRightButtonsClass] = useState("workDetailsRightButtons");
-  // const [workDetailsRightButtons600Class, setworkDetailsRightButtons600Class] = useState("workDetailsRightButtons-600");
-  // const [workDetailsNextPrevProjectClass, setworkDetailsNextPrevProjectClass] = useState("workDetailsNextPrevProject");
-  // const [workDetailsNextPrevProject600Class, setworkDetailsNextPrevProject600Class] = useState("workDetailsNextPrevProject-600");
-
   let tags;
   
   if (currentProject && currentProject.tags) {
@@ -170,33 +164,6 @@ export default function WorksDetails({ project }: ProjectsInterface) {
 
     setIsLoading(false);
   }, [project, projectId]);
-
-  // useEffect(() =>{
-  //   if((prevProjectId == undefined && currentProject?.project_id == 0) || currentProject?.project_id == prevProjectId?.project_id){
-  //     if(size.width != undefined && size.width >= 600){
-  //       setworkDetailsRightButtonsClass("workDetailsRightButtonsJustifyEnd workDetailsRightButtons");
-  //       setworkDetailsNextPrevProjectClass("workDetailsNextPrevProjectJustifyEnd workDetailsNextPrevProject");
-  //     }else{
-  //       setworkDetailsRightButtons600Class("workDetailsRightButtonsJustifyEnd workDetailsRightButtons-600");
-  //       setworkDetailsNextPrevProject600Class("workDetailsNextPrevProjectJustifyEnd workDetailsNextPrevProject-600");
-  //     }
-      
-  //   }else if(currentProject?.project_id == nextProjectId?.project_id){
-  //     if(size.width != undefined && size.width >= 600){
-  //       setworkDetailsRightButtonsClass("workDetailsRightButtonsJustifyStart workDetailsRightButtons");
-  //       setworkDetailsNextPrevProjectClass("workDetailsNextPrevProjectJustifyStart workDetailsNextPrevProject");
-  //     }else{
-  //       setworkDetailsRightButtons600Class("workDetailsRightButtonsJustifyStart workDetailsRightButtons-600");
-  //       setworkDetailsNextPrevProject600Class("workDetailsNextPrevProjectJustifyStart workDetailsNextPrevProject-600");
-  //     }
-      
-  //   }else{
-  //     setworkDetailsRightButtonsClass("workDetailsRightButtons");
-  //     setworkDetailsNextPrevProjectClass("workDetailsNextPrevProject");
-  //     setworkDetailsRightButtons600Class("workDetailsRightButtons-600");
-  //     setworkDetailsNextPrevProject600Class("workDetailsNextPrevProject-600");
-  //   }
-  // }, [prevProjectId, currentProject, nextProjectId])
 
   if (router.isFallback) {
     return <div>Loading...</div>;
@@ -252,22 +219,6 @@ export default function WorksDetails({ project }: ProjectsInterface) {
           }
         )}
         <WorksButtons project={project} />
-        {/* <div className={workDetailsRightButtonsClass}>
-          {prevProjectId != undefined && currentProject?.project_id != 0 && prevProjectId?.project_id >= 0 && (
-            <Link href={`/works/${prevProjectId?.project_id}`}>
-              &#10094; Prev
-            </Link>
-          )}
-          {nextProjectId != undefined && currentProject?.project_id != nextProjectId?.project_id && nextProjectId?.project_id >= 0 && (
-            <Link href={`/works/${nextProjectId?.project_id}`}>
-              Next &#10095;
-            </Link>
-          )}
-        </div>
-        <div className={workDetailsNextPrevProjectClass}>
-          {prevProjectId != undefined && currentProject?.project_id != 0 && <span>{prevProjectId.title}</span>}
-          {nextProjectId != undefined && currentProject?.project_id != nextProjectId?.project_id && <span>{nextProjectId.title}</span>}
-        </div> */}
       </div>
       {currentProject != undefined && (
       <div className="worksDetailsTitleMobile">
@@ -276,24 +227,6 @@ export default function WorksDetails({ project }: ProjectsInterface) {
             </div>
             )}
             <WorksButtons600 project={project} />
-      {/* <div className="workDetails-600">
-        <div className={workDetailsRightButtons600Class}>
-          {prevProjectId != undefined && currentProject?.project_id != 0 && prevProjectId?.project_id >= 0 && (
-            <Link href={`/works/${prevProjectId?.project_id}`}>
-              &#10094; Prev
-            </Link>
-          )}
-          {nextProjectId != undefined && currentProject?.project_id != nextProjectId?.project_id && nextProjectId?.project_id >= 0 && (
-            <Link href={`/works/${nextProjectId?.project_id}`}>
-              Next &#10095;
-            </Link>
-          )}
-        </div>
-        <div className={workDetailsNextPrevProject600Class}>
-          {prevProjectId != undefined && currentProject?.project_id != 0 && <span>{prevProjectId.title}</span>}
-          {nextProjectId != undefined && currentProject?.project_id != nextProjectId?.project_id && <span>{nextProjectId.title}</span>}
-        </div>
-      </div> */}
     </div>
   );
 }
