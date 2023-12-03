@@ -49,8 +49,15 @@ export const TopDiv = styled.div<colorInterface>`
     justify-content: space-between;
     margin: 0 15px;
     padding-top: 10px;
+    column-gap: 120px;
 
-    & span {
+    & div {
+        display: flex;
+        justify-content: space-between;
+        width: 50%;
+    }
+
+    & div span {
         // color:  ${props => props.color};
         font-family: "SuisseIntl-Regular";
         font-style: normal;
