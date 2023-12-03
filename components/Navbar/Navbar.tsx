@@ -26,16 +26,16 @@ export default function Navbar() {
       <NavbarMobile /> :
       (<>
       <div className={styles.navLeftBlock}>
-        <Link href="/">
-          <span>Info</span>
+      <Link href="/studio">
+          <span className={styles.rl_logo}></span>
         </Link>
-        <Link href="/works">
-          <span>Works</span>
+        <Link href="/project-index">
+          <span>Index</span>
         </Link>
       </div>
       <div className={styles.navRightBlock}>
-        <Link href="/project-index">
-          <span>Index</span>
+        <Link href="/works">
+          <span>Works</span>
         </Link>
         <Clock />
         <Link href="/about">

@@ -20,7 +20,7 @@ const justify = {
 
 export const workDetails600Class = styled.div`
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
   position: absolute;
   width: -webkit-fill-available;
 }
@@ -54,7 +54,7 @@ export const workDetailsRightButtons600Class = styled.div<workDetailsRightButton
     justify-content: flex-end;
   }
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 700px) {
     display: flex;
     justify-content: ${props => props.nextB && props.prevB ? justify.space : props.nextB && !props.prevB ? justify.end : !props.nextB && props.prevB ? justify.start : ""};
     height: 100%;
@@ -85,7 +85,7 @@ export const workDetailsNextPrevProject600Class = styled.div<workDetailsRightBut
     color: #000000;
   }
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 700px) {
     display: flex;
     justify-content: ${props => props.nextB && props.prevB ? justify.space : props.nextB && !props.prevB ? justify.end : !props.nextB && props.prevB ? justify.start : ""};
     margin: 10px 10px 15px 10px;

@@ -10,7 +10,7 @@ export const ClockMainDiv = styled.div`
     font-family: "SuisseIntl-Regular";
     font-style: normal;
     font-weight: bolder;
-    font-size: 10px;
+    font-size: 12px;
     line-height: 100%;
     color: #000000;
     position: relative;

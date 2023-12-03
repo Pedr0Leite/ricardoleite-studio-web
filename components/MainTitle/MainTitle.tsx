@@ -23,10 +23,14 @@ export default function MainTitle() {
             </p>
           </Styled.Title>
           <Styled.TopDiv color={currentColor}>
+            <div>
             <span>Branding</span>
-            <span>Design</span>
+            <span>Creative Design</span>
+            </div>
+            <div>
             <span>Art Direction</span>
             <span>Typography</span>
+            </div>
           </Styled.TopDiv>
         </Styled.MainDiv>
       ) : (
