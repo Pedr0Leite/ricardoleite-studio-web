@@ -166,6 +166,16 @@ body {
   text-decoration: none;
 }
 
+.figure p img {
+  transition: filter 0.3s ease;
+
+}
+
+.figure p img:hover {
+  filter: blur(5px); /* Adjust the blur value as needed */
+  background-color: rgba(255, 0, 0, 0.9); /* Red color with some transparency */
+}
+
 .aspect1_1 {
   aspect-ratio: auto 1 / 1;
 }

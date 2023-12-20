@@ -5,12 +5,16 @@ interface imgInterface {
   url: string;
 }
 
-export const ProjectIndexBlockDiv = styled.div`
+interface projectIndexBlockElement {
+  isLastElem: boolean;
+}
+
+export const ProjectIndexBlockDiv = styled.div<projectIndexBlockElement>`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   column-gap: 79px;
   margin: 0 15px 0 15px;
-  border-top: 1px solid black;
+  ${props => props.isLastElem ? 'border-bottom: 1px solid black;border-top: 1px solid black;' : 'border-top: 1px solid black;'}
   padding: 10px;
   cursor: pointer;
 

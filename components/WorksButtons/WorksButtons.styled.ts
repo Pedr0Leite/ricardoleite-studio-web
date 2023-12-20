@@ -25,6 +25,8 @@ export const workDetailsRightButtonsClass = styled.div<workDetailsRightButtonsIn
   margin-bottom: -27px;
   border-top: 1px solid black;
   padding-top: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
   margin-top: 250px;
 
   & a {
@@ -55,6 +57,8 @@ justify-content: ${props => props.nextB && props.prevB ? justify.space : props.n
 position: absolute;
 margin-top: 5px;
 margin-right: 25px;
+padding-right: 10px;
+padding-left: 10px;
 width: -webkit-fill-available;
 border-bottom: 1px solid black;
 

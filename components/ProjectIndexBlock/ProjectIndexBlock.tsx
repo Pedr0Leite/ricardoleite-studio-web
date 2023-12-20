@@ -15,6 +15,7 @@ interface ProjectIndexBlockInterface {
   year: number;
   location: string;
   images?: Array<imgObj>;
+  isLastElem: boolean;
 }
 
 export default function ProjectIndexBlock({
@@ -24,6 +25,7 @@ export default function ProjectIndexBlock({
   year,
   location,
   images,
+  isLastElem
 }: ProjectIndexBlockInterface) {
   const [vpInnerWidth, setVpInnerWidth] = useState<number>();
   const cardImgVariants = {
@@ -84,7 +86,7 @@ export default function ProjectIndexBlock({
         key={project_id}
       >
         <Link href={`/works/${project_id}`}>
-          <Styled.ProjectIndexBlockDiv>
+          <Styled.ProjectIndexBlockDiv isLastElem={isLastElem}>
             <Styled.ProjectIndexBlockOneDiv>
               <div>{title}</div>
               <div>{images && images.length} img</div>
