@@ -2,9 +2,11 @@
   width: 100%;
 }
 
+
 .projectIndexMain a {
   text-decoration: none;
 }
+
 
 .projectIndexBlock {
   display: grid;
@@ -69,6 +71,6 @@
   width: 453px;
   position: fixed;
   z-index: 2;
-  left: 25%;
-  top: 25%;
+  left: 33%;
+  top: 33%;
 }

@@ -4,29 +4,14 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { GraphQLClient } from "graphql-request";
 import ProjectIndexBlock from "@/components/ProjectIndexBlock/ProjectIndexBlock";
-
-const workBlocksQuery = `
-query Projects {
-  projects (first: 20) {
-    project_id
-    title
-    tags
-    year
-    location
-    images {
-      url
-    }
-  }
-}     
-`;
+import { workProjectBlocksQuery } from "@/queries/projectQueries";
+import { projectInterface, ProjectsInterface } from "@/Interfaces/ProjectInterface";
 
 //Runs at build time
 export const getStaticProps = async () => {
-  const hygraph = new GraphQLClient(
-    "https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/clg7wfxo31jmr01uibwk16v1x/master"
-  );
+  const hygraph = new GraphQLClient(process.env.hygraphURL+"");
 
-  const data = await hygraph.request(workBlocksQuery);
+  const data = await hygraph.request(workProjectBlocksQuery);
 
   return {
     props: {
@@ -35,14 +20,14 @@ export const getStaticProps = async () => {
   };
 };
 
-interface projectInterface {
-    project_id: number,
-    title: string,
-    tags: Array<string>,
-    year: number,
-    location: string,
-    images: Array<object>
-}
+// interface projectInterface {
+//     project_id: number,
+//     title: string,
+//     tags: Array<string>,
+//     year: number,
+//     location: string,
+//     images: Array<object>
+// }
 
 
 export default function ProjectIndex({projects} : any) {
@@ -96,9 +81,13 @@ const sortedProjects = projects.projects.sort(function(a:projectInterface, b:pro
   return (
     <div className={styles.projectIndexMain}>
       {sortedProjects !== undefined &&
-        sortedProjects.map((_value: any) => {
+        sortedProjects.map((_value: any, index: number) => {
+          let isLastElem = false;
+          if(index == sortedProjects.length - 1){
+            isLastElem = true;
+        }
           return (
-            <ProjectIndexBlock key={_value.project_id} project_id={_value.project_id} title={_value.title} tags={_value.tags} year={_value.year} location={_value.location} images={_value.images}/>
+            <ProjectIndexBlock key={_value.project_id} project_id={_value.project_id} title={_value.title} tags={_value.tags} year={_value.year} location={_value.location} images={_value.images} isLastElem={isLastElem}/>
           );
         })}
       {/* <motion.div

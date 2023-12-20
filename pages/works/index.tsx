@@ -1,34 +1,13 @@
-import React, { useState } from "react";
+import { ProjectsWorkBlockInterface } from "@/Interfaces/ProjectInterface";
 import MainTitle from "@/components/MainTitle/MainTitle";
-import WorksBlock from "@/components/WorksBlock/WorksBlock";
-import { GraphQLClient } from "graphql-request";
 import SlidingText from "@/components/SlidingText";
-
-const workBlocksQuery = `
-query WorkBlocks {
-  workBlockEntries (first: 20) {
-    id
-    blockNumber
-    img {
-      url
-    }
-    sectionNumber
-    imgNumber
-    project {
-      id
-      project_id
-      title
-      tags
-    }
-  }
-}      
-`;
+import WorksBlock from "@/components/WorksBlock/WorksBlock";
+import { workBlocksQuery } from "@/queries/projectQueries";
+import { GraphQLClient } from "graphql-request";
 
 //Runs at build time
 export const getStaticProps = async () => {
-  const hygraph = new GraphQLClient(
-    "https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/clg7wfxo31jmr01uibwk16v1x/master"
-  );
+  const hygraph = new GraphQLClient(process.env.hygraphURL+"");
 
   const data = await hygraph.request(workBlocksQuery);
 
@@ -39,29 +18,7 @@ export const getStaticProps = async () => {
   };
 };
 
-interface ProjectObjectInterface {
-  id?: string;
-  blockNumber?: string;
-  img: {
-    url?: string;
-  };
-  sectionNumber?: number;
-  imgNumber?: string;
-  project: {
-    id?: string;
-    project_id?: number;
-    title?: string;
-    tags:Array<string>
-  };
-}
-
-interface ProjectsInterface {
-  projects: {
-    workBlockEntries: Array<ProjectObjectInterface>;
-  };
-}
-
-export default function Works({ projects }: ProjectsInterface) {
+export default function Works({ projects }: ProjectsWorkBlockInterface) {
    const projectsBlocks = projects.workBlockEntries;
 
   //SECTIONS

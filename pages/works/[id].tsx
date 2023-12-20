@@ -1,68 +1,16 @@
-import { useRouter } from "next/router";
-import React, { ReactNode, useEffect, useState } from "react";
-import specificProjectData from "../../specificProjectData.json";
-import { GraphQLClient, request, gql } from "graphql-request";
-import Link from "next/link";
-import Image from "next/image";
-import useWindowSize from "@/hooks/useWindowSize";
-import WorksButtons from "@/components/WorksButtons/WorksButtons";
+import { ProjectsInterface, projectInterface } from "@/Interfaces/ProjectInterface";
+import { SpecificProjectInterface } from "@/Interfaces/SpecificProjectInterface";
 import WorksButtons600 from "@/components/WorksButtons/WorkButtons600";
-
-interface SpecificProjectInterface {
-  title: ReactNode;
-  year: ReactNode;
-  location: ReactNode;
-  tags: ReactNode;
-  info: ReactNode;
-  projects: [
-    {
-      media: any;
-      project_id: number;
-      title: string;
-      tags: Array<string>;
-      year: number;
-      location: string;
-      active: boolean;
-      info: string;
-      images: Array<object>;
-    }
-  ];
-}
-
-interface projectInterface {
-  project_id: number;
-  title: string;
-  tags: Array<string>;
-  year: number;
-  location: string;
-  info: string;
-  images: Array<{
-    url: string;
-  }>;
-}
-
-const projectsQuery = `
-query Projects {
-  projects (first: 20) {
-    project_id
-    title
-    tags
-    year
-    location
-    info
-    images {
-      fileName
-      url
-    }
-  }
-}      
-`;
+import WorksButtons from "@/components/WorksButtons/WorksButtons";
+import useWindowSize from "@/hooks/useWindowSize";
+import { projectsQuery, specificIDQuery } from "@/queries/projectQueries";
+import { GraphQLClient } from "graphql-request";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 
 // //Runs at build time - PATHS
 export const getStaticPaths = async () => {
-  const hygraph = new GraphQLClient(
-    "https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/clg7wfxo31jmr01uibwk16v1x/master"
-  );
+  const hygraph = new GraphQLClient(process.env.hygraphURL+"");
 
   const data: any = await hygraph.request(projectsQuery);
 
@@ -71,7 +19,6 @@ export const getStaticPaths = async () => {
       params: { id: _project.project_id.toString() },
     };
   });
-
   return {
     paths: paths,
     fallback: false, //fallback pages
@@ -80,54 +27,15 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async (context: any) => {
   const id = context.params.id;
-  const hygraph = new GraphQLClient(
-    "https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/clg7wfxo31jmr01uibwk16v1x/master"
-  );
-
-  //   const data: SpecificProjectInterface = await hygraph.request(
-  //     `
-  //     query SpecificID {
-  //     projects(where: { project_id: ${id} }) {
-  //       project_id
-  //       title
-  //       tags
-  //       year
-  //       location
-  //       info
-  //       images {
-  //         fileName
-  //         url
-  //       }
-  //   }
-  // }`);
-  const data: SpecificProjectInterface = await hygraph.request(
-    `
-    query SpecificID {
-      projects (first: 20) {
-        project_id
-        title
-        tags
-        year
-        location
-        info
-        images {
-          url
-        }
-      }
-}`
-  );
-
+  const hygraph = new GraphQLClient(process.env.hygraphURL+"");
+  
+  const data: SpecificProjectInterface = await hygraph.request(specificIDQuery);
+  
   return {
-    // props: { project: data.projects, projectImgs: data.projects[0].images },
     props: { project: data.projects },
   };
 };
 
-interface ProjectsInterface {
-  // project: SpecificProjectInterface;
-  project: Array<projectInterface>;
-  // projectImgs: Array<Object>;
-}
 
 export default function WorksDetails({ project }: ProjectsInterface) {
   const router = useRouter();
@@ -207,15 +115,29 @@ export default function WorksDetails({ project }: ProjectsInterface) {
       )}
       <div className="worksDetailsRight">
         {currentProject?.images.map(
-          (projImg: { url: string }, index: number) => {
-            return (
-              <img
-                src={projImg.url}
-                className="specificFigure aspect16_9"
-                key={`specific-img-${index}`}
-                loading="lazy"
-              />
-            );
+          (projImg: { url: string, mimeType:string }, index: number) => {
+            
+            if(projImg.mimeType.includes('image')){
+              return (
+                <img
+                  src={projImg.url}
+                  className="specificFigure aspect16_9"
+                  key={`specific-img-${index}`}
+                  loading="lazy"
+                />
+              );
+            }else if(projImg.mimeType.includes('video')){
+              return (
+                <video
+                  src={projImg.url}
+                  className="specificFigure aspect16_9"
+                  key={`specific-img-${index}`}
+                  preload="auto"
+                  autoPlay={true}
+                  muted={true}
+                />
+              );
+            }
           }
         )}
         <WorksButtons project={project} />

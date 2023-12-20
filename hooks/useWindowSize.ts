@@ -1,9 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
-    interface IWindow{
-        width: number | undefined,
-        height: number | undefined
-    }
+import { IWindow } from "@/Interfaces/WindowInterface";
 
   // Hook
   function useWindowSize() {

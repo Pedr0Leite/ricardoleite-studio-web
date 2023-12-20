@@ -5,7 +5,8 @@ const nextConfig = {
 
 module.exports = {
   nextConfig,
-  // images: {
-  //   domains: ['media.graphassets.com'],
-  // },
+  env: {
+    hygraphURL: process.env.HYGRAPH_URL,
+    splineURL: process.env.SPLINE_URL
+  },
 }

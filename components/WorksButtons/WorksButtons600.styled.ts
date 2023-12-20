@@ -62,8 +62,7 @@ export const workDetailsRightButtons600Class = styled.div<workDetailsRightButton
     border-bottom: 1px solid black;
     border-top: 1px solid black;
     margin-bottom: 0;
-    padding-bottom: 10px;
-    padding-top: 15px;
+    padding: ${props => props.nextB && props.prevB ? "15px 10px 0 10px" : props.nextB && !props.prevB ? "15px 0 10px" : !props.nextB && props.prevB ? "15px 0 10px" : "15px 10px 0 10px"};
     width: -webkit-fill-available;
   }
 
