@@ -42,6 +42,7 @@ export const workDetailsRightButtonsClass = styled.div<workDetailsRightButtonsIn
       border: none;
       text-decoration: none;
       cursor: pointer;
+      -webkit-tap-highlight-color: transparent;
     }
 
     @media only screen and (max-width: 600px) {

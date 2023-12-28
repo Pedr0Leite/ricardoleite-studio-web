@@ -1,6 +1,13 @@
 .mainDiv {
   width: 100%;
   background: 
+  linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 49%,
+    rgba(253, 107, 107, 1) 62%,
+    rgba(252, 33, 33, 1) 87%,
+    rgba(255, 255, 255, 1) 100%
+  );
   /* linear-gradient(
     0deg,
     rgba(255, 255, 255, 1) 74%,
@@ -8,13 +15,13 @@
     rgba(252, 33, 33, 1) 95%,
     rgba(255, 255, 255, 1) 100%
   ); */
-  linear-gradient(
+  /* linear-gradient(
     0deg,
     rgba(255, 255, 255, 1) 67%,
     rgba(253, 107, 107, 1) 69%,
     rgba(252, 33, 33, 1) 79%,
     rgba(255, 255, 255, 1) 93%
-  )
+  ) */
 }
 
 /* New */
@@ -241,6 +248,10 @@
 
 .linksText a{
   text-decoration-line: none;
+  color: #000000;
+}
+
+.aboutContacts {
   color: #000000;
 }
 

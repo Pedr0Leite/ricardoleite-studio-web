@@ -7,6 +7,8 @@ query Projects {
     year
     location
     info
+    isFirstProject
+    isLastProject
     images {
       fileName
       url
@@ -24,6 +26,8 @@ query SpecificID {
     year
     location
     info
+    isFirstProject
+    isLastProject
     images {
       url
       mimeType
