@@ -4,6 +4,8 @@ export interface projectInterface {
     tags: Array<string>;
     year: number;
     location: string;
+    isFirstProject: boolean;
+    isLastProject: boolean;
     info: string;
     images: Array<{
       url: string;
@@ -44,5 +46,7 @@ export interface ProjectWorkBlockObjectInterface {
     project_id?: number;
     title?: string;
     tags:Array<string>
+    isFirstProject: boolean;
+    isLastProject: boolean;
   };
 }

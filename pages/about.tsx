@@ -25,17 +25,7 @@ export const getStaticProps = async () => {
 };
 
 export default function About({ abouts } : AboutsInterface) {
-console.log('abouts :', abouts);
   const size = useWindowSize();
-  // const mainTxt = 
-  // const introTxt = 
-  // const bio1Txt = 
-  // const bio2Txt = 
-  // const studioTxt = 
-  // const clientsAndAgencieTxt = 
-  // const booksTxt = 
-  // const [bio2Txt, setBio2Txt] = useState<any>(undefined);
-  
   let booksTxtEntries = undefined;
   let clientsAndAgencieTxtEntriesOne = undefined;
   let clientsAndAgencieTxtEntriesTwo = undefined;
@@ -93,34 +83,6 @@ console.log('abouts :', abouts);
   return (
     <>
       <div className={styles.mainDiv}>
-        {/* <Block title={aboutData.bio.title} info={aboutData.bio.info} />
-        <Block
-          title={aboutData.services.title}
-          list={aboutData.services.list}
-        />
-        <Block
-          title={aboutData.clients.title}
-          info={aboutData.clients.info}
-        />
-        <Block
-          title={aboutData.books.title}
-          list={aboutData.books.list}
-        />
-        <Block
-          title={aboutData.magazines.title}
-          list={aboutData.magazines.list}
-        />
-        <Block
-          title={aboutData.links.title}
-          list={aboutData.links.list}
-        />
-        <div className={styles.block}>
-          <div className={styles.subBlock}>For freelance inquiers -</div>
-          <div className={styles.subBlock}>
-            <a href="mailto:someone@yoursite.com">info@ricardoleite.net</a>
-          </div>
-        </div> */}
-
         <div className={styles.firstBlock}>
           <div className={styles.firstBlockLeft}>
             <div>I am Ricardo Leite</div>
@@ -200,22 +162,11 @@ console.log('abouts :', abouts);
           <div className={styles.thirdBlockTitle}>Clients & Agencies</div>
           <div className={styles.thirdBlockText}>
             <ul>
-              {/* <li>Adidas</li>
-              <li>Brut</li>
-              <li>Converse</li>
-              <li>Facebook</li>
-              <li>Pepsi</li>
-              <li>Spotify</li>
-              <li>WeArePi</li>
-              <li>Brut</li>
-              <li>CloudFactory</li>
-              <li>Ridley Scott Creative Group</li>
-              <li>Nike</li> */}
               {clientsAndAgencieTxtEntriesOne != undefined &&
                   clientsAndAgencieTxtEntriesOne.map((_value: string, index: number) => {
                     return (
                       <>
-                        <li key={`books-li-${index}`}>{_value}</li>
+                        <li key={`client-agency1-li-${index}`}>{_value}</li>
                       </>
                     );
                   })}
@@ -224,19 +175,11 @@ console.log('abouts :', abouts);
           <div className={styles.thirdBlockTitle}></div>
           <div className={styles.thirdBlockText}>
             <ul>
-              {/* <li>KNAS Agency</li>
-              <li>YourMajesty</li>
-              <li>WeTransfer</li>
-              <li>LeGuessWho?</li>
-              <li>Mr.Frank</li>
-              <li>Pepsi</li>
-              <li>Experimenta</li>
-              <li>Adobe</li> */}
               {clientsAndAgencieTxtEntriesTwo != undefined &&
                   clientsAndAgencieTxtEntriesTwo.map((_value: string, index: number) => {
                     return (
                       <>
-                        <li key={`books2-li-${index}`}>{_value}</li>
+                        <li key={`client-agency2-li-${index}`}>{_value}</li>
                       </>
                     );
                   })}
@@ -245,15 +188,6 @@ console.log('abouts :', abouts);
           <div className={styles.thirdBlockTitle}>Magazines</div>
           <div className={styles.thirdBlockText}>
             <ul>
-              {/* <li>Kinfolk v38 / Rituals, Winter, 2020</li>
-              <li>IdN v22n3: Designer Typefaces, 2015</li>
-              <li>IdN v20n4: Paper Special, 2014</li>
-              <li>Soirée graphique n°6, 2013</li>
-              <li>IdN v19n4: Shapes-in-Pattern, 2013</li>
-              <li>Étapes, France, 2013</li>
-              <li>Creative Review, June, 2012</li>
-              <li>IDN v19/ Shaping their own patterns, 2012</li>
-              <li>C.R. , Monograph Barcelona, 2012</li> */}
               {magazinesTxtEntries != undefined &&
                   magazinesTxtEntries.map((_value: string, index: number) => {
                     return (
@@ -265,45 +199,6 @@ console.log('abouts :', abouts);
             </ul>
           </div>
         </div>
-        {/* <div className={styles.thirdBlock}>
-          <div className={styles.thirdBlockTitle}>Books</div>
-          <div className={styles.thirdBlockText}>
-            <ul>
-              <li>Less is More by Victionary, 2018</li>
-              <li>Type Plus by Unit editions, 2015</li>
-              <li>CITIx60 Amsterdam by Victionary, 2015</li>
-              <li>Portugal by Design, 2015</li>
-              <li>RSVP - Invitation Design for Special Occasions, 2015</li>
-              <li>Its Nice That Annual Review, 2013</li>
-              <li>Poster Graphics, JP, 2013</li>
-              <li>Pretty Ugly, Gestalten, 2012</li>
-              <li>BASIC COVER, Index Books, 2013</li>
-              <li>Posters, Index Books, 2013</li>
-              <li>FRESH - Cutting Edge Illustrations, Slanted 2012</li>
-            </ul>
-          </div>
-          <div className={styles.thirdBlockTitle}>Prizes</div>
-          <div className={styles.thirdBlockText}>
-            <ul>
-              <li>Clio Awards / C.F, 2023</li>
-              <li>ADCN / 2x Silver Lamp / C.F., 2022</li>
-            </ul>
-          </div>
-          <div className={styles.thirdBlockTitle}>Contacts</div>
-          <div className={styles.thirdBlockText}>
-            <ul>
-              <li>Exhibition & Lectures</li>
-              <li>ricardo@ricardoleite.net</li>
-              <br />
-              <li>Creative Direction</li>
-              <li>Brut Representation/US/UK/ES</li>
-              <li>sara@brut.works</li>
-              <br />
-              <li>Freelancer inquiries availability/</li>
-              <li>info@ricardoleite.net</li>
-            </ul>
-          </div>
-        </div> */}
         {size != undefined && size.width != undefined && size.width >= 600 ? (
           <>
         <div className={styles.thirdBlock}>
@@ -332,14 +227,14 @@ console.log('abouts :', abouts);
             <div className={styles.thirdBlockText}>
             <ul>
               <li>Exhibition & Lectures</li>
-              <li>ricardo@ricardoleite.net</li>
+              <li><a  className={styles.aboutContacts} href="mailto:ricardo@ricardoleite.net">ricardo@ricardoleite.net</a></li>
               <br />
               <li>Creative Direction</li>
               <li>Brut Representation/US/UK/ES</li>
-              <li>sara@brut.works</li>
+              <li><a  className={styles.aboutContacts} href="mailto:sara@brut.works">sara@brut.works</a></li>
               <br />
-              <li>Freelancer inquiries availability/</li>
-              <li>info@ricardoleite.net</li>
+              <li>Freelancer inquiries availability</li>
+              <li><a  className={styles.aboutContacts} href="mailto:info@ricardoleite.net">info@ricardoleite.net</a></li>
             </ul>
           </div>
           </div>
@@ -370,7 +265,7 @@ console.log('abouts :', abouts);
                   booksTxtEntries.map((_value: string, index: number) => {
                     return (
                       <>
-                        <li key={`books-li-${index}`}>{_value}</li>
+                        <li key={`books-m-li-${index}`}>{_value}</li>
                       </>
                     );
                   })}

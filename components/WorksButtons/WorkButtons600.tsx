@@ -45,19 +45,22 @@ export default function WorksButtons600({ project }: ProjectsInterface) {
     }, [project, projectId]);
   
     useEffect(() =>{
-      if((prevProjectId == undefined && currentProject?.project_id == 0) || currentProject?.project_id == prevProjectId?.project_id){
+      // if((prevProjectId == undefined && currentProject?.project_id == 0 && currentProject?.isLastProject == false) || currentProject?.project_id == prevProjectId?.project_id){
+      if(currentProject?.isFirstProject == true){
         setNextB(true);
         setPrevB(false);
         
-      }else if(currentProject?.project_id == nextProjectId?.project_id){
+      }else if(currentProject?.isLastProject == true){
         setNextB(false);
         setPrevB(true);
         
-      }else{
+      }
+      else if((currentProject?.isFirstProject == null  || currentProject?.isFirstProject == false) && (currentProject?.isLastProject == null || currentProject?.isLastProject == false)){
         setNextB(true);
         setPrevB(true);
       }
-    }, [prevProjectId, currentProject, nextProjectId])
+    })
+    // }, [prevProjectId, currentProject, nextProjectId])
   
     if (router.isFallback) {
       return <div>Loading...</div>;

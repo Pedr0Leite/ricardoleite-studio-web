@@ -18,6 +18,18 @@ const justify = {
   space: "space-between"
 };
 
+const justifyContentValue = (nextB: Boolean | undefined, prevB: Boolean | undefined) => {
+  if (nextB && prevB) {
+    return 'space-between';
+  } else if (!nextB && prevB) {
+    return 'flex-start';
+  } else if (nextB && !prevB) {
+    return 'flex-end';
+  } else {
+    return ''; // Default value or empty string
+  }
+};
+
 export const workDetails600Class = styled.div`
 
 @media only screen and (max-width: 700px) {
@@ -47,22 +59,25 @@ export const workDetailsRightButtons600Class = styled.div<workDetailsRightButton
     border: none;
     text-decoration: none;
     cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
   }
 
   & a:last-child{
     display: flex;
-    justify-content: flex-end;
+    justify-content:  ${props => !props.nextB && props.prevB ? "flex-start" : "flex-end"};
+    // justify-content: flex-end;
   }
 
   @media only screen and (max-width: 700px) {
     display: flex;
-    justify-content: ${props => props.nextB && props.prevB ? justify.space : props.nextB && !props.prevB ? justify.end : !props.nextB && props.prevB ? justify.start : ""};
+    justify-content: ${props => justifyContentValue(props.nextB, props.prevB)};
     height: 100%;
     width: -webkit-fill-available;
     border-bottom: 1px solid black;
     border-top: 1px solid black;
     margin-bottom: 0;
-    padding: ${props => props.nextB && props.prevB ? "15px 10px 0 10px" : props.nextB && !props.prevB ? "15px 0 10px" : !props.nextB && props.prevB ? "15px 0 10px" : "15px 10px 0 10px"};
+    //padding: ${props => props.nextB && props.prevB ? "15px 10px 0 10px" : props.nextB && !props.prevB ? "15px 10px 0 10px" : !props.nextB && props.prevB ? "15px 0 10px" : "15px 10px 0 10px"};
+    padding: 15px 10px 0 10px;
     width: -webkit-fill-available;
   }
 

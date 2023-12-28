@@ -41,6 +41,7 @@
 
 .navbar a {
   text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 .navLeftBlock {
@@ -130,6 +131,7 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    -webkit-tap-highlight-color: transparent;
   }
 
   .rl_logo {
