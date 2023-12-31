@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "@/styles/About.module.css";
-import FadeInSection from "@/components/FadeInSection";
+import FadeInSection from "@/components/FadeIn/FadeInSection";
 
 interface BlockInterface {
   title: string;

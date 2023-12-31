@@ -1,6 +1,6 @@
 import { ProjectsWorkBlockInterface } from "@/Interfaces/ProjectInterface";
 import MainTitle from "@/components/MainTitle/MainTitle";
-import SlidingText from "@/components/SlidingText";
+import SlidingText from "@/components/SlidingText/SlidingText";
 import WorksBlock from "@/components/WorksBlock/WorksBlock";
 import { workBlocksQuery } from "@/queries/projectQueries";
 import { GraphQLClient } from "graphql-request";
@@ -58,7 +58,7 @@ export default function Works({ projects }: ProjectsWorkBlockInterface) {
   const sectionThreeRowOne = sectionThree.filter(
     (block: any) => block.blockNumber == "block1"
   );
-
+console.log("block: " +  sectionOneRowOne[0].img.url)
 
   return (
     <>

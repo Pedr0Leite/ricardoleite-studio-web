@@ -8,11 +8,13 @@ import { GraphQLClient } from "graphql-request";
 // import mainAbstrc from "../public/About/abstract_img_1.png";
 import mainAbstrc from "../public/About/RL_Logotype_3D.png";
 import Image from "next/image";
-import SlidingText from "@/components/SlidingText";
+import SlidingText from "@/components/SlidingText/SlidingText";
 import Link from "next/link";
 import { aboutQuery } from "@/queries/projectQueries";
 import { AboutsInterface, aboutTagsEnum } from "@/Interfaces/AboutInterface";
 import useWindowSize from "@/hooks/useWindowSize";
+import AboutMainImg from "@/components/About/MainImg/AboutMainImg";
+import AboutMainImgMobile from "@/components/About/MainImg/AboutMainImgMobile";
 
 export const getStaticProps = async () => {
   const hygraph = new GraphQLClient(process.env.hygraphURL+"");
@@ -31,8 +33,12 @@ export default function About({ abouts } : AboutsInterface) {
   let clientsAndAgencieTxtEntriesTwo = undefined;
   let magazinesTxtEntries = undefined;
 
-    const mainTxt = abouts.filter(
+      const main = abouts.filter(
       (x: any) => x.aboutTags == aboutTagsEnum.main
+      )[0];
+ 
+      const logo = abouts.filter(
+      (x: any) => x.aboutTags == aboutTagsEnum.logo
       )[0];
   
       const introTxt = abouts.filter(
@@ -79,14 +85,14 @@ export default function About({ abouts } : AboutsInterface) {
       magazinesTxtEntries = magazinesTxt.aboutText.split('\n');
     }
 
-    
   return (
     <>
       <div className={styles.mainDiv}>
         <div className={styles.firstBlock}>
           <div className={styles.firstBlockLeft}>
             <div>I am Ricardo Leite</div>
-            <div className={styles.mainAbstrcImgMobile}></div>
+            {/* <div className={styles.mainAbstrcImgMobile}/> */}
+              <AboutMainImgMobile url={main.image?.url != undefined ? main.image?.url : ''}/>
             <div>
               <p>
                 {introTxt.aboutText}
@@ -100,21 +106,21 @@ export default function About({ abouts } : AboutsInterface) {
             </div>
           </div>
           <div className={styles.firstBlockRight}>
-            {/* <div>
-              <p>Amsterdam,</p>
-              <p>2023.</p>
-            </div> */}
-            <div className={styles.mainAbstrcImg}>
+            <AboutMainImg 
+            url={main.image?.url != undefined ? main.image?.url : ''} 
+            logoUrl={logo.image?.url != undefined ? logo.image?.url : ''}/>
+            {/* <div className={styles.mainAbstrcImg}>
               <div className={styles.mainAbstrcOverlapDiv}>
                 <Image
-                  src={mainAbstrc.src}
+                  // src={mainAbstrc.src}
+                  src={logo.image?.url != undefined ? logo.image?.url : ''}
                   height="100"
                   width="100"
                   alt="abstract"
                   className={styles.mainAbstrcOverlapImg}
                 />
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
         <SlidingText />
