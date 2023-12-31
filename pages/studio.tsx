@@ -2,8 +2,8 @@ import React, { useEffect, useRef, useState } from "react";
 import styles from "@/styles/Studio.module.css";
 import Spline from "@splinetool/react-spline";
 import { motion, AnimatePresence, useAnimationControls } from "framer-motion";
-import AnimatedTitle from "@/components/AnimatedTitle";
-import AnimatedText from "@/components/AnimatedText";
+import AnimatedTitle from "@/components/Animated/AnimatedTitle";
+import AnimatedText from "@/components/Animated/AnimatedText";
 import MainTitle from "@/components/MainTitle/MainTitle";
 import { GraphQLClient } from "graphql-request";
 

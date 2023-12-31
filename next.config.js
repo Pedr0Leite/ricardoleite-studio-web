@@ -9,4 +9,7 @@ module.exports = {
     hygraphURL: process.env.HYGRAPH_URL,
     splineURL: process.env.SPLINE_URL
   },
+  images: {
+    domains: ['media.graphassets.com'],
+  },
 }
