@@ -220,9 +220,9 @@ export default function About({ abouts } : AboutsInterface) {
             <br/>
              <p>All rights reserved 2023</p>
           <br/>
-            <p>
+            {/* <p>
               Type by <u>ABC Dinamo</u>
-            </p>
+            </p> */}
             <p>
               Site by <Link href="https://www.linkedin.com/in/pedromgleite/">Pedro Leite</Link>
             </p>
@@ -306,9 +306,9 @@ export default function About({ abouts } : AboutsInterface) {
             <br/>
              <p>All rights reserved 2023</p>
           <br/>
-            <p>
+            {/* <p>
               Type by <u>ABC Dinamo</u>
-            </p>
+            </p> */}
             <p>
               Site by <Link href="https://www.linkedin.com/in/pedromgleite/">Pedro Leite</Link>
             </p>

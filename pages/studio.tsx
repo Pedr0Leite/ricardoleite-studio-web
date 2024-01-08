@@ -1,41 +1,12 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import styles from "@/styles/Studio.module.css";
 import Spline from "@splinetool/react-spline";
-import { motion, AnimatePresence, useAnimationControls } from "framer-motion";
-import AnimatedTitle from "@/components/Animated/AnimatedTitle";
-import AnimatedText from "@/components/Animated/AnimatedText";
 import MainTitle from "@/components/MainTitle/MainTitle";
-import { GraphQLClient } from "graphql-request";
 
-// //Runs at build time
-// export const getStaticProps = async () => {
-//     const hygraph = new GraphQLClient(
-//       'https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/clg7wfxo31jmr01uibwk16v1x/master'
-//     );
+// https://prod.spline.design/xrJgKlLhlatkwEaY/scene.splinecode
 
-//     const data = await hygraph.request(
-//       `
-//       query TestDatas {
-//         testDatas {
-//           createdAt
-//           id
-//           name
-//           publishedAt
-//           updatedAt
-//           img {
-//             url
-//           }
-//         }
-//       }
-//       `
-//     );
-
-//     return {
-//       props: {
-//         data,
-//       },
-//     };
-//   }
+// real
+// https://prod.spline.design/BkrGLpQQ4CiqLZ-m/scene.splinecode
 
 export default function Studio() {
   const [Loading, setLoading] = useState(true);

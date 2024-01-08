@@ -20,32 +20,11 @@ export const getStaticProps = async () => {
   };
 };
 
-// interface projectInterface {
-//     project_id: number,
-//     title: string,
-//     tags: Array<string>,
-//     year: number,
-//     location: string,
-//     images: Array<object>
-// }
-
-
 export default function ProjectIndex({projects} : any) {
 const sortedProjects = projects.projects.sort(function(a:projectInterface, b:projectInterface) {
   return b.year - a.year;
 });
-  //   const cardImgVariants = {
-  //     hidden: {
-  //       opacity: 0,
-  //     },
-  //     visible: {
-  //       opacity: 1,
-  //       transition: {
-  //         type: "spring",
-  //         delay: 0.5,
-  //       },
-  //     },
-  //   };
+
   const cardImgVariants = {
     hidden: {
       opacity: 0,
@@ -67,10 +46,6 @@ const sortedProjects = projects.projects.sort(function(a:projectInterface, b:pro
         "500px",
         "517px",
       ],
-      //   transition: {
-      //     type: "spring",
-      //     delay: 0.5,
-      //   },
       transition: {
         type: "linear",
         delay: 0.5,
@@ -90,25 +65,6 @@ const sortedProjects = projects.projects.sort(function(a:projectInterface, b:pro
             <ProjectIndexBlock key={_value.project_id} project_id={_value.project_id} title={_value.title} tags={_value.tags} year={_value.year} location={_value.location} images={_value.images} isLastElem={isLastElem}/>
           );
         })}
-      {/* <motion.div
-        initial="hidden"
-        whileHover="visible"
-        animate="hidden"
-        className={styles.projectIndexBlock}
-      >
-        <div className={styles.projectIndexBlockOne}>
-          <div>Altava</div>
-          <div>4 img</div>
-        </div>
-        <div className={styles.projectIndexBlockTwo}>
-          <div>Art Direction, Branding, Graphic Design</div>
-          <div>2022</div>
-        </div>
-        <motion.div
-          variants={cardImgVariants}
-          className={styles.cardImg}
-        ></motion.div>
-      </motion.div> */}
     </div>
   );
 }

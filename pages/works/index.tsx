@@ -58,7 +58,6 @@ export default function Works({ projects }: ProjectsWorkBlockInterface) {
   const sectionThreeRowOne = sectionThree.filter(
     (block: any) => block.blockNumber == "block1"
   );
-console.log("block: " +  sectionOneRowOne[0].img.url)
 
   return (
     <>
