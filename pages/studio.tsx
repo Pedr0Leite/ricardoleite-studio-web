@@ -7,6 +7,7 @@ export default function Studio() {
   const [Loading, setLoading] = useState(true);
   const splineURL = process.env.splineURL != "" ? process.env.splineURL+"" : process.env.SPLINE_URL+"";
 
+  
   return (
     <>
       <MainTitle />
