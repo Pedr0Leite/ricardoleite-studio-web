@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@netlify/plugin-nextjs": "^4.36.0",
-    "@splinetool/react-spline": "^2.2.6",
     "@types/node": "18.15.3",
     "@types/react": "18.0.28",
     "@types/react-dom": "18.0.11",
@@ -28,6 +27,8 @@
     "typescript": "4.9.5"
   },
   "devDependencies": {
+    "@splinetool/react-spline": "^2.2.6",
+    "@splinetool/runtime": "^1.0.24",
     "@types/styled-components": "^5.1.26",
     "babel-plugin-styled-components": "^2.0.7"
   }
