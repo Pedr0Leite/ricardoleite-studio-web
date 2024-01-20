@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import * as Styled from "./Clock.styled";
 import useWindowSize from "@/hooks/useWindowSize";
+import pugRunnig from '@/public/cursor/pug_running.gif'
 
 export default function Clock() {
   const [dateTime, setDateTime] = useState(
@@ -42,7 +43,7 @@ export default function Clock() {
 
   return (
     <>
-    <Styled.ClockMainDiv>
+    <Styled.ClockMainDiv cursorImage={pugRunnig.src}>
         <span>Amsterdam, {dateTime}</span>
         <span>{openForProjects}</span>
       </Styled.ClockMainDiv>

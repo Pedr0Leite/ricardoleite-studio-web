@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import * as Styled from "./MainTitle.styled";
 import { useRouter } from "next/router";
 import useWindowSize from "@/hooks/useWindowSize";
+import Link from "next/link";
+
 
 export default function MainTitle() {
   const router = useRouter();
@@ -19,7 +21,9 @@ export default function MainTitle() {
         <Styled.MainDiv>
           <Styled.Title color={currentColor}>
             <p>
-              <span>Leite Studio</span>
+              <Link href="/works">
+                <span>Leite Studio</span>
+              </Link>
             </p>
           </Styled.Title>
           <Styled.TopDiv color={currentColor}>

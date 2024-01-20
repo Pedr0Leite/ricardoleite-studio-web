@@ -251,9 +251,18 @@
   color: #000000;
 }
 
+.linksText a:hover{
+  color: red;
+}
+
 .aboutContacts {
   color: #000000;
 }
+
+.aboutContacts:hover{
+  color: red;
+}
+
 
 /* Old */
 

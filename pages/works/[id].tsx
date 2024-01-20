@@ -135,6 +135,7 @@ export default function WorksDetails({ project }: ProjectsInterface) {
                   preload="auto"
                   autoPlay={true}
                   muted={true}
+                  loop={true}
                 />
               );
             }

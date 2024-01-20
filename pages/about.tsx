@@ -218,14 +218,14 @@ export default function About({ abouts } : AboutsInterface) {
             </p>
             <br/>
             <br/>
-             <p>All rights reserved 2023</p>
+             {/* <p>All rights reserved 2023</p> */}
           <br/>
             {/* <p>
               Type by <u>ABC Dinamo</u>
             </p> */}
-            <p>
+            {/* <p>
               Site by <Link href="https://www.linkedin.com/in/pedromgleite/">Pedro Leite</Link>
-            </p>
+            </p> */}
           </div>
           <div className={styles.thirdBlockTitle}>Contacts</div>
           <div className={styles.thirdBlockText}>
@@ -304,14 +304,14 @@ export default function About({ abouts } : AboutsInterface) {
             </p>
             <br/>
             <br/>
-             <p>All rights reserved 2023</p>
+             {/* <p>All rights reserved 2023</p> */}
           <br/>
             {/* <p>
               Type by <u>ABC Dinamo</u>
             </p> */}
-            <p>
+            {/* <p>
               Site by <Link href="https://www.linkedin.com/in/pedromgleite/">Pedro Leite</Link>
-            </p>
+            </p> */}
           </div>
         </div>
           </>

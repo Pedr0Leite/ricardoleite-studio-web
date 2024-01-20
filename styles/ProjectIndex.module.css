@@ -72,6 +72,7 @@
   width: 453px;
   position: fixed;
   z-index: 2;
-  left: 33%;
+  /* left: 33%; */
+  left: 48%;
   top: 33%;
 }
