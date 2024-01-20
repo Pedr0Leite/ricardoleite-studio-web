@@ -1,23 +1,29 @@
 import styled from "styled-components";
+import { StaticImageData } from "next/image";
 
-export const ClockMainDiv = styled.div`
+type CursorImageProps = {
+  cursorImage: string;
+};
+
+export const ClockMainDiv = styled.div<CursorImageProps>`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  cursor: wait;
+  cursor: url(${props => props.cursorImage}), auto;
 
   & span {
     font-family: "SuisseIntl-Regular";
     font-style: normal;
     font-weight: bolder;
-    font-size: 12px;
-    line-height: 100%;
+    font-size: 10px;
+    line-height: 90%;
     color: #000000;
     position: relative;
     left: 5vw;
     color: black !important;
     padding-top: 2px;
-    cursor: wait;
+    // cursor: wait;
+    cursor: url(${props => props.cursorImage}), auto
   }
 
   & span:first-child {
@@ -43,12 +49,13 @@ export const ClockMainDiv = styled.div`
   }
 `;
 
-export const ClockMainDivMobile = styled.div`
+export const ClockMainDivMobile = styled.div<CursorImageProps>`
   display: none;
 
   @media only screen and (max-width: 600px) {
     display: inherit;
-    cursor: wait;
+    // cursor: wait;
+    cursor: url(${props => props.cursorImage}), auto
 
     & span {
       font-family: "SuisseIntl-Regular";

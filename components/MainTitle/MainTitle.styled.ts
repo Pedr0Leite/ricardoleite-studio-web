@@ -35,6 +35,11 @@ export const Title = styled.div<colorInterface>`
         color: black;
     }
 
+    & p a {
+        text-decoration: none;
+        color: black
+    }
+
     @media only screen and (max-width: 850px) {
         font-size: 160px;
       }

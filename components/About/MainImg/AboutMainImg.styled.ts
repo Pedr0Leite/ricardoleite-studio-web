@@ -50,7 +50,8 @@ export const mainAbstrcOverlapImg = styled.img.attrs((props) => ({
   }))`
     background-repeat: no-repeat;
     background-size: cover;
-    height: 90%;
+    // height: 90%;
+    height: 80%;
     width: 50vw;
     aspect-ratio: 4 / 5;
     position: fixed;

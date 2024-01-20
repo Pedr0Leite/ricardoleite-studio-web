@@ -89,12 +89,12 @@ export default function WorksButtons({ project }: ProjectsInterface) {
         <Styled.workDetailsRightButtonsClass nextB={nextB} prevB={prevB}>
           {prevProjectId != undefined && currentProject?.project_id != 0 && prevProjectId?.project_id >= 0 && (
             <Link href={`/works/${prevProjectId?.project_id}`}>
-              &#10094; Prev
+               {'< Prev'}
             </Link>
           )}
           {nextProjectId != undefined && currentProject?.project_id != nextProjectId?.project_id && nextProjectId?.project_id >= 0 && (
             <Link href={`/works/${nextProjectId?.project_id}`}>
-              Next &#10095;
+              {'Next >'}
             </Link>
           )}
         </Styled.workDetailsRightButtonsClass>

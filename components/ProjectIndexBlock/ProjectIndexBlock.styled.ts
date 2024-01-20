@@ -50,7 +50,8 @@ export const ProjectIndexBlockOneDiv = styled.div`
     font-family: "SuisseIntl-Regular";
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    // font-size: 14px;
+    font-size: 10px;
     line-height: 100%;
     text-align: right;
     color: #000000;
