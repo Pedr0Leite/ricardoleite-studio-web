@@ -5,11 +5,12 @@ type CursorImageProps = {
   cursorImage: string;
 };
 
-export const ClockMainDiv = styled.div<CursorImageProps>`
+  // export const ClockMainDiv = styled.div<CursorImageProps>`
+  export const ClockMainDiv = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  cursor: url(${props => props.cursorImage}), auto;
+  cursor: wait;
 
   & span {
     font-family: "SuisseIntl-Regular";
@@ -22,8 +23,7 @@ export const ClockMainDiv = styled.div<CursorImageProps>`
     left: 5vw;
     color: black !important;
     padding-top: 2px;
-    // cursor: wait;
-    cursor: url(${props => props.cursorImage}), auto
+    cursor: wait;
   }
 
   & span:first-child {
@@ -49,13 +49,13 @@ export const ClockMainDiv = styled.div<CursorImageProps>`
   }
 `;
 
-export const ClockMainDivMobile = styled.div<CursorImageProps>`
+// export const ClockMainDivMobile = styled.div<CursorImageProps>`
+export const ClockMainDivMobile = styled.div`
   display: none;
 
   @media only screen and (max-width: 600px) {
     display: inherit;
-    // cursor: wait;
-    cursor: url(${props => props.cursorImage}), auto
+    cursor: wait;
 
     & span {
       font-family: "SuisseIntl-Regular";
