@@ -101,7 +101,7 @@ export default function About({ abouts } : AboutsInterface) {
             <div>
               <p>Let’s work on something together →</p>
               <p>
-                <u>info@ricardoleite.net</u>
+                <u><a className={styles.aboutContacts} href="mailto:info@ricardoleite.net">info@ricardoleite.net</a></u>
               </p>
             </div>
           </div>

@@ -220,6 +220,7 @@ body {
 
 .specificFigure {
   width: 100% !important;
+  margin-bottom: -4px;
 }
 
 .figure p span:first-child {
@@ -489,20 +490,6 @@ body {
 {
   margin-left: 60px;
 }
-
-/* clock */
-
-/* .clock {
-  font-family: "SuisseIntl-Regular";
-  font-style: normal;
-  font-weight: bolder;
-  font-size: 14px;
-  line-height: 100%;
-  text-decoration-line: underline;
-  color: #000000;
-  position: relative;
-  left: 8vw;
-} */
 
 /* Sliding text */
 
