@@ -22,7 +22,7 @@ export const workDetailsRightButtonsClass = styled.div<workDetailsRightButtonsIn
   justify-content: ${props => props.nextB && props.prevB ? justify.space : props.nextB && !props.prevB ? justify.end : !props.nextB && props.prevB ? justify.start : ""};
   padding-bottom: 20px;
   align-items: flex-end;
-  margin-bottom: -27px;
+  margin-bottom: -30px;
   border-top: 1px solid black;
   padding-top: 10px;
   padding-right: 10px;
@@ -67,7 +67,7 @@ border-bottom: 1px solid black;
   font-family: "SuisseIntl-Regular";
   font-style: normal;
   font-weight: 400;
-  font-size: 12px;
+  font-size: calc(5px + 0.8vw);
   line-height: 100%;
   text-align: right;
 
@@ -78,84 +78,3 @@ border-bottom: 1px solid black;
   display: none;
 }
 `;
-
-// 600
-// .workDetailsRightButtons {
-//   display: none;
-// }
-
-// .workDetailsNextPrevProject {
-//   display: none;
-  
-// }
-
-// ------------------------
-// .workDetailsRightButtons {
-  // display: flex;
-  // justify-content: space-between;
-  // padding-bottom: 20px;
-  // align-items: flex-end;
-  // margin-bottom: -27px;
-  // border-top: 1px solid black;
-  // padding-top: 10px;
-  // margin-top: 250px;
-// }
-
-// .workDetailsRightButtons a {
-//   height: 35px;
-//   margin-bottom: 10px;
-//   font-family: "SuisseIntl-Regular";
-//   font-style: normal;
-//   font-weight: 500;
-//   font-size: 26px;
-//   line-height: 100%;
-//   color: var(--globalBlack);
-//   background-color: transparent;
-//   border: none;
-//   text-decoration: none;
-//   cursor: pointer;
-// }
-
-// .workDetailsRightButtonsJustifyEnd {
-//   justify-content: flex-end !important;
-// }
-
-// .workDetailsRightButtonsJustifyStart {
-//   justify-content: flex-start !important;
-// }
-
-
-// ------------
-
-
-
-// .workDetailsNextPrevProject {
-  // display: flex;
-  // justify-content: space-between;
-  // position: absolute;
-  // margin-top: 5px;
-  // margin-right: 25px;
-  // width: -webkit-fill-available;
-  // border-bottom: 1px solid black;
-// }
-
-// .workDetailsNextPrevProjectJustifyEnd{
-//   justify-content: flex-end;
-
-// }
-
-// .workDetailsNextPrevProjectJustifyStart{
-//   justify-content: flex-start;
-
-// }
-
-// .workDetailsNextPrevProject span {
-//   font-family: "SuisseIntl-Regular";
-//   font-style: normal;
-//   font-weight: 400;
-//   font-size: 12px;
-//   line-height: 100%;
-//   text-align: right;
-
-//   color: #000000;
-// }

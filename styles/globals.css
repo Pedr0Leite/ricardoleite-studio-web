@@ -220,7 +220,7 @@ body {
 
 .specificFigure {
   width: 100% !important;
-  margin-bottom: -4px;
+  margin-bottom: 4px;
 }
 
 .figure p span:first-child {
@@ -338,7 +338,13 @@ body {
 }
 
 .worksDetailsInfo:nth-child(5) span:nth-child(2) {
-  font-weight: 400;
+  /* font-weight: 400; */
+  font-family: "SuisseIntl-Regular";
+  font-style: normal;
+  font-weight: 500;
+  font-size: calc(5px + 0.8vw);
+  line-height: 100%;
+  color: #000000;
 }
 
 .worksDetailsInfo:last-child{

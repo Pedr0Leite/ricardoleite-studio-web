@@ -43,9 +43,11 @@ export default function MainTitle() {
             <>
               <Styled.TitleMobile color={currentColor}>
                 <p>
-                  <span>Leite</span>
-                  <br />
-                  <span>Studio</span>
+                  <Link href="/works">
+                    <span>Leite</span>
+                    <br />
+                    <span>Studio</span>
+                  </Link>
                 </p>
               </Styled.TitleMobile>
               <Styled.TopBottomMainDiv>

@@ -5,9 +5,6 @@ import aboutData from "../aboutData.json";
 import Block from "@/components/About/Block/Block";
 import mainImg from "../public/About/main1.png";
 import { GraphQLClient } from "graphql-request";
-// import mainAbstrc from "../public/About/abstract_img_1.png";
-import mainAbstrc from "../public/About/RL_Logotype_3D.png";
-import Image from "next/image";
 import SlidingText from "@/components/SlidingText/SlidingText";
 import Link from "next/link";
 import { aboutQuery } from "@/queries/projectQueries";
@@ -283,14 +280,14 @@ export default function About({ abouts } : AboutsInterface) {
             <div className={styles.thirdBlockText}>
             <ul>
               <li>Exhibition & Lectures</li>
-              <li>ricardo@ricardoleite.net</li>
+              <li><a  className={styles.aboutContacts} href="mailto:ricardo@ricardoleite.net">ricardo@ricardoleite.net</a></li>
               <br />
               <li>Creative Direction</li>
               <li>Brut Representation/US/UK/ES</li>
-              <li>sara@brut.works</li>
+              <li><a  className={styles.aboutContacts} href="mailto:sara@brut.works">sara@brut.works</a></li>
               <br />
               <li>Freelancer inquiries availability/</li>
-              <li>info@ricardoleite.net</li>
+              <li><a  className={styles.aboutContacts} href="mailto:info@ricardoleite.net">info@ricardoleite.net</a></li>
             </ul>
           </div>
           </div>

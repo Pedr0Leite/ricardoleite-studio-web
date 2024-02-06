@@ -69,3 +69,11 @@
   height: 300vh;
   background-color: #d7dde7;
 }
+
+.studioEntry {
+  font-family: "SuisseIntl-Regular";
+  color: black;
+  position: absolute;
+  bottom: 15px;
+  padding: 15px;
+}

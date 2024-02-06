@@ -10,7 +10,7 @@ type CursorImageProps = {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  cursor: wait;
+  cursor: default;
 
   & span {
     font-family: "SuisseIntl-Regular";
@@ -23,7 +23,7 @@ type CursorImageProps = {
     left: 5vw;
     color: black !important;
     padding-top: 2px;
-    cursor: wait;
+    cursor: default;
   }
 
   & span:first-child {
@@ -55,7 +55,7 @@ export const ClockMainDivMobile = styled.div`
 
   @media only screen and (max-width: 600px) {
     display: inherit;
-    cursor: wait;
+    cursor: default;
 
     & span {
       font-family: "SuisseIntl-Regular";

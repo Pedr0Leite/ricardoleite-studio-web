@@ -10,7 +10,7 @@ export default function Clock() {
       .split(",")[1]
   );
   const [openForProjects, setOpenForProjects] =
-    useState<string>("Open for projects!");
+    useState<string>("Open for business!");
 
   const size = useWindowSize();
 
@@ -30,9 +30,11 @@ export default function Clock() {
     const dayOfWeek = new Date().getDay();
 
     if (now >= 9 && now <= 18 && dayOfWeek != 0 && dayOfWeek != 6) {
-      setOpenForProjects("Open for projects!");
+      setOpenForProjects("Open for business!");
+    } else if(dayOfWeek == 0 || dayOfWeek == 6) {
+      setOpenForProjects("Enjoying the sun in Amsterdam!");
     } else {
-      setOpenForProjects("Closed! See you tomorrow!");
+      setOpenForProjects("Closed! Talk tomorrow.");
     }
 
     const timerId = setInterval(refreshClock, 999);
@@ -44,20 +46,9 @@ export default function Clock() {
   return (
     <>
     <Styled.ClockMainDiv>
-        <span>Amsterdam, {dateTime}</span>
+        <span><i>Amsterdam</i>, {dateTime}</span>
         <span>{openForProjects}</span>
       </Styled.ClockMainDiv>
-      {/* {size != undefined && size.width != undefined && size.width >= 600 ? 
-      <Styled.ClockMainDiv>
-        <span>Amsterdam, {dateTime}</span>
-        <span>{openForProjects}</span>
-      </Styled.ClockMainDiv>
-      :
-      <Styled.ClockMainDivMobile>
-        <span>Amsterdam, {dateTime}</span>
-        <span>{openForProjects}</span>
-      </Styled.ClockMainDivMobile>
-      } */}
     </>
   );
 }
