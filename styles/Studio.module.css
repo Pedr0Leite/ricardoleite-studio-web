@@ -71,8 +71,16 @@
 }
 
 .studioEntry {
-  font-family: "SuisseIntl-Regular";
   color: black;
+  font-family: "SuisseIntl-Regular";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 36px;
+  -webkit-letter-spacing: 0.18px;
+  -moz-letter-spacing: 0.18px;
+  -ms-letter-spacing: 0.18px;
+  letter-spacing: 0.18px;
   position: absolute;
   bottom: 15px;
   padding: 15px;

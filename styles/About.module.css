@@ -532,7 +532,7 @@
   .secondBlock {
     height: 310px;
     margin: 0px 0px 25px 0px;
-    padding: 30px 0px 200px 20px;
+    padding: 30px 0px 160px 20px;
     display: flex;
     flex-direction: column;
     row-gap: 15px;
