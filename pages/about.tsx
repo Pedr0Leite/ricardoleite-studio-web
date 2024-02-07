@@ -88,7 +88,6 @@ export default function About({ abouts } : AboutsInterface) {
         <div className={styles.firstBlock}>
           <div className={styles.firstBlockLeft}>
             <div>I am Ricardo Leite</div>
-            {/* <div className={styles.mainAbstrcImgMobile}/> */}
               <AboutMainImgMobile url={main.image?.url != undefined ? main.image?.url : ''}/>
             <div>
               <p>
@@ -106,18 +105,6 @@ export default function About({ abouts } : AboutsInterface) {
             <AboutMainImg 
             url={main.image?.url != undefined ? main.image?.url : ''} 
             logoUrl={logo.image?.url != undefined ? logo.image?.url : ''}/>
-            {/* <div className={styles.mainAbstrcImg}>
-              <div className={styles.mainAbstrcOverlapDiv}>
-                <Image
-                  // src={mainAbstrc.src}
-                  src={logo.image?.url != undefined ? logo.image?.url : ''}
-                  height="100"
-                  width="100"
-                  alt="abstract"
-                  className={styles.mainAbstrcOverlapImg}
-                />
-              </div>
-            </div> */}
           </div>
         </div>
         <SlidingText />
@@ -215,18 +202,10 @@ export default function About({ abouts } : AboutsInterface) {
             </p>
             <br/>
             <br/>
-             {/* <p>All rights reserved 2023</p> */}
           <br/>
-            {/* <p>
-              Type by <u>ABC Dinamo</u>
-            </p> */}
-            {/* <p>
-              Site by <Link href="https://www.linkedin.com/in/pedromgleite/">Pedro Leite</Link>
-            </p> */}
           </div>
           <div className={styles.thirdBlockTitle}>Contacts</div>
           <div className={styles.thirdBlockText}>
-            {/* <p>All rights reserved 2023</p> */}
             <div className={styles.thirdBlockText}>
             <ul>
               <li>Exhibition & Lectures</li>
@@ -261,55 +240,49 @@ export default function About({ abouts } : AboutsInterface) {
         (
           <>
           <div className={styles.thirdBlock}>
-          <div className={styles.thirdBlockTitle}>Books</div>
-          <div className={styles.thirdBlockText}>
-             <ul>
-             {booksTxtEntries != undefined &&
-                  booksTxtEntries.map((_value: string, index: number) => {
-                    return (
-                      <>
-                        <li key={`books-m-li-${index}`}>{_value}</li>
-                      </>
-                    );
-                  })}
-            </ul>
-          </div>
-          <div className={styles.thirdBlockTitle}>Contacts</div>
-          <div className={styles.thirdBlockText}>
-            {/* <p>All rights reserved 2023</p> */}
+            <div className={styles.thirdBlockTitle}>Books</div>
             <div className={styles.thirdBlockText}>
-            <ul>
-              <li>Exhibition & Lectures</li>
-              <li><a  className={styles.aboutContacts} href="mailto:ricardo@ricardoleite.net">ricardo@ricardoleite.net</a></li>
-              <br />
-              <li>Creative Direction</li>
-              <li>Brut Representation/US/UK/ES</li>
-              <li><a  className={styles.aboutContacts} href="mailto:sara@brut.works">sara@brut.works</a></li>
-              <br />
-              <li>Freelancer inquiries availability/</li>
-              <li><a  className={styles.aboutContacts} href="mailto:info@ricardoleite.net">info@ricardoleite.net</a></li>
-            </ul>
+              <ul>
+              {booksTxtEntries != undefined &&
+                    booksTxtEntries.map((_value: string, index: number) => {
+                      return (
+                        <>
+                          <li key={`books-m-li-${index}`}>{_value}</li>
+                        </>
+                      );
+                    })}
+              </ul>
+            </div>
           </div>
-          </div>
-          <div className={styles.thirdBlockTitle}>Links</div>
-          <div className={styles.thirdBlockText}>
-            <p className={styles.linksText}>
-              <Link href="https://www.linkedin.com/in/ricardo-leite-98820523/">LinkedIn</Link>
-              <Link href="https://www.instagram.com/_ricardo_leite_/">Instagram</Link>
-              <Link href="https://www.behance.net/ricardoleite">Behance</Link>
-              <Link href="https://vimeo.com/rl85">Vimeo</Link>
-            </p>
-            <br/>
-            <br/>
-             {/* <p>All rights reserved 2023</p> */}
-          <br/>
-            {/* <p>
-              Type by <u>ABC Dinamo</u>
-            </p> */}
-            {/* <p>
-              Site by <Link href="https://www.linkedin.com/in/pedromgleite/">Pedro Leite</Link>
-            </p> */}
-          </div>
+          <div className={styles.thirdBlock}>
+            <div className={styles.thirdBlockTitle}>Contacts</div>
+            <div className={styles.thirdBlockText}>
+              <div className={styles.thirdBlockText}>
+              <ul>
+                <li>Exhibition & Lectures</li>
+                <li><a  className={styles.aboutContacts} href="mailto:ricardo@ricardoleite.net">ricardo@ricardoleite.net</a></li>
+                <br />
+                <li>Creative Direction</li>
+                <li>Brut Representation/US/UK/ES</li>
+                <li><a  className={styles.aboutContacts} href="mailto:sara@brut.works">sara@brut.works</a></li>
+                <br />
+                <li>Freelancer inquiries availability/</li>
+                <li><a  className={styles.aboutContacts} href="mailto:info@ricardoleite.net">info@ricardoleite.net</a></li>
+              </ul>
+            </div>
+            </div>
+            <div className={styles.thirdBlockTitle}>Links</div>
+            <div className={styles.thirdBlockText}>
+              <p className={styles.linksText}>
+                <Link href="https://www.linkedin.com/in/ricardo-leite-98820523/">LinkedIn</Link>
+                <Link href="https://www.instagram.com/_ricardo_leite_/">Instagram</Link>
+                <Link href="https://www.behance.net/ricardoleite">Behance</Link>
+                <Link href="https://vimeo.com/rl85">Vimeo</Link>
+              </p>
+              <br/>
+              <br/>
+              <br/>
+            </div>
         </div>
           </>
         )}

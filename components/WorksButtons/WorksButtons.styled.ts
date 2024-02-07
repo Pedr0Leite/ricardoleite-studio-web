@@ -56,7 +56,7 @@ export const workDetailsNextPrevProjectClass = styled.div<workDetailsRightButton
 display: flex;
 justify-content: ${props => props.nextB && props.prevB ? justify.space : props.nextB && !props.prevB ? justify.end : !props.nextB && props.prevB ? justify.start : ""};
 position: absolute;
-margin-top: 5px;
+margin-top: 4px;
 margin-right: 25px;
 padding-right: 10px;
 padding-left: 10px;
