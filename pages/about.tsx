@@ -148,6 +148,7 @@ export default function About({ abouts } : AboutsInterface) {
             </div>
           </div>
         </div>
+        {size != undefined && size.width != undefined && size.width >= 600 ? (
         <div className={styles.thirdBlock}>
           <div className={styles.thirdBlockTitle}>Clients & Agencies</div>
           <div className={styles.thirdBlockText}>
@@ -189,6 +190,53 @@ export default function About({ abouts } : AboutsInterface) {
             </ul>
           </div>
         </div>
+        ) : (
+            <>
+          <div className={styles.thirdBlock}>
+            <div className={styles.thirdBlockTitle}>Clients & Agencies</div>
+            <div className={styles.thirdBlockText}>
+              <ul>
+                {clientsAndAgencieTxtEntriesOne != undefined &&
+                    clientsAndAgencieTxtEntriesOne.map((_value: string, index: number) => {
+                      return (
+                        <>
+                          <li key={`client-agency1-li-${index}`}>{_value}</li>
+                        </>
+                      );
+                    })}
+              </ul>
+            </div>
+            <div className={styles.thirdBlockTitle}></div>
+            <div className={styles.thirdBlockText}>
+              <ul>
+                {clientsAndAgencieTxtEntriesTwo != undefined &&
+                    clientsAndAgencieTxtEntriesTwo.map((_value: string, index: number) => {
+                      return (
+                        <>
+                          <li key={`client-agency2-li-${index}`}>{_value}</li>
+                        </>
+                      );
+                    })}
+              </ul>
+            </div>
+          </div>
+          <div className={styles.thirdBlock}>
+            <div className={styles.thirdBlockTitle}>Magazines</div>
+            <div className={styles.thirdBlockText}>
+              <ul>
+                {magazinesTxtEntries != undefined &&
+                    magazinesTxtEntries.map((_value: string, index: number) => {
+                      return (
+                        <>
+                          <li key={`magazines-li-${index}`}>{_value}</li>
+                        </>
+                      );
+                    })}
+              </ul>
+            </div>
+          </div>
+        </>
+        )}
         {size != undefined && size.width != undefined && size.width >= 600 ? (
           <>
         <div className={styles.thirdBlock}>
