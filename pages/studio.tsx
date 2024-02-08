@@ -13,10 +13,10 @@ export default function Studio() {
   return (
     <>
       <MainTitle />
-      {Loading && <div className="classic-2">Loading</div>}
+      {Loading && <div className="classic-2">Coffee Time</div>}
         <Spline
           className={studiocss.threedbg}
-          onLoad={() => setLoading(false)}
+          // onLoad={() => setLoading(false)}
           scene={splineURL}
         />
         {size != undefined && size.width != undefined && size.width > 600 ? (
