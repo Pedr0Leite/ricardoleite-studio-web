@@ -122,15 +122,15 @@ export default function About({ abouts } : AboutsInterface) {
           <div className={styles.secondBlockRight}>
             <div>
               <div className={styles.secondBlockRightTitle}>
-                As a freelancer
+                As a Freelancer / Work Pal
               </div>
               <ul className={styles.secondBlockRightList}>
-                <li>Design & Art Direction Creative Direction</li>
+                <li>Designer & Art Director</li>
               </ul>
             </div>
               <br />
             <div>
-              <div className={styles.secondBlockRightTitle}>As a studio</div>
+              <div className={styles.secondBlockRightTitle}>As a Studio</div>
               <ul className={styles.secondBlockRightList}>
                 <li>
                   {studioTxt.aboutText}
@@ -138,14 +138,14 @@ export default function About({ abouts } : AboutsInterface) {
               </ul>
             </div>
             <br />
-            <div>
+            {/* <div>
               <div className={styles.secondBlockRightTitle}>
                 As a Director / Rep. by
               </div>
               <ul className={styles.secondBlockRightList}>
                 <li>Brut.works [ES]</li>
               </ul>
-            </div>
+            </div> */}
           </div>
         </div>
         {size != undefined && size.width != undefined && size.width >= 600 ? (
@@ -256,14 +256,16 @@ export default function About({ abouts } : AboutsInterface) {
           <div className={styles.thirdBlockText}>
             <div className={styles.thirdBlockText}>
             <ul>
-              <li>Exhibition & Lectures</li>
+              <li>Exhibition /</li>
+              <li>/ Lectures</li>
               <li><a  className={styles.aboutContacts} href="mailto:ricardo@ricardoleite.net">ricardo@ricardoleite.net</a></li>
               <br />
-              <li>Creative Direction</li>
+              {/* <li>Creative Direction</li>
               <li>Brut Representation/US/UK/ES</li>
               <li><a  className={styles.aboutContacts} href="mailto:sara@brut.works">sara@brut.works</a></li>
-              <br />
-              <li>Freelancer inquiries availability</li>
+              <br /> */}
+              <li>Freelancer Availability /</li>
+              <li>/ Projects Inquiries</li>
               <li><a  className={styles.aboutContacts} href="mailto:info@ricardoleite.net">info@ricardoleite.net</a></li>
             </ul>
           </div>
@@ -310,10 +312,10 @@ export default function About({ abouts } : AboutsInterface) {
                 <li>Exhibition & Lectures</li>
                 <li><a  className={styles.aboutContacts} href="mailto:ricardo@ricardoleite.net">ricardo@ricardoleite.net</a></li>
                 <br />
-                <li>Creative Direction</li>
+                {/* <li>Creative Direction</li>
                 <li>Brut Representation/US/UK/ES</li>
                 <li><a  className={styles.aboutContacts} href="mailto:sara@brut.works">sara@brut.works</a></li>
-                <br />
+                <br /> */}
                 <li>Freelancer inquiries availability/</li>
                 <li><a  className={styles.aboutContacts} href="mailto:info@ricardoleite.net">info@ricardoleite.net</a></li>
               </ul>
