@@ -176,7 +176,7 @@ export default function About({ abouts } : AboutsInterface) {
                   })}
             </ul>
           </div>
-          <div className={styles.thirdBlockTitle}>Magazines</div>
+          <div className={styles.thirdBlockTitle}>Workshops & Lectures</div>
           <div className={styles.thirdBlockText}>
             <ul>
               {magazinesTxtEntries != undefined &&
@@ -221,7 +221,7 @@ export default function About({ abouts } : AboutsInterface) {
             </div>
           </div>
           <div className={styles.thirdBlock}>
-            <div className={styles.thirdBlockTitle}>Magazines</div>
+            <div className={styles.thirdBlockTitle}>Workshops & Lectures</div>
             <div className={styles.thirdBlockText}>
               <ul>
                 {magazinesTxtEntries != undefined &&
@@ -256,8 +256,7 @@ export default function About({ abouts } : AboutsInterface) {
           <div className={styles.thirdBlockText}>
             <div className={styles.thirdBlockText}>
             <ul>
-              <li>Exhibition /</li>
-              <li>/ Lectures</li>
+              <li>Exhibition / Lectures</li>
               <li><a  className={styles.aboutContacts} href="mailto:ricardo@ricardoleite.net">ricardo@ricardoleite.net</a></li>
               <br />
               {/* <li>Creative Direction</li>
@@ -270,7 +269,7 @@ export default function About({ abouts } : AboutsInterface) {
             </ul>
           </div>
           </div>
-          <div className={styles.thirdBlockTitle}>Books</div>
+          <div className={styles.thirdBlockTitle}>Books & Magazines</div>
           <div className={styles.thirdBlockText}>
              <ul>
              {booksTxtEntries != undefined &&
@@ -290,7 +289,7 @@ export default function About({ abouts } : AboutsInterface) {
         (
           <>
           <div className={styles.thirdBlock}>
-            <div className={styles.thirdBlockTitle}>Books</div>
+            <div className={styles.thirdBlockTitle}>Books & Magazines</div>
             <div className={styles.thirdBlockText}>
               <ul>
               {booksTxtEntries != undefined &&
@@ -309,7 +308,7 @@ export default function About({ abouts } : AboutsInterface) {
             <div className={styles.thirdBlockText}>
               <div className={styles.thirdBlockText}>
               <ul>
-                <li>Exhibition & Lectures</li>
+                <li>Exhibition / Lectures</li>
                 <li><a  className={styles.aboutContacts} href="mailto:ricardo@ricardoleite.net">ricardo@ricardoleite.net</a></li>
                 <br />
                 {/* <li>Creative Direction</li>
