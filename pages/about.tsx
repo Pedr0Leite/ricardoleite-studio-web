@@ -176,7 +176,7 @@ export default function About({ abouts } : AboutsInterface) {
                   })}
             </ul>
           </div>
-          <div className={styles.thirdBlockTitle}>Workshops & Lectures</div>
+          <div className={styles.thirdBlockTitle}>Books & Magazines</div>
           <div className={styles.thirdBlockText}>
             <ul>
               {magazinesTxtEntries != undefined &&
@@ -221,7 +221,7 @@ export default function About({ abouts } : AboutsInterface) {
             </div>
           </div>
           <div className={styles.thirdBlock}>
-            <div className={styles.thirdBlockTitle}>Workshops & Lectures</div>
+            <div className={styles.thirdBlockTitle}>Books & Magazines</div>
             <div className={styles.thirdBlockText}>
               <ul>
                 {magazinesTxtEntries != undefined &&
@@ -269,7 +269,7 @@ export default function About({ abouts } : AboutsInterface) {
             </ul>
           </div>
           </div>
-          <div className={styles.thirdBlockTitle}>Books & Magazines</div>
+          <div className={styles.thirdBlockTitle}>Workshops & Lectures</div>
           <div className={styles.thirdBlockText}>
              <ul>
              {booksTxtEntries != undefined &&
@@ -289,7 +289,7 @@ export default function About({ abouts } : AboutsInterface) {
         (
           <>
           <div className={styles.thirdBlock}>
-            <div className={styles.thirdBlockTitle}>Books & Magazines</div>
+            <div className={styles.thirdBlockTitle}>Workshops & Lectures</div>
             <div className={styles.thirdBlockText}>
               <ul>
               {booksTxtEntries != undefined &&
