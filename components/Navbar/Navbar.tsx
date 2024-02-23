@@ -1,11 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import styles from "@/styles/Navbar.module.css";
 import useScrollDirection from "@/hooks/useScrollDirection";
 import Link from "next/link";
 import dynamic from "next/dynamic";
-import rlLogo from "../public/RL_Logotype.png";
-import { motion, AnimatePresence } from "framer-motion";
-import { Squeeze as Hamburger } from "hamburger-react";
 import NavbarMobile from "./NavbarMobile";
 import useWindowSize from "@/hooks/useWindowSize";
 

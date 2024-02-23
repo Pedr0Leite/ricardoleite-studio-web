@@ -45,7 +45,6 @@ export default function AnimatedText() {
       ref={ref}
       variants={sentence}
       initial="hidden"
-    //   animate="visible"
       animate={ctrls}
       >
         {line1.split("").map((char, index) => {

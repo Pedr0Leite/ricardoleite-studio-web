@@ -23,7 +23,6 @@
   font-size: 26px;
   line-height: 100%;
   color: #000000;
-  /* padding-top: 15px; */
   padding: 15px 15px 0 15px;
   cursor: pointer;
   text-align: right;
@@ -70,10 +69,8 @@
 .navMobileMenu {
   width: 100%;
   background-color: var(--globalRed);
-  /* height: 285px; */
   position: fixed;
   top: 0px;
-  /* padding: 15px 0; */
   right: 0;
   z-index: 2;
 }
@@ -84,20 +81,16 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-evenly;
-  /* row-gap: 50px; */
   margin-top: 75px;
-  /* padding: 15px; */
 }
 
 .navMobileLinks {
   border-top: 1px solid black;
-  /* border-bottom: 1px solid black; */
   width: 100%;
   padding: 15px 0 15px 0;
 }
 
 .navMobileLinks:nth-child(3) {
-  /* border-top: 1px solid black; */
   border-bottom: 1px solid black;
   width: 100%;
   padding: 15px 0 15px 0;

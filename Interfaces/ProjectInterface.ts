@@ -17,15 +17,6 @@ export interface ProjectsInterface {
     project: Array<projectInterface>;
   }
   
-//   interface projectInterface {
-//     project_id: number,
-//     title: string,
-//     tags: Array<string>,
-//     year: number,
-//     location: string,
-//     images: Array<object>
-// }
-
 export interface ProjectsWorkBlockInterface {
   projects: {
     workBlockEntries: Array<ProjectWorkBlockObjectInterface>;
