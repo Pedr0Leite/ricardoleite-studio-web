@@ -24,7 +24,7 @@ export default function SlidingText() {
         'Motion Design',
         'Type Design',
         'Consultancy',
-                'Branding Design',
+        'Branding Design',
         'Visual Strategies',
         'Art Direction',
         'Design',

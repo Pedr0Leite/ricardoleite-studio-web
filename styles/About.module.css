@@ -8,20 +8,6 @@
     rgba(252, 33, 33, 1) 87%,
     rgba(255, 255, 255, 1) 100%
   );
-  /* linear-gradient(
-    0deg,
-    rgba(255, 255, 255, 1) 74%,
-    rgba(253, 107, 107, 1) 85%,
-    rgba(252, 33, 33, 1) 95%,
-    rgba(255, 255, 255, 1) 100%
-  ); */
-  /* linear-gradient(
-    0deg,
-    rgba(255, 255, 255, 1) 67%,
-    rgba(253, 107, 107, 1) 69%,
-    rgba(252, 33, 33, 1) 79%,
-    rgba(255, 255, 255, 1) 93%
-  ) */
 }
 
 /* New */
@@ -30,7 +16,6 @@
   grid-template-columns: repeat(2, 1fr);
   column-gap: 79px;
   border-top: 1px solid black;
-  /* border-bottom: 1px solid black; */
   margin: 0 15px 0 15px;
 }
 
@@ -104,7 +89,6 @@
   font-size: 18px;
   line-height: 100%;
   color: #000000;
-  /* padding-bottom: 20px; */
 }
 
 .mainAbstrcImg {
@@ -139,18 +123,7 @@
   display: inline !important;
 }
 
-/* .firstBlockRight div:nth-child(2) img {
-  height: 100% !important;
-  width: 33% !important;
-  position: fixed;
-  top: 30px;
-  right: 30px;
-} */
-
 .secondBlock {
-  /* height: 423px; */
-  /* border-bottom: 1px solid black; */
-  /* grid-template-rows: 0.7fr 1.3fr; */
   height: 600px;
   display: grid;
   grid-template-columns: 1.7fr 1fr;
@@ -193,7 +166,6 @@
   height: 415px;
   border-top: 1px solid black;
   display: grid;
-  /* grid-template-rows: 0.7fr 1.3fr; */
   grid-template-rows: 0.3fr 1.7fr;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 79px;
@@ -242,7 +214,6 @@
   font-weight: 400;
   font-size: calc(50px - 1vw);
   line-height: 100%;
-  /* text-decoration-line: underline; */
   color: #000000;
 }
 
@@ -457,38 +428,11 @@
   }
 
   .secondBlock, .thirdBlock {
-    /* grid-template-rows: 0.7fr 1.3fr; */
     height: 500px;
   }
 }
 
 @media only screen and (max-width: 600px) {
-
-  /* .firstBlock {
-    grid-template-columns: none;
-  }
-
-  .firstBlockLeft {
-    grid-row: 2;
-    position: relative;
-    height: 103vh;
-  }
-
-  .firstBlockRight {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 70vh;
-  }
-
-  .firstBlockRight div:first-child {
-    font-family: "SuisseIntl-Regular";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 100%;
-    color: #000000;
-  } */
 
   .mainDiv{
     width: 100vw;
@@ -507,7 +451,6 @@
   }
   
   .firstBlockLeft div:nth-child(3) {
-    /* margin: 0px 25px 0px 0px; */
     margin: 0px 25px -35px 0px;
     padding-bottom: 5px;
   }
@@ -531,7 +474,7 @@
 
   .secondBlock {
     height: 310px;
-    margin: 0px 0px 25px 0px;
+    margin: 0px 10px 25px 0px;
     padding: 30px 0px 160px 20px;
     display: flex;
     flex-direction: column;

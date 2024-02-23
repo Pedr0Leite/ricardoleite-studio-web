@@ -13,7 +13,7 @@ export default function Studio() {
   return (
     <>
       <MainTitle />
-      {Loading && <div className="classic-2">Coffee Time</div>}
+      {Loading && <div className="classic-2"><i>Coffee Time</i></div>}
         <Spline
           className={studiocss.threedbg}
           onLoad={() => setLoading(false)}
@@ -22,7 +22,7 @@ export default function Studio() {
         {size != undefined && size.width != undefined && size.width > 600 ? (
           <>
         <span className={studiocss.studioEntry}>
-          Leite Studio, life is a lab-like, a place where curiosity drives you daily.
+        From local brands to global briefings.
         </span>
         </>
         ) : 

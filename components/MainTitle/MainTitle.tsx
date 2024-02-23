@@ -9,8 +9,6 @@ export default function MainTitle() {
   const router = useRouter();
   const route = router.route;
 
-  // const [currentColor, setCurrentColor] = useState<string>("");
-
   const size = useWindowSize();
   const currentColor: string = route == "/studio" ? "white" : "#1a1a1a";
   const currentFirstRoute: boolean = route == "/studio" ? true : false;

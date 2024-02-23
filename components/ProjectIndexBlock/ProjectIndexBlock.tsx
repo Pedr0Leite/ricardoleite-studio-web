@@ -49,10 +49,6 @@ export default function ProjectIndexBlock({
         "500px",
         "517px",
       ],
-      //   transition: {
-      //     type: "spring",
-      //     delay: 0.5,
-      //   },
       transition: {
         type: "linear",
         delay: 0.5,

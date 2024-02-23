@@ -5,7 +5,6 @@ type CursorImageProps = {
   cursorImage: string;
 };
 
-  // export const ClockMainDiv = styled.div<CursorImageProps>`
   export const ClockMainDiv = styled.div`
   display: flex;
   flex-direction: column;

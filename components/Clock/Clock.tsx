@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import * as Styled from "./Clock.styled";
 import useWindowSize from "@/hooks/useWindowSize";
-import styled from "styled-components";
 
 export default function Clock() {
   const [dateTime, setDateTime] = useState(

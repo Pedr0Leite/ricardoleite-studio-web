@@ -23,7 +23,6 @@ export const ProjectIndexBlockDiv = styled.div<projectIndexBlockElement>`
   }
 
   @media only screen and (max-width: 800px) {
-    // column-gap: 25px;
     column-gap: 0px;
     margin: 0;
 
@@ -50,7 +49,6 @@ export const ProjectIndexBlockOneDiv = styled.div`
     font-family: "SuisseIntl-Regular";
     font-style: normal;
     font-weight: 400;
-    // font-size: 14px;
     font-size: 10px;
     line-height: 100%;
     text-align: right;
@@ -63,7 +61,6 @@ export const ProjectIndexBlockOneDiv = styled.div`
     }
     
     & div:nth-child(2) {
-      // font-size: calc(8px + 1vw);
       display: none;
     }
   }
