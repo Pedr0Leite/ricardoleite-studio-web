@@ -151,6 +151,7 @@ export default function About({ abouts } : AboutsInterface) {
                   })}
             </ul>
           </div>
+          <div className={styles.thirdBlockTitle}></div>
           <div className={styles.thirdBlockText}>
             <ul>
               {clientsAndAgencieTxtEntriesTwo != undefined &&
