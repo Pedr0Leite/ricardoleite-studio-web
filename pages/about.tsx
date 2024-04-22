@@ -250,7 +250,7 @@ export default function About({ abouts }: AboutsInterface) {
                     <li>Internship Applications/</li>
                     <li>From March to November/</li>
                     <li>Available options:</li>
-                    <li>Graphic Design / Motion design / Project Manager</li>
+                    <li>Graphic Design & Motion design</li>
                     <br />
                     <li>Exhibition / Lectures</li>
                     <li><a className={styles.aboutContacts} href="mailto:ricardo@ricardoleite.net">ricardo@ricardoleite.net</a></li>
@@ -306,7 +306,7 @@ export default function About({ abouts }: AboutsInterface) {
                       <li>Internship Applications/</li>
                       <li>From March to November/</li>
                       <li>Available options:</li>
-                      <li>Graphic Design / Motion design / Project Manager</li>
+                      <li>Graphic Design & Motion design</li>
                       <br />
                       <li>Exhibition / Lectures</li>
                       <li><a className={styles.aboutContacts} href="mailto:ricardo@ricardoleite.net">ricardo@ricardoleite.net</a></li>
