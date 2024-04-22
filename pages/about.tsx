@@ -10,73 +10,73 @@ import AboutMainImg from "@/components/About/MainImg/AboutMainImg";
 import AboutMainImgMobile from "@/components/About/MainImg/AboutMainImgMobile";
 
 export const getStaticProps = async () => {
-  const hygraph = new GraphQLClient(process.env.hygraphURL+"");
-  
+  const hygraph = new GraphQLClient(process.env.hygraphURL + "");
+
   const data: AboutsInterface = await hygraph.request(aboutQuery);
-  
+
   return {
     props: { abouts: data.abouts },
   };
 };
 
-export default function About({ abouts } : AboutsInterface) {
+export default function About({ abouts }: AboutsInterface) {
   const size = useWindowSize();
   let booksTxtEntries = undefined;
   let clientsAndAgencieTxtEntriesOne = undefined;
   let clientsAndAgencieTxtEntriesTwo = undefined;
   let magazinesTxtEntries = undefined;
 
-      const main = abouts.filter(
-      (x: any) => x.aboutTags == aboutTagsEnum.main
-      )[0];
- 
-      const logo = abouts.filter(
-      (x: any) => x.aboutTags == aboutTagsEnum.logo
-      )[0];
-  
-      const introTxt = abouts.filter(
-      (x: any) => x.aboutTags == aboutTagsEnum.intro
-      )[0];
-  
-      const bio1Txt = abouts.filter(
-      (x: any) => x.aboutTags == aboutTagsEnum.bio1
-      )[0];
-  
-      const bio2Txt = abouts.filter(
-      (x: any) => x.aboutTags == aboutTagsEnum.bio2
-      )[0];
-  
-      const studioTxt = abouts.filter(
-      (x: any) => x.aboutTags == aboutTagsEnum.studio
-      )[0];
-    
-      const clientsAndAgencieTxt = abouts.filter(
-      (x: any) => x.aboutTags == aboutTagsEnum.clients_agencies
-      )[0];
-    
-      const booksTxt = abouts.filter(
-      (x: any) => x.aboutTags == aboutTagsEnum.books
-      )[0];
-      
-      const magazinesTxt = abouts.filter(
-      (x: any) => x.aboutTags == aboutTagsEnum.magazines
-      )[0];
-  
-    if (booksTxt != undefined){
-      booksTxtEntries = booksTxt.aboutText.split('\n');
-    }
-    
-    if (clientsAndAgencieTxt != undefined){
-      clientsAndAgencieTxtEntriesOne = clientsAndAgencieTxt.aboutText.split('\n');
-      clientsAndAgencieTxtEntriesOne = [...clientsAndAgencieTxtEntriesOne].sort((a: any, b:any) => b - a).slice(0, 11);
-      
-      clientsAndAgencieTxtEntriesTwo = clientsAndAgencieTxt.aboutText.split('\n');
-      clientsAndAgencieTxtEntriesTwo = [...clientsAndAgencieTxtEntriesTwo].sort((a: any, b:any) => b - a).slice(11);
-    }
-    
-    if (magazinesTxt != undefined){
-      magazinesTxtEntries = magazinesTxt.aboutText.split('\n');
-    }
+  const main = abouts.filter(
+    (x: any) => x.aboutTags == aboutTagsEnum.main
+  )[0];
+
+  const logo = abouts.filter(
+    (x: any) => x.aboutTags == aboutTagsEnum.logo
+  )[0];
+
+  const introTxt = abouts.filter(
+    (x: any) => x.aboutTags == aboutTagsEnum.intro
+  )[0];
+
+  const bio1Txt = abouts.filter(
+    (x: any) => x.aboutTags == aboutTagsEnum.bio1
+  )[0];
+
+  const bio2Txt = abouts.filter(
+    (x: any) => x.aboutTags == aboutTagsEnum.bio2
+  )[0];
+
+  const studioTxt = abouts.filter(
+    (x: any) => x.aboutTags == aboutTagsEnum.studio
+  )[0];
+
+  const clientsAndAgencieTxt = abouts.filter(
+    (x: any) => x.aboutTags == aboutTagsEnum.clients_agencies
+  )[0];
+
+  const booksTxt = abouts.filter(
+    (x: any) => x.aboutTags == aboutTagsEnum.books
+  )[0];
+
+  const magazinesTxt = abouts.filter(
+    (x: any) => x.aboutTags == aboutTagsEnum.magazines
+  )[0];
+
+  if (booksTxt != undefined) {
+    booksTxtEntries = booksTxt.aboutText.split('\n');
+  }
+
+  if (clientsAndAgencieTxt != undefined) {
+    clientsAndAgencieTxtEntriesOne = clientsAndAgencieTxt.aboutText.split('\n');
+    clientsAndAgencieTxtEntriesOne = [...clientsAndAgencieTxtEntriesOne].sort((a: any, b: any) => b - a).slice(0, 11);
+
+    clientsAndAgencieTxtEntriesTwo = clientsAndAgencieTxt.aboutText.split('\n');
+    clientsAndAgencieTxtEntriesTwo = [...clientsAndAgencieTxtEntriesTwo].sort((a: any, b: any) => b - a).slice(11);
+  }
+
+  if (magazinesTxt != undefined) {
+    magazinesTxtEntries = magazinesTxt.aboutText.split('\n');
+  }
 
   return (
     <>
@@ -84,7 +84,7 @@ export default function About({ abouts } : AboutsInterface) {
         <div className={styles.firstBlock}>
           <div className={styles.firstBlockLeft}>
             <div>I am Ricardo Leite</div>
-              <AboutMainImgMobile url={main.image?.url != undefined ? main.image?.url : ''}/>
+            <AboutMainImgMobile url={main.image?.url != undefined ? main.image?.url : ''} />
             <div>
               <p>
                 {introTxt.aboutText}
@@ -98,9 +98,9 @@ export default function About({ abouts } : AboutsInterface) {
             </div>
           </div>
           <div className={styles.firstBlockRight}>
-            <AboutMainImg 
-            url={main.image?.url != undefined ? main.image?.url : ''} 
-            logoUrl={logo.image?.url != undefined ? logo.image?.url : ''}/>
+            <AboutMainImg
+              url={main.image?.url != undefined ? main.image?.url : ''}
+              logoUrl={logo.image?.url != undefined ? logo.image?.url : ''} />
           </div>
         </div>
         <SlidingText />
@@ -124,7 +124,7 @@ export default function About({ abouts } : AboutsInterface) {
                 <li>Designer & Art Director</li>
               </ul>
             </div>
-              <br />
+            <br />
             <div>
               <div className={styles.secondBlockRightTitle}>As a Studio</div>
               <ul className={styles.secondBlockRightList}>
@@ -137,11 +137,11 @@ export default function About({ abouts } : AboutsInterface) {
           </div>
         </div>
         {size != undefined && size.width != undefined && size.width >= 600 ? (
-        <div className={styles.thirdBlock}>
-          <div className={styles.thirdBlockTitle}>Clients & Agencies</div>
-          <div className={styles.thirdBlockText}>
-            <ul>
-              {clientsAndAgencieTxtEntriesOne != undefined &&
+          <div className={styles.thirdBlock}>
+            <div className={styles.thirdBlockTitle}>Clients & Agencies</div>
+            <div className={styles.thirdBlockText}>
+              <ul>
+                {clientsAndAgencieTxtEntriesOne != undefined &&
                   clientsAndAgencieTxtEntriesOne.map((_value: string, index: number) => {
                     return (
                       <>
@@ -149,12 +149,12 @@ export default function About({ abouts } : AboutsInterface) {
                       </>
                     );
                   })}
-            </ul>
-          </div>
-          <div className={styles.thirdBlockTitle}></div>
-          <div className={styles.thirdBlockText}>
-            <ul>
-              {clientsAndAgencieTxtEntriesTwo != undefined &&
+              </ul>
+            </div>
+            <div className={styles.thirdBlockTitle}></div>
+            <div className={styles.thirdBlockText}>
+              <ul>
+                {clientsAndAgencieTxtEntriesTwo != undefined &&
                   clientsAndAgencieTxtEntriesTwo.map((_value: string, index: number) => {
                     return (
                       <>
@@ -162,12 +162,12 @@ export default function About({ abouts } : AboutsInterface) {
                       </>
                     );
                   })}
-            </ul>
-          </div>
-          <div className={styles.thirdBlockTitle}>Books & Magazines</div>
-          <div className={styles.thirdBlockText}>
-            <ul>
-              {magazinesTxtEntries != undefined &&
+              </ul>
+            </div>
+            <div className={styles.thirdBlockTitle}>Books & Magazines</div>
+            <div className={styles.thirdBlockText}>
+              <ul>
+                {magazinesTxtEntries != undefined &&
                   magazinesTxtEntries.map((_value: string, index: number) => {
                     return (
                       <>
@@ -175,16 +175,16 @@ export default function About({ abouts } : AboutsInterface) {
                       </>
                     );
                   })}
-            </ul>
+              </ul>
+            </div>
           </div>
-        </div>
         ) : (
-            <>
-          <div className={styles.thirdBlock}>
-            <div className={styles.thirdBlockTitle}>Clients & Agencies</div>
-            <div className={styles.thirdBlockText}>
-              <ul>
-                {clientsAndAgencieTxtEntriesOne != undefined &&
+          <>
+            <div className={styles.thirdBlock}>
+              <div className={styles.thirdBlockTitle}>Clients & Agencies</div>
+              <div className={styles.thirdBlockText}>
+                <ul>
+                  {clientsAndAgencieTxtEntriesOne != undefined &&
                     clientsAndAgencieTxtEntriesOne.map((_value: string, index: number) => {
                       return (
                         <>
@@ -192,12 +192,12 @@ export default function About({ abouts } : AboutsInterface) {
                         </>
                       );
                     })}
-              </ul>
-            </div>
-            <div className={styles.thirdBlockTitle}></div>
-            <div className={styles.thirdBlockText}>
-              <ul>
-                {clientsAndAgencieTxtEntriesTwo != undefined &&
+                </ul>
+              </div>
+              <div className={styles.thirdBlockTitle}></div>
+              <div className={styles.thirdBlockText}>
+                <ul>
+                  {clientsAndAgencieTxtEntriesTwo != undefined &&
                     clientsAndAgencieTxtEntriesTwo.map((_value: string, index: number) => {
                       return (
                         <>
@@ -205,14 +205,14 @@ export default function About({ abouts } : AboutsInterface) {
                         </>
                       );
                     })}
-              </ul>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div className={styles.thirdBlock}>
-            <div className={styles.thirdBlockTitle}>Books & Magazines</div>
-            <div className={styles.thirdBlockText}>
-              <ul>
-                {magazinesTxtEntries != undefined &&
+            <div className={styles.thirdBlock}>
+              <div className={styles.thirdBlockTitle}>Books & Magazines</div>
+              <div className={styles.thirdBlockText}>
+                <ul>
+                  {magazinesTxtEntries != undefined &&
                     magazinesTxtEntries.map((_value: string, index: number) => {
                       return (
                         <>
@@ -220,101 +220,118 @@ export default function About({ abouts } : AboutsInterface) {
                         </>
                       );
                     })}
-              </ul>
+                </ul>
+              </div>
             </div>
-          </div>
-        </>
+          </>
         )}
         {size != undefined && size.width != undefined && size.width >= 600 ? (
           <>
-        <div className={styles.thirdBlock}>
-          <div className={styles.thirdBlockTitle}>Links</div>
-          <div className={styles.thirdBlockText}>
-            <p className={styles.linksText}>
-              <Link href="https://www.linkedin.com/in/ricardo-leite-98820523/">LinkedIn</Link>
-              <Link href="https://www.instagram.com/_ricardo_leite_/">Instagram</Link>
-              <Link href="https://www.behance.net/ricardoleite">Behance</Link>
-              <Link href="https://vimeo.com/rl85">Vimeo</Link>
-            </p>
-            <br/>
-            <br/>
-          <br/>
-          </div>
-          <div className={styles.thirdBlockTitle}>Contacts</div>
-          <div className={styles.thirdBlockText}>
-            <div className={styles.thirdBlockText}>
-            <ul>
-              <li>Exhibition / Lectures</li>
-              <li><a  className={styles.aboutContacts} href="mailto:ricardo@ricardoleite.net">ricardo@ricardoleite.net</a></li>
-              <br />
-              <li>Freelancer Availability /</li>
-              <li>/ Projects Inquiries</li>
-              <li><a  className={styles.aboutContacts} href="mailto:info@ricardoleite.net">info@ricardoleite.net</a></li>
-            </ul>
-          </div>
-          </div>
-          <div className={styles.thirdBlockTitle}>Workshops & Lectures</div>
-          <div className={styles.thirdBlockText}>
-             <ul>
-             {booksTxtEntries != undefined &&
-                  booksTxtEntries.map((_value: string, index: number) => {
-                    return (
-                      <>
-                        <li key={`books-li-${index}`}>{_value}</li>
-                      </>
-                    );
-                  })}
-            </ul>
-          </div>
-        </div>
-        </>
-        )
-        :
-        (
-          <>
-          <div className={styles.thirdBlock}>
-            <div className={styles.thirdBlockTitle}>Workshops & Lectures</div>
-            <div className={styles.thirdBlockText}>
-              <ul>
-              {booksTxtEntries != undefined &&
+            <div className={styles.thirdBlock}>
+              <div className={styles.thirdBlockTitle}>Links</div>
+              <div className={styles.thirdBlockText}>
+                <p className={styles.linksText}>
+                  <Link href="https://www.linkedin.com/in/ricardo-leite-98820523/">LinkedIn</Link>
+                  <Link href="https://www.instagram.com/_ricardo_leite_/">Instagram</Link>
+                  <Link href="https://www.behance.net/ricardoleite">Behance</Link>
+                  <Link href="https://vimeo.com/rl85">Vimeo</Link>
+                </p>
+                <br />
+                <br />
+                <br />
+              </div>
+              <div className={styles.thirdBlockTitle}>Contacts</div>
+              <div className={styles.thirdBlockText}>
+                <div className={styles.thirdBlockText}>
+                  <ul>
+                    <li>Freelancer inquiries availability /</li>
+                    <li><a className={styles.aboutContacts} href="mailto:info@ricardoleite.net">info@ricardoleite.net</a></li>
+                    <br />
+                    <li>Internship Applications/</li>
+                    <li>From March to November/</li>
+                    <li>Available options:</li>
+                    <li>Graphic Design / Motion design / Project Manager</li>
+                    <br />
+                    <li>Exhibition / Lectures</li>
+                    <li><a className={styles.aboutContacts} href="mailto:ricardo@ricardoleite.net">ricardo@ricardoleite.net</a></li>
+                    <br />
+                    <li>Studio Postmail /</li>
+                    <li>Amaliastraat 5</li>
+                    <li>1052 GM Amsterdam</li>
+                  </ul>
+                </div>
+              </div>
+              <div className={styles.thirdBlockTitle}>Workshops & Lectures</div>
+              <div className={styles.thirdBlockText}>
+                <ul>
+                  {booksTxtEntries != undefined &&
                     booksTxtEntries.map((_value: string, index: number) => {
                       return (
                         <>
-                          <li key={`books-m-li-${index}`}>{_value}</li>
+                          <li key={`books-li-${index}`}>{_value}</li>
                         </>
                       );
                     })}
-              </ul>
+                </ul>
+              </div>
             </div>
-          </div>
-          <div className={styles.thirdBlock}>
-            <div className={styles.thirdBlockTitle}>Contacts</div>
-            <div className={styles.thirdBlockText}>
-              <div className={styles.thirdBlockText}>
-              <ul>
-                <li>Exhibition / Lectures</li>
-                <li><a  className={styles.aboutContacts} href="mailto:ricardo@ricardoleite.net">ricardo@ricardoleite.net</a></li>
-                <br />
-                <li>Freelancer inquiries availability/</li>
-                <li><a  className={styles.aboutContacts} href="mailto:info@ricardoleite.net">info@ricardoleite.net</a></li>
-              </ul>
-            </div>
-            </div>
-            <div className={styles.thirdBlockTitle}>Links</div>
-            <div className={styles.thirdBlockText}>
-              <p className={styles.linksText}>
-                <Link href="https://www.linkedin.com/in/ricardo-leite-98820523/">LinkedIn</Link>
-                <Link href="https://www.instagram.com/_ricardo_leite_/">Instagram</Link>
-                <Link href="https://www.behance.net/ricardoleite">Behance</Link>
-                <Link href="https://vimeo.com/rl85">Vimeo</Link>
-              </p>
-              <br/>
-              <br/>
-              <br/>
-            </div>
-        </div>
           </>
-        )}
+        )
+          :
+          (
+            <>
+              <div className={styles.thirdBlock}>
+                <div className={styles.thirdBlockTitle}>Workshops & Lectures</div>
+                <div className={styles.thirdBlockText}>
+                  <ul>
+                    {booksTxtEntries != undefined &&
+                      booksTxtEntries.map((_value: string, index: number) => {
+                        return (
+                          <>
+                            <li key={`books-m-li-${index}`}>{_value}</li>
+                          </>
+                        );
+                      })}
+                  </ul>
+                </div>
+              </div>
+              <div className={styles.thirdBlock}>
+                <div className={styles.thirdBlockTitle}>Contacts</div>
+                <div className={styles.thirdBlockText}>
+                  <div className={styles.thirdBlockText}>
+                    <ul>
+                      <li>Freelancer inquiries availability /</li>
+                      <li><a className={styles.aboutContacts} href="mailto:info@ricardoleite.net">info@ricardoleite.net</a></li>
+                      <br />
+                      <li>Internship Applications/</li>
+                      <li>From March to November/</li>
+                      <li>Available options:</li>
+                      <li>Graphic Design / Motion design / Project Manager</li>
+                      <br />
+                      <li>Exhibition / Lectures</li>
+                      <li><a className={styles.aboutContacts} href="mailto:ricardo@ricardoleite.net">ricardo@ricardoleite.net</a></li>
+                      <br />
+                      <li>Studio Postmail /</li>
+                      <li>Amaliastraat 5</li>
+                      <li>1052 GM Amsterdam</li>
+                    </ul>
+                  </div>
+                </div>
+                <div className={styles.thirdBlockTitle}>Links</div>
+                <div className={styles.thirdBlockText}>
+                  <p className={styles.linksText}>
+                    <Link href="https://www.linkedin.com/in/ricardo-leite-98820523/">LinkedIn</Link>
+                    <Link href="https://www.instagram.com/_ricardo_leite_/">Instagram</Link>
+                    <Link href="https://www.behance.net/ricardoleite">Behance</Link>
+                    <Link href="https://vimeo.com/rl85">Vimeo</Link>
+                  </p>
+                  <br />
+                  <br />
+                  <br />
+                </div>
+              </div>
+            </>
+          )}
         <SlidingText />
       </div>
     </>
