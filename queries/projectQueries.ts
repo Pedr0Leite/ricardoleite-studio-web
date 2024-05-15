@@ -84,3 +84,13 @@ query Abouts {
   }
 }
 `;
+
+export const linkQuery = `
+query Links {
+  links {
+    id
+    label
+    link
+  }
+}
+`;
