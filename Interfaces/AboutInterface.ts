@@ -1,5 +1,8 @@
+import { LinksInterface, linkInterface } from "./LinksInterface";
+
 export interface AboutsInterface {
-    abouts: Array<aboutInterface>;
+    abouts: Array<aboutInterface>,
+    links: Array<linkInterface>
   }
 
 export interface aboutInterface {
