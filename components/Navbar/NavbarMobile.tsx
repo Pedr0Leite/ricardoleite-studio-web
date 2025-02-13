@@ -49,6 +49,9 @@ export default function NavbarMobile() {
                 <Link className={styles.navMobileLinks} href="/about">
                   <span>About</span>
                 </Link>
+                <Link className={styles.navMobileLinks} href="/archive">
+                  <span>Archive</span>
+                </Link>
               </ul>
             </motion.div>
           </AnimatePresence>

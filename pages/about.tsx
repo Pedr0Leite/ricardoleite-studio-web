@@ -127,15 +127,15 @@ export default function About({ abouts, links }: AboutsInterface) {
               <div className={styles.secondBlockRightTitle}>
                 As a Freelancer / Work Pal
               </div>
-              <ul className={styles.secondBlockRightList}>
-                <li>Designer & Art Director</li>
+              <ul key={'secondBlockRightList-ul-1'} className={styles.secondBlockRightList}>
+                <li key={'secondBlockRightList-li-1'}>Designer & Art Director</li>
               </ul>
             </div>
             <br />
             <div>
               <div className={styles.secondBlockRightTitle}>As a Studio</div>
-              <ul className={styles.secondBlockRightList}>
-                <li>
+              <ul key={'secondBlockRightList-ul-2'} className={styles.secondBlockRightList}>
+                <li key={'secondBlockRightList-li-2'}>
                   {studioTxt.aboutText}
                 </li>
               </ul>
@@ -147,7 +147,7 @@ export default function About({ abouts, links }: AboutsInterface) {
           <div className={styles.thirdBlock}>
             <div className={styles.thirdBlockTitle}>Clients & Agencies</div>
             <div className={styles.thirdBlockText}>
-              <ul>
+              <ul key={'thirdBlockText-ul-1'}>
                 {clientsAndAgencieTxtEntriesOne != undefined &&
                   clientsAndAgencieTxtEntriesOne.map((_value: string, index: number) => {
                     return (
@@ -160,7 +160,7 @@ export default function About({ abouts, links }: AboutsInterface) {
             </div>
             <div className={styles.thirdBlockTitle}></div>
             <div className={styles.thirdBlockText}>
-              <ul>
+              <ul key={'thirdBlockText-ul-2'}>
                 {clientsAndAgencieTxtEntriesTwo != undefined &&
                   clientsAndAgencieTxtEntriesTwo.map((_value: string, index: number) => {
                     return (
@@ -173,7 +173,7 @@ export default function About({ abouts, links }: AboutsInterface) {
             </div>
             <div className={styles.thirdBlockTitle}>Books & Magazines</div>
             <div className={styles.thirdBlockText}>
-              <ul>
+              <ul key={'thirdBlockText-ul-3'}>
                 {magazinesTxtEntries != undefined &&
                   magazinesTxtEntries.map((_value: string, index: number) => {
                     return (
@@ -191,7 +191,7 @@ export default function About({ abouts, links }: AboutsInterface) {
             <div className={styles.thirdBlock}>
               <div className={styles.thirdBlockTitle}>Clients & Agencies</div>
               <div className={styles.thirdBlockText}>
-                <ul>
+                <ul key={'thirdBlockText-ul-1'}>
                   {clientsAndAgencieTxtEntriesOne != undefined &&
                     clientsAndAgencieTxtEntriesOne.map((_value: string, index: number) => {
                       return (
@@ -204,7 +204,7 @@ export default function About({ abouts, links }: AboutsInterface) {
               </div>
               <div className={styles.thirdBlockTitle}></div>
               <div className={styles.thirdBlockText}>
-                <ul>
+                <ul key={'thirdBlockText-ul-2'}>
                   {clientsAndAgencieTxtEntriesTwo != undefined &&
                     clientsAndAgencieTxtEntriesTwo.map((_value: string, index: number) => {
                       return (
@@ -219,7 +219,7 @@ export default function About({ abouts, links }: AboutsInterface) {
             <div className={styles.thirdBlock}>
               <div className={styles.thirdBlockTitle}>Books & Magazines</div>
               <div className={styles.thirdBlockText}>
-                <ul>
+                <ul key={'thirdBlockText-ul-3'}>
                   {magazinesTxtEntries != undefined &&
                     magazinesTxtEntries.map((_value: string, index: number) => {
                       return (
@@ -257,20 +257,20 @@ export default function About({ abouts, links }: AboutsInterface) {
               <div className={styles.thirdBlockText}>
                 <div className={styles.thirdBlockText}>
                   <ul>
-                    <li>Freelancer inquiries availability /</li>
-                    <li><a className={styles.aboutContacts} href="mailto:info@ricardoleite.net">info@ricardoleite.net</a></li>
+                    <li key={'thirdBlockText-1'}>Freelancer inquiries availability /</li>
+                    <li key={'thirdBlockText-2'}><a className={styles.aboutContacts} href="mailto:info@ricardoleite.net">info@ricardoleite.net</a></li>
                     <br />
-                    <li>Internship Applications/</li>
-                    <li>From March to November/</li>
-                    <li>Available options:</li>
-                    <li>Graphic Design & Motion design</li>
+                    <li key={'thirdBlockText-3'}>Internship Applications/</li>
+                    <li key={'thirdBlockText-4'}>From March to November/</li>
+                    <li key={'thirdBlockText-5'}>Available options:</li>
+                    <li key={'thirdBlockText-6'}>Graphic Design & Motion design</li>
                     <br />
-                    <li>Exhibition / Lectures</li>
-                    <li><a className={styles.aboutContacts} href="mailto:ricardo@ricardoleite.net">ricardo@ricardoleite.net</a></li>
+                    <li key={'thirdBlockText-7'}>Exhibition / Lectures</li>
+                    <li key={'thirdBlockText-8'}><a className={styles.aboutContacts} href="mailto:ricardo@ricardoleite.net">ricardo@ricardoleite.net</a></li>
                     <br />
-                    <li>Studio Postmail /</li>
-                    <li>Amaliastraat 5</li>
-                    <li>1052 GM Amsterdam</li>
+                    <li key={'thirdBlockText-9'}>Studio Postmail /</li>
+                    <li key={'thirdBlockText-10'}>Amaliastraat 5</li>
+                    <li key={'thirdBlockText-11'}>1052 GM Amsterdam</li>
                   </ul>
                 </div>
               </div>
@@ -314,20 +314,20 @@ export default function About({ abouts, links }: AboutsInterface) {
                 <div className={styles.thirdBlockText}>
                   <div className={styles.thirdBlockText}>
                     <ul>
-                      <li>Freelancer inquiries availability /</li>
-                      <li><a className={styles.aboutContacts} href="mailto:info@ricardoleite.net">info@ricardoleite.net</a></li>
+                      <li key={'thirdBlockText-1'}>Freelancer inquiries availability /</li>
+                      <li key={'thirdBlockText-2'}><a className={styles.aboutContacts} href="mailto:info@ricardoleite.net">info@ricardoleite.net</a></li>
                       <br />
-                      <li>Internship Applications/</li>
-                      <li>From March to November/</li>
-                      <li>Available options:</li>
-                      <li>Graphic Design & Motion design</li>
+                      <li key={'thirdBlockText-3'}>Internship Applications/</li>
+                      <li key={'thirdBlockText-4'}>From March to November/</li>
+                      <li key={'thirdBlockText-5'}>Available options:</li>
+                      <li key={'thirdBlockText-6'}>Graphic Design & Motion design</li>
                       <br />
-                      <li>Exhibition / Lectures</li>
-                      <li><a className={styles.aboutContacts} href="mailto:ricardo@ricardoleite.net">ricardo@ricardoleite.net</a></li>
+                      <li key={'thirdBlockText-7'}>Exhibition / Lectures</li>
+                      <li key={'thirdBlockText-8'}><a className={styles.aboutContacts} href="mailto:ricardo@ricardoleite.net">ricardo@ricardoleite.net</a></li>
                       <br />
-                      <li>Studio Postmail /</li>
-                      <li>Amaliastraat 5</li>
-                      <li>1052 GM Amsterdam</li>
+                      <li key={'thirdBlockText-9'}>Studio Postmail /</li>
+                      <li key={'thirdBlockText-10'}>Amaliastraat 5</li>
+                      <li key={'thirdBlockText-11'}>1052 GM Amsterdam</li>
                     </ul>
                   </div>
                 </div>
