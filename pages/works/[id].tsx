@@ -8,7 +8,7 @@ import { GraphQLClient } from "graphql-request";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 
-// //Runs at build time - PATHS
+//Runs at build time - PATHS
 export const getStaticPaths = async () => {
   const hygraph = new GraphQLClient(process.env.hygraphURL+"");
 

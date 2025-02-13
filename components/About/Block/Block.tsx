@@ -19,10 +19,10 @@ export default function Block({ title, info, list }: BlockInterface) {
             <>
               <ul className={styles.serviceList}>
                 {list != undefined &&
-                  list.map((_value: string) => {
+                  list.map((_value: string, index:number) => {
                     return (
                       <>
-                        <li>{_value}</li>
+                        <li key={`about-block-${index}`}>{_value}</li>
                       </>
                     );
                   })}

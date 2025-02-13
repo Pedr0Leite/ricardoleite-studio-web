@@ -61,6 +61,7 @@ margin-right: 25px;
 padding-right: 10px;
 padding-left: 10px;
 width: -webkit-fill-available;
+width: -moz-available;
 border-bottom: 1px solid black;
 
 & span {

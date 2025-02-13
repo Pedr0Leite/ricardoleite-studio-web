@@ -94,3 +94,21 @@ query Links {
   }
 }
 `;
+
+export const archiveQuery = `
+query OtherWorks {
+  otherworks(where: {active: true}) {
+    id
+    active
+    image {
+      url
+    }
+    name
+    order
+    video {
+      url
+    }
+    aspectRatio
+  }
+}
+`;
